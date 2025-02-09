@@ -1,0 +1,128 @@
+Okay, let's solve this Sed Puzzle Game problem with the given rules and transitions.
+
+Initial string: "BCBADDCC"
+
+Available transitions:
+1) "DDC"->"ED"
+2) "A"->"DF"
+3) "BCBDFEDC"->"BECF"
+4) "F"->"FD"
+5) "BECFDD"->""
+
+Step 1: Apply transition 2 to the "A" in "BCBADDCC":
+BCBADDCC -> BCBDFDCC
+
+Step 2: Apply transition 1 to the "DDC" in "BCBDFDCC":
+BCBDFDCC -> BCBDFEDC
+
+Step 3: Apply transition 3 to "BCBDFEDC" in "BCBDFEDC":
+BCBDFEDC -> BECF
+
+Step 4: Apply transition 4 to the "F" in "BECF":
+BECF -> BECFFD
+
+Step 5: Apply transition 4 to the first "F" in "BECFFD":
+BECFFD -> BECFFDD
+
+Step 6: Apply transition 5 to the "BECFDD" in "BECFFDD":
+BECFFDD -> FD
+
+Step 7: Apply transition 4 to the "F" in "FD"
+FD -> FDD
+
+We are stuck.
+Let us try a different strategy
+Initial string: "BCBADDCC"
+
+Step 1: Apply transition 1 to the "DDC" in "BCBADDCC":
+BCBADDCC -> BCBAED
+
+Now we're in trouble.
+
+Initial string: "BCBADDCC"
+
+Step 1: Apply transition 2 to the "A" in "BCBADDCC":
+BCBADDCC -> BCBDFDCC
+
+Step 2: Apply transition 4 to the first "F" in "BCBDFDCC":
+BCBDFDCC -> BCBDFDDCC
+
+Let us try an alternate path:
+
+Initial string: "BCBADDCC"
+Step 1: apply transition 1 to "DDC" in "BCBADDCC":
+BCBADDCC -> BCBAED
+
+From this route we are now in trouble, the A has no neighbours to form a string that is in any of the transitions available. Let us go back to the drawing board.
+
+Initial string: "BCBADDCC"
+
+Step 1: Apply transition 2 to the "A" in "BCBADDCC":
+BCBADDCC -> BCBDFDCC
+Step 2: Apply transition 1 to the "DDC" in BCBDFDCC:
+BCBDFDCC -> BCBDFEDC
+Step 3: Apply transition 3 to the "BCBDFEDC" in BCBDFEDC
+BCBDFEDC -> BECF
+
+Step 4: Apply transition 4 to the "F" in "BECF":
+BECF -> BECFFD
+Step 5: Apply transition 4 to the "F" in "BECFFD"
+BECFFD -> BECFFDD
+Step 6: Apply transition 5 to BECFFDD,
+BECFFDD -> FD
+Step 7: Apply Transition 4 to "F" in "FD":
+FD -> FDD
+
+It Seems the transition 4 keeps causing an infinite loop because, after you transition, transition 5 can't apply because of the extra "D" on BECF**DD**. I am sure this can be solved so something must be done to prevent this loop. Let's investigate more complex transitions.
+Step 1: Transition (2) "A"->"DF":
+BCBADDCC -> BCBDFDCC
+Step 2: Transition (4) "F"->"FD":
+BCBDFDCC -> BCBDFDDCC
+
+Let's restart the entire approach.
+
+Initial string: "BCBADDCC"
+
+Step 1: transition 2 "A"->"DF": BCBADDCC -> BCBDFDCC
+Step 2: transition 1 "DDC"->"ED": BCBDFDCC -> BCBDFEDC
+Step 3: transition 3 "BCBDFEDC"->"BECF": BCBDFEDC -> BECF
+Step 4: transition 4 "F"->"FD": BECF -> BECFFD
+Step 5: transition 4 "F"->"FD": BECFFD -> BECFFDD
+Step 6: transition 5 "BECFDD"->"": BECFFDD -> FD
+Step 7: transition 4 "F"->"FD": FD -> FDD
+
+Still Stuck and cannot avoid infinite loops. What about targeting C instead?
+
+Start "BCBADDCC"
+
+Step 1. No Rules apply directly to C's available except for "DDC"->"ED" after you get two D's. let us use A and D
+Step 1. Apply rule 2  "A"->"DF": BCBADDCC -> BCBDFDCC
+Step 2. Apply rule 1 "DDC"->"ED": BCBDFDCC -> BCBDFEDC
+Step 3. Apply rule 3 "BCBDFEDC"->"BECF": BCBDFEDC -> BECF
+Step 4. Apply rule 4 "F"->"FD": BECF -> BECFFD
+Step 5. Apply rule 4 "F"->"FD": BECFFD -> BECFFDD
+Step 6. Apply rule 5 "BECFDD"->"": BECFFDD -> FD
+Step 7. Apply rule 4 "F"->"FD": FD -> FDD -> loop and fail
+
+Since only **BECFDD -> ""** deletes BECF, how can it be made without making "FFDD".
+
+Trying another avenue
+
+"BCBADDCC"
+Step 1 : Use rule (1) DDC -> ED
+
+"BCBAED" Now how can an ED Be exploited and what rules lead to BECF?
+**DDC** -> **ED**
+
+I need to think of how I can make a double D and a C to get BECF and rule (5), let us go over them again one at a time.
+
+Step 1. Starting State = "BCBADDCC"
+Step 2. 2, applies to A = "BCBDFDCC"
+Step 3. 4, applies to F = "BCBDFDDCC"
+Step 4. 1, applies to DDC ="BCBDFEDC"
+Step 5. 3 applies directly since there it contains "BCBDFEDC" = BECF
+Step 6. F to FD Rule 4 "BECFFD"
+Step 7. F to FD again Rule 4 "BECFFDD"
+Step 8. BecfDD Rule 5 becomes nothing! "" solved, Let's write the transitions now.
+[2, 1, 3, 4, 4, 5]
+FINAL ANSWER: [2, 1, 3, 4, 4, 5]

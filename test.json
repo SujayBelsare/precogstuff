@@ -1,0 +1,108 @@
+[
+    {
+        "problem_id": "000",
+        "initial_string": "BCDDDBF",
+        "transitions": [
+            {
+                "src": "BCD",
+                "tgt": "BC"
+            },
+            {
+                "src": "CBF",
+                "tgt": "FB"
+            },
+            {
+                "src": "BFB",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "001",
+        "initial_string": "BDFBFD",
+        "transitions": [
+            {
+                "src": "BFD",
+                "tgt": "BD"
+            },
+            {
+                "src": "BDFBD",
+                "tgt": "DCC"
+            },
+            {
+                "src": "CC",
+                "tgt": "EB"
+            },
+            {
+                "src": "DE",
+                "tgt": "BA"
+            },
+            {
+                "src": "BAB",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "002",
+        "initial_string": "EBBAD",
+        "transitions": [
+            {
+                "src": "D",
+                "tgt": "BF"
+            },
+            {
+                "src": "F",
+                "tgt": "AE"
+            },
+            {
+                "src": "BB",
+                "tgt": "AE"
+            },
+            {
+                "src": "BA",
+                "tgt": "CF"
+            },
+            {
+                "src": "EAEACFE",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "003",
+        "initial_string": "CDBFC",
+        "transitions": [
+            {
+                "src": "BFC",
+                "tgt": "FE"
+            },
+            {
+                "src": "FE",
+                "tgt": "FE"
+            },
+            {
+                "src": "CDFE",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "004",
+        "initial_string": "CBECBF",
+        "transitions": [
+            {
+                "src": "CB",
+                "tgt": "BF"
+            },
+            {
+                "src": "BFE",
+                "tgt": "CC"
+            },
+            {
+                "src": "CBFFF",
+                "tgt": ""
+            }
+        ]
+    }
+]

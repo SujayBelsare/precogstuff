@@ -1,0 +1,130 @@
+Let's analyze the available transitions and the initial string "FABFF" to devise a strategy for reducing it to an empty string.
+
+Transitions:
+1) "F"->"EE"
+2) ""->"AC"  (This can't be used initially because the goal is to get to the empty string)
+3) "ACEEABEEEE"->""
+
+Initial string: "FABFF"
+
+**Step 1: Apply transition 1 to the first F.**
+
+FABFF -> EEABFF
+
+**Step 2: Apply transition 1 to the first F.**
+
+EEABFF -> EEABEEF
+
+**Step 3: Apply transition 1 to the first F.**
+
+EEABEEF -> EEABEEEE
+
+**Step 4: Apply transition 2**
+It is impossible to apply, due to initial constraint 2. "" -> "AC" is irreversible. 
+
+**Revised plan**
+The original approach of greedily applying Rule 1 is getting us nowhere.
+
+Transitions:
+1) "F"->"EE"
+2) ""->"AC"
+3) "ACEEABEEEE"->""
+
+Initial string: "FABFF"
+
+We need to get "ACEEABEEEE" to use transition 3 and empty string. We need to have "ACEEABEEEE" in the initial string.
+Applying transition 1 to "F" turns to "EE", and eventually we're using too many "F". 
+This hints us into using "EE" that comes from transition 1.
+We can introduce AC later on and try and eliminate it another way or incorporate it last minute to apply transition 3.
+
+**Step 1: Apply transition 1 to the first F.**
+FABFF -> EEABFF
+
+**Step 2: Apply transition 1 to the second F.**
+EEABFF -> EEABEEF
+
+**Step 3: Apply transition 1 to the third F.**
+EEABEEF -> EEABEEEE
+
+We currently have "EEABEEEE".
+We still need "AC" at the beginning.
+Unfortunately, adding transition 2 will lead us to nowhere, which leaves us the current string.
+
+We need to try another way
+Transitions:
+1) "F"->"EE"
+2) ""->"AC"
+3) "ACEEABEEEE"->""
+
+Initial string: "FABFF"
+
+**Step 1: Apply transition 1 to the first F.**
+FABFF -> EEABFF
+
+**Step 2: Apply transition 1 to the second F.**
+EEABFF -> EEABEEF
+
+**Step 3: Apply transition 1 to the third F.**
+EEABEEF -> EEABEEEE
+
+Now we have "EEABEEEE", if there was "AC" in the beginning, we could simply do transition 3.
+Therefore this method isn't sufficient enough, let's rethink about the question itself.
+
+Another plan.
+Transitions:
+1) "F"->"EE"
+2) ""->"AC"
+3) "ACEEABEEEE"->""
+
+Initial string: "FABFF"
+Notice that there's only transition with A, B, C is number 3. and it has to be located in order with "ACEEABEEEE".
+
+It may not always be the best to start at step 1, as it may be needed for other calculations.
+Let's try doing it this way. 
+
+The main goal is "ACEEABEEEE"
+Therefore, "F" will not eliminate, "EE" will not eliminate.
+The only letter that could eliminate is "AB", which makes us lean toward transition 3.
+Let's start off with step 1.
+**Step 1: Apply transition 1 to the first F.**
+FABFF -> EEABFF
+Noticed that there aren't many As, Cs to go off with, so adding this isn't great.
+Let's start off with "Last" letter "F", and use transformation 1.
+
+Transitions:
+1) "F"->"EE"
+2) ""->"AC"
+3) "ACEEABEEEE"->""
+
+Initial string: "FABFF"
+
+If we want "ACEEABEEEE" to exist and we can only use transition 1: "F"->"EE"
+
+So let's start with Farthest, use "F" to -> "EE", and it slowly integrates
+
+**Step 1: Apply transition 1 to the first F.**
+FABFF -> EEABFF
+
+**Step 2: Apply transition 1 to the second F.**
+EEABFF -> EEABEEF
+
+**Step 3: Apply transition 1 to the third F.**
+EEABEEF -> EEABEEEE
+
+Now we have "EEABEEEE" left, which the only missing is AC.
+Using rule 2 will be adding to the string when you should be decreasing. However since Rule 3 can only remove specific case we must be exact
+Using rule 2 "".->"AC", will append AC to the left. 
+
+**Step 4: Using rule 2. "" ->"AC"**
+
+""+ "EEABEEEE"-> ACEEABEEEE
+However, rule 2 can't be triggered as it needs to be completely blank. 
+Hence why we are going to have this
+**Incorrect solution**
+The Final solution requires us to rethink again, that we must create something that eliminates by being very specifically there.
+
+After careful considerations,
+it is impossible
+
+**Step 1: No solution**
+[ ]

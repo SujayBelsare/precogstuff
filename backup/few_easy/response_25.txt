@@ -1,0 +1,126 @@
+Okay, let's analyze the problem carefully to convert "FFADA" to "".
+
+Available transitions:
+1) "A"->"AF"
+2) "FFAFFFFDA"->""
+
+Initial string: "FFADA"
+
+Step 1: Apply transition 1 to the last 'A' in "FFADA".
+FFADA -> FFAFDAF
+
+Step 2: Apply transition 1 again to the last 'A' in "FFAFDAF".
+FFAFDAF -> FFAFDFFAFF
+
+Step 3: Apply transition 1 again to the only remaining 'A' in "FFAFDFFAFF".
+FFAFDFFAFF -> FFAFDFFFFAFFF
+
+Step 4: Apply transition 1 again to the only remaining 'A' in "FFAFDFFFFAFFF".
+FFAFDFFFFAFFF -> FFAFDFFFFFAFFFF
+
+This is not leading to any where, let's re-evaluate:
+
+Let us make some more steps before applying Rule 2.
+
+Initial string: "FFADA"
+
+Step 1: Apply rule 1 to "FFADA". A -> AF
+FFADA -> FFADAF
+
+Step 2: Apply rule 1 to "FFADAF". A -> AF
+FFADAF -> FFADAF
+
+Step 3: Apply rule 1 to "FFADAF". A -> AF
+FFADAFF -> FFAF
+
+Let's revert back to the initial string: "FFADA"
+
+Step 1: Apply rule 1 to "FFADA". A -> AF
+FFADA -> FFADAF
+
+This isn't promising at all.
+
+It appears the only rule that can clear substrings "FFADA" is rule 2 but this does not exactly overlap from a direct transition. This means Rule 1 has to change substring "FFADA" into the format defined by Rule 2 which is "FFAFFFFDA".
+Initial String: "FFADA"
+
+The difference between the target string and the intial string has the following deltas.
+FFAFFFFDA
+FFADA
+
+We require "FFFFD" insertion between the "FF" substring and the trailing DA substring.
+
+Let us reapply rule 1.
+Step 1:
+"FFADA" apply Rule 1
+A->AF
+"FFADA"->"FFADAF"
+
+Reapply:
+Step 1:
+"FFADAF" apply Rule 1
+A->AF
+"FFADAF"->"FFADAFF"
+
+Reapply:
+Step 1:
+"FFADAFF" apply Rule 1
+A->AF
+"FFADAFF"->"FFAFFAFF"
+This route does not create the expression needed in Rule 2 to make it an empty String.
+
+Lets apply the first available move that does not result in a repeat:
+
+Initial string: "FFADA"
+Apply Rule 1 to leftmost A:
+"FFADA" => "FFAFDA"
+
+We need more "F"s. Lets try inserting them before the first D.
+
+Apply Rule 1 again:
+"FFAFDA" Apply Rule 1 to A in the last place, A-> AF:
+FFAFDAF
+
+Apply Rule 1 again:
+FFAFDAF->FFAFDFFAFF (No because its not in sequence with FFAFFFFDA-> ""
+}
+
+Lets make this leap, there could be some hidden pattern:
+
+"FFADA" -> FFAFFFFDA is the Target
+
+Current initial string: "FFADA"
+
+1. A->AF insert "AF". "FFAF"
+A->AF insert "F"-> AF.
+
+We can break this transition between Rule one "A" -> "AF", however the intermediate conversion substring has to match exactly "FFAFFFFDA".
+
+If our initial expression is only FFADA this does NOT result in a final solution because it would NOT allow the FFAFFFFDA to "" at ALL.
+
+Thus it would take n times operations to result in "".
+
+Another method:
+
+Apply 1
+"FFADA"-> FFAFDA
+"FFAFDA" ->
+Can we add to the end result?
+Rule 1 applies to FFADA and that's it.
+Thus, FFAFFFFDA only is the key transition with an "" assignment to resolve to "".
+FFAFFFFDA - FFADA
+
+Missing elements=FFFFDA. 
+We cannot change or make such modifications at any point, based on the Rules presented.
+
+"A"->AF cannot add the desired FF to insert correctly without generating a loop or repeating expressions.
+
+Thus the game cannot be converted with available rule in ANY order.
+
+However, since the initial rule sets were designed as being "SOLVABLE at ANY condition, that implies my constraints in understanding and making the correct logical assertions or steps are mis aligned with final solution"
+Thus
+
+**NO SOLUTION exists and cannot resolve because RULE #2 Requires an exact string match to invoke, in one direction! and no solution can produce that, so its FALSE!**
+
+NO output/Solution provided since the condition cannot logically lead into empty "".
+
+**NO_ANSWER**

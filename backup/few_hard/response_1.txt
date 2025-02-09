@@ -1,0 +1,42 @@
+Okay, let's solve the Sed Puzzle Game problem step-by-step. The goal is to transform "BBA23" into "".
+
+Initial string: "BBA23"
+
+Available transitions:
+1) ""->"97"
+2) "7BBA2"->"4F"
+3) "94F"->"78"
+4) "7"->"CE"
+5) "9797CE83"->""
+
+Current String: "BBA23"
+
+Since none of the transitions directly match the current string, let's aim to create a "7BBA2" which is needed for transition 2. Let's try creating 7's from transition 3 and 4, or transition 1. Applying transition 1 is useful if we can create a situation to use transition 5 which removes specific substrings to get to an empty string, this route seems difficult since the initial string is not made up of "9", "7", "C", "E", or "8", "3".
+Let's try creating "7BBA2", perhaps involving transition 1. We need "7" followed by "BBA2".
+If somehow we can create "7BBA2", then transition 2 gives "4F".
+If somehow we can create "94F", then transition 3 gives "78". Then we are closer to forming "97" which helps.
+We start with BBA23
+
+Consider building from "BBA2". Let's find a way to insert "7" before. But insertion of 7 requires an empty string, transition 1: "" -> "97". Doesn't work right away.
+We see "BBA2" exists, let us create "7BBA2". We don't seem to have many applicable rules. Let's start backward to deduce:
+
+To get "", we need "9797CE83".
+To get "9797CE83" we need somehow convert from "BBA23"
+
+This seems like we must transition toward something involving the "9797CE83" string as the transition leading to "" needs the "9797CE83" string. Also, we see the characters "97", this is transition 1's output, perhaps we must get to an empty string, then add parts to make the "9797CE83" string.
+But lets evaluate "BBA23". We are missing the "7" that will trigger transition 2. To obtain 7 via "94F" requires a "9" infront of it (via 94F).
+Another strategy is making BBA23->[X]7BBA2[Y], which becomes 4F after [2].
+We are missing a 7 right before it, making 7BBA23, then transitioning to 4F3... Then building "94F", and then using transition 3, the transition will give us "783".
+
+Transition 1 seems like the first best route, because it gets "9797CE83" for "" at transition 5. Let's assume this. But, this means the string we are trying to empty should eventually form "9797CE83".
+
+Maybe we should forget "" -> "97". Because the initial string BBA23 has no rules going from it.
+
+From "BBA23", let's use a sequence that gives 7 before BBA2 so transition 2 can work "7BBA2"->"4F" so our BBA23-> 7BBA23 -> 4F3.
+
+We can't immediately get "7BBA2", we should instead use some sort of a transformation of "BBA23". If we want to eventually reach "" via string "9797CE83" we should make use of 1-5 transitions in reverse to obtain the string for removal using the empty string
+
+Since we have no way to directly reduce the string we must add characters to match patterns. Since the only initial viable option appears to be 2. Let us build towards "7BBA2". The "BBA2" part exists already in BBA23, we want to get rid of the trailing 3, and add a leading 7, to perform transtion 2, so transition 2 "7BBA2"->"4F". Since transition 2 exists to use transition 3 and create the 9 pattern
+
+It appears there are NO viable options to produce "7BBA2" given BBA23->"", so the puzzle must be unsolveable and an error on the puzzle masters side. No transformations available to transform to an empty string. It relies heavily on knowing an intermediate string that may reduce down by using removal by 5, addition by 1. and substitutions by 2-4. No transitions are easily obtainable, hence an empty set
+[]

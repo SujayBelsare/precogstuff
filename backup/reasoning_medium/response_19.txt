@@ -1,0 +1,151 @@
+Okay, let's analyze the problem meticulously.
+
+Available transitions:
+1) "EE"->"FE"
+2) "FED"->"EAC"
+3) ""->"CE"
+4) "DF"->"AB"
+5) "CEABFAEAC"->""
+
+Initial string: "FAEED"
+
+Goal: "" (empty string)
+
+The target string for the final transition is "CEABFAEAC". Let's see how we can maneuver the initial string towards this state.
+
+1. **FAEED** ->  **FAFED** (applying rule 1 "EE"->"FE")
+
+Now we have "FAFED". We need "EAC" to form within the substring.  Let's try to create that next, targeting transition 2
+
+2.  **FAFED** -> FAEAC (transition 2, FED-> EAC )
+ Now our string looks close!
+
+The transition 5 needs CEABFAEAC to go to "". So let's see how close the string 'FAEAC' looks with the one that can collapse into nothing.
+
+We can insert CEAB. Let's check to see how AB appears
+
+We have:
+F - keep the character
+AEAC
+
+Lets make AB with DF -> AB (rule 4)
+
+Therefore we have:
+FAEAC
+Need to transform F into DF
+
+The transition DF does not apply, it has to come AFTER so there must be a way to form FA. So F -> DF? NO so Rule 4 doesnt apply.
+
+Let's restart with FAEED to think with rule 4 as a priority
+
+Let's convert EED -> FED with Rule 1 twice. 
+1) FAEED -> FAFED (Rule 1)
+2) FAFED -> FAFFED
+
+There isn't a DFA in our solution path... maybe consider inserting some characters.
+
+Transition 3: ""->"CE" , but cannot be use in nonempty string
+
+Let's revisit. The string FAEED can be thought with rule 2: "FED"->"EAC".
+Currently we don't have FED
+
+FAEED -> FEAED -> FA E ED-> FA FE D, we are simply delaying!
+
+Okay.
+Let's observe that CEABFAEAC is very long, let's see backwards
+""<- CEABFAEAC
+
+The most important thing we can have now is Rule 5's: "CEABFAEAC"->""
+
+Looking at Initial string: FAEED
+
+To form Rule 5, we need CEAB before the string.
+
+""->"CE" won't change a preexisting string. 
+The best option will involve transforming FAEED to something with BFAEAC, in this case the AB comes AFTER the F. Let's look at some insertions.
+
+There has to be a step where 'DF' is available, thus AB appears.
+
+From "FAEED"
+
+Try the transitions
+1) "EE"->"FE"
+2) "FED"->"EAC"
+3) ""->"CE"
+4) "DF"->"AB"
+5) "CEABFAEAC"->""
+
+FAEED -> FAFED (1)
+Now we need to get DF out of FA somehow
+
+FAEED -> transform into CAE first
+
+let's create the BFA part of the problem: ABF
+DF -> AB Rule 4! So we want DF somehow
+
+Let me try this one more time
+"FAEED"->"FAFEd"(rule 1)
+
+now if we use rule 2:"FED"->"EAC"
+then we get "FAEAC"
+Missing CE and BFA now
+
+So...
+
+FAEED (Start)
+->FAFED (rule 1)
+->FAEAC (rule 2)
+
+Let's insert CE
+FAFEAC
+
+then we require DF -> AB to come into the string...
+so
+
+Try adding a "DF" string by adding Rule 4
+It seems it should be impossible to create AB first then remove it at the end
+
+However, a more elegant solution should exist
+
+FAEED
+Applying reverse engineering
+
+"CEABFAEAC"<-"" Rule 5
+
+FAEED-> we can try adding a DFA to our existing function
+
+Then with (1), (2), and (3). CE cannot be removed
+
+Let me see the sequence again. It starts with CE.
+We see EED has EE, the problem might come when EE transform to FE, maybe
+So our sequence would be something:
+1,2,3,4,5
+
+However if i see (4), then "DF" should be formed first.
+
+Answer: Impossible
+Reasoning: The algorithm did not provide a solution
+
+Let's assume Rule 3 applies ONLY to initial string. "" to CE is just dead, which isn't
+
+Therefore we have
+FAILED
+
+Another try,
+* FAEED - start
+* FAFED (1 EE->FE)
+
+If there is a "CE" + string, there may be "CE" insertion that cancels out eachother.
+Because FAEED contains "AEED" this means we must focus more to F and D.
+
+Final Approach, Rule 5 ends in EAC: We create a situation to transition towards EED by something
+Here FAEED may need F and D transformation,
+
+* FAEED --> rule 4 somehow creates a loop? Or maybe 1 then 4 should happen.
+
+Final Answer: Impossible
+Reasoning: after further attempts to look at edge cases, no valid answer
+
+```
+Impossible
+```

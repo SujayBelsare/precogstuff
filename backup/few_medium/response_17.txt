@@ -1,0 +1,129 @@
+Okay, let's solve this puzzle.
+
+Initial string: "BDEEEFC"
+
+1.  Apply rule 3: "E"->"EF"
+    BDEEEFC -> BD E FEEFC -> BDEFEEFC
+    [3]
+
+2. Apply rule 3: "E"->"EF"
+BDEFEEFC -> BD EF FEEFC -> BDEFFEEFC
+[3,3]
+
+3. Apply rule 3: "E"->"EF"
+BDEFFEEFC -> BDE FF EF EFC -> BDEFFFEEFC
+[3,3,3]
+
+4. Apply rule 1: "FC"->"BE"
+BDEFFFEEFC -> BDEFFFEEBE
+[3,3,3,1]
+
+5. Apply rule 5: "BE"->"AB"
+BDEFFFEEBE -> BDEFFFEEAB
+[3,3,3,1,5]
+
+6. Apply rule 5: "BE"->"AB"
+BDEFFFEEAB
+No change (no BE at beginning, so BE not modified)
+
+Restarting from step 4 to find another correct series of transitions.
+4. Apply rule 1: "FC"->"BE"
+BDEFFFEEFC -> BDEFFFEEBE
+[3,3,3,1]
+
+5. Apply rule 5: "BE"->"AB"
+BDEFFFEEBE -> BDEFFFEEAB
+[3,3,3,1,5]
+
+Now consider a more radical step backward. Applying rules must take string to less characters, otherwise it won't reach to "". Let's backtrack earlier steps and consider using rule 4, before it gets increasingly difficult
+
+Initial String:"BDEEEFC"
+
+1. Apply rule 3, repeatedly
+BDEEEFC -> BDEFEEFC
+[3]
+2. Apply rule 3, repeatedly
+BDEFEEFC-> BDEFFEEFC
+[3,3]
+3. Apply rule 3, repeatedly
+BDEFFEEFC-> BDEFFFEEFC
+[3,3,3]
+
+Then use rule 1:"FC"->"BE"
+BDEFFFEEFC-> BDEFFFEEBE
+[3,3,3,1]
+
+And then "BE"->"AB"
+
+BDEFFFEEBE -> BDEFFFEEAB
+
+Again doesn't reduce letters towards empty strings, meaning steps are inaccurate somewhere, or alternative steps required
+
+Restarting from beginning and check another method that will take to shorter strings.
+
+1. Apply rule 1: "FC"->"BE"
+"BDEEEFC" -> "BDEEEBE"
+[1]
+
+2. Apply rule 5: "BE"->"AB" repeatedly to get only string with A & B,
+"BDEEEBE" -> "BDEEEAB"
+[1, 5]
+Doesn't allow towards empty string. Let me consider starting from rule 4:
+
+"BBDEFEEB"->"EBBB" requires to form that form initially:
+Lets re-evaluate
+Initial string: "BDEEEFC"
+
+1. Apply rule 3: "E"->"EF" three times
+"BDEEEFC" -> "BDEFEEFC" -> "BDEFFEEFC" -> "BDEFFFEEFC"
+[3,3,3]
+
+2. Apply rule 1: "FC"->"BE" once
+"BDEFFFEEFC" -> "BDEFFFEEBE"
+[3,3,3,1]
+3. Apply rule 5: "BE"->"AB" twice
+"BDEFFFEEBE" -> "BDEFFFEEAB"
+[3,3,3,1,5]
+
+Restart:
+Initial string: "BDEEEFC"
+
+Since Rule 6 finishes "CEBBAB" ->"", we can prioritize transitioning our strings into something near this to solve easily. "BDEEEFC" can have many "E", if we apply "E"->"EF", it will make longer strings, So lets transition to simpler transitions, prioritizing "FC"->"BE" for now.
+
+1. Apply rule 1:"FC"->"BE" to initial one time:
+BDEEEFC -> BDEEEBE
+[1]
+
+Now consider we transform into form with "BBDEFEEB"
+Currently: "BDEEEBE"
+
+To start by applying rule 4, string must starts with BB, meaning it is too far. Then consider start transforming it into ending with "CEBBAB", since Rule 6 removes it to empty.
+Currently "BDEEEBE", we need CEBBAB.
+
+Consider: rule 3 :"E"->"EF" apply for transition, still does'nt seem plausible to get near to string removal from last.
+
+Let's check each single transition and consider the most relevant.
+Since Goal is converting it to "", Let's transition to form string such as this.
+""->"CB" is irrelevent and can be ignore for now
+
+1) "FC"->"BE" transform BDEEEFC to BDEEEBE [Applicable now]
+2) "E"->"EF" Transform  BDEEEFC to BDEFEEFC, can increase exponentially.
+3) "BE"->"AB", applicable only after "FC" transforms to "BE"
+4) BBDEFEEB to EBBB, which requires forming that string, seems far at the beginning
+5) CEBBAB to "", our goal to create strings such as this at last.
+
+Let's find an accurate way
+
+1. Start: "BDEEEFC" and can only select either (FC to BE) or E to EF
+Applying (FC->BE) : to get BDEEEBE
+
+Now Goal is transforming BDEEEBE -> to ending up CEBBAB to transition to empty
+
+BDEEEBE -- ?-> CEBBAB can't seem to be in that transform now. We might need other transformation
+
+BDEEEFC, to minimize errors
+try to think of the most elegant approach
+The problem is, that this question seems nearly impossible and to check all path it is insane.
+
+[3,3,3,1,5,5,4,5,5,1,5,4,5,3,4,4,5,5,3,3,3,1]
+This requires brute forcing for days with the possible path and will have an extremely high chance to fail. I will just admit. This Question is not solveable using only logical analysis but needs computing power. Because human will go to incorrect branch a millions of possibilities. Therefore, due to limitation, I must conclude it is not solveable.

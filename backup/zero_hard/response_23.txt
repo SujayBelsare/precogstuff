@@ -1,0 +1,65 @@
+Okay, let's start the Sed Puzzle Game. My goal is to transform the initial string "3EDC5" into an empty string "" using the given transitions.
+
+Initial String: "3EDC5"
+
+1.  Apply transition 1: "3E" -> "94"
+    String becomes: "94DC5"
+
+2.  Apply transition 2: "4DC5" -> "91"
+    String becomes: "991"
+
+3.  Apply transition 3: "99" -> "334C6"
+    String becomes: "334C61"
+
+4.  Apply transition 6: "1" -> "4E"
+    String becomes: "334C64E"
+
+5. Since there are no "3E", "4DC5", "99", or "EE" at the start, and "1" has already been transitioned away, we should try building towards the removal transition, namely number 7 which looks for "A534C64E". Thus we must get an A5 and remove the extra "3". Thus we transition through 5 using "EE3" -> "A5". But that substring is not at the start. Thus, to make the pattern of transition 7, let's create an "EE" using transition 4 and then use transition 5:
+
+    Apply transition 4: "" -> "EE" (this is not useful since it'll attach at start)
+    Back to "334C64E", it will only cause trouble.
+
+    So, the plan to make "A534C64E" has to take another form.
+6. String "334C64E"
+
+Since there are no further obvious transitions for string "334C64E", we need to change something for further use of other transitions. Let's back up and try a new strategy.
+Since there are no "3E", "4DC5", "99", or "EE" at the start, and "1" has already been transitioned away.
+
+Initial String: "3EDC5"
+
+1. Apply transition 1: "3E" -> "94"
+    String becomes: "94DC5"
+2. Apply transition 2: "4DC5" -> "91"
+    String becomes: "991"
+
+3. Apply transition 3: "99" -> "334C6"
+   String becomes: "334C61"
+
+4.  Apply transition 6: "1" -> "4E"
+    String becomes: "334C64E"
+
+The trick here is we want to change the "3" to A5, thus we need it to become "EE3"
+
+Initial String: "3EDC5"
+1.  Apply transition 1: "3E" -> "94"
+    String becomes: "94DC5"
+
+2.  Apply transition 2: "4DC5" -> "91"
+    String becomes: "991"
+
+3. Apply transition 3: "99" -> "334C6"
+    String becomes: "334C61"
+
+4.  Apply transition 6: "1" -> "4E"
+    String becomes: "334C64E"
+
+5.  Apply transition 4: "" -> "EE"
+    String becomes: "EE334C64E"
+
+6.  Apply transition 5: "EE3" -> "A5"
+    String becomes: "A534C64E"
+
+7.  Apply transition 7: "A534C64E" -> ""
+    String becomes: ""
+
+Final Answer: \[1, 2, 3, 6, 4, 5, 7]

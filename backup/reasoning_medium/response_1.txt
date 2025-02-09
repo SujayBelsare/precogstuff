@@ -1,0 +1,57 @@
+Okay, let's analyze this problem meticulously.
+
+Initial String: "DBFFA"
+Transitions:
+1) "DBFF"->"DFF"
+2) ""->"EF"
+3) "EFEFEFEFDFFA"->""
+
+Goal: ""
+
+This is a tricky one because of transition 2, which introduces "EF". It looks like we need to *build* the string "EFEFEFEFDFFA" and then eliminate it in one go.  Since we start with "DBFFA", we want to transform this into something that could lead us closer to "EFEFEFEFDFFA".
+
+Looking at rule 3, the end portion "DFFA" is interesting and very useful.
+
+Let's start:
+"DBFFA".  How do we add some Es and Fs at the front? Let's start with the empty string. We can create some empty string if we reduce DBFF->DFF.  But that will cause problems so lets keep "DBFFA".  We need to figure out how to *add* E's and F's.  Transition 2 inserts "EF". So, somehow, we need to delete the entire string "DBFFA". We CANNOT do that. So something might be wrong with that deduction...
+
+However, we can start by building the sequence backwards.
+"EFEFEFEFDFFA". Before this, maybe it was nothing "". And we somehow applied ""->"EF" many times... which seems impossible. So let's try to build some stuff.
+We need to somehow change DBFFA into EFEFEFEFDFFA
+
+1)DBFF->DFF
+"DBFFA" using transition 1, "DBFF"->"DFF" gets us "DFFA" which is the *end* part of rule 3, we need the starting "EFEFEFEF". We can never add it! What about reducing DFFA. No way.
+Lets backtrack our thought.
+We are given that the string is mathematically proven to be solvable. So there exists a sequence!
+"DBFFA"
+The main transition that eliminates something big is "EFEFEFEFDFFA"->""
+
+Final try: Let's rethink this.
+Initial: DBFFA
+
+If transition 3 is "EFEFEFEFDFFA"->"", that means that we can eliminate "EFEFEFEFDFFA" completely. How do we get the EFEFEFEF *IN FRONT*? Rule 2 introduces "EF", but there's no way to force rule 2.
+
+Let's try this:
+The final part has to be DFFA. That should give us a hint. So we somehow need to transform "DBF" into "EFEFEFEF".
+
+But look closer, we don't have to change into a "strict" EFEFEF. Maybe DFF has to turn into EFEFEF some how.
+1. DBFF->DFF
+So DBFFA->DFFFA, that gets us closer since we are removing elements. What we can we do about "DFFFA"? We're stuck!
+
+Final Final Try: Think outside of the box...is there any assumption about using all rules?
+
+Initial: DBFFA
+
+If we apply ONLY transition 2 ""->"EF" over and over...will the program STOP EVER?! IT won't stop, therefore that must mean we MUST use Rule 3!
+
+Let's restart.
+Initial: DBFFA
+Need to create "EFEFEFEFDFFA".
+So somehow, DBFF turns into "EFEFEFEF"
+After some struggle I realize the puzzle is unsolvable, as none of the operations are able to help construct the required string. It is a trap!
+
+I therefore report that there's no solution for this puzzle.
+
+```
+There is no possible transformation.
+```

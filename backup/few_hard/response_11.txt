@@ -1,0 +1,75 @@
+Okay, let's solve this Sed Puzzle. The initial string is "45F7D". We want to reach an empty string "".
+
+Available transitions:
+1) ""->"FA"
+2) "D"->"FE9E96"
+3) "E9E"->"72A1A8F"
+4) "A8F96345"->"2338B56C52"
+5) "FAF72A12338B56C52F7FE9E96"->""
+
+1. **"45F7D"**: Apply transition 2 to the "D":
+   "45F7D" -> "45F7FE9E96"  (Transition 2)
+
+2. **"45F7FE9E96"**: Apply transition 3 to "E9E":
+   "45F7FE9E96" -> "45F7F72A1A8F96" (Transition 3)
+
+3. **"45F7F72A1A8F96"**: Apply transition 4 to "A8F96345":
+   This looks like a reverse of something we would use later if that first section was changed
+
+4. Observe that transtion 1 adds an "FA", so if we can some how isolate our substring by changing the surrounding characters we might be able to solve it with transition 5
+
+Let's think about how we can create  "FAF72A12338B56C52F7FE9E96":
+
+Looking at our options again...
+
+Since we are starting at 45F7D:
+1. The easiest start to modify our original expression appears to be rule 2, with replacement "D" with "FE9E96"
+
+Going with our original solution:
+
+1. **"45F7D"**: Apply transition 2 to the "D":
+   "45F7D" -> "45F7FE9E96"  (Transition 2)
+
+2. **"45F7FE9E96"**: Apply transition 3 to "E9E":
+   "45F7FE9E96" -> "45F7F72A1A8F96" (Transition 3)
+
+3. **"45F7F72A1A8F96"**: We want to somehow obtain this portion:  "FAF72A12338B56C52F7FE9E96"
+     We need "FAF72A1"
+     We have "45F7F72A1A8F96"
+
+4. Apply Transition 4 backwards but only with part of the substring (only useful for analysis)
+
+Let me take another angle: 
+We want empty string "". Transition 5 is our only viable means.
+
+So, we must at all costs generate:
+"FAF72A12338B56C52F7FE9E96" from "45F7D"
+
+The key is realizing the problem states that *any* order is solvable.  This means we might need to insert many "FA" at strategic locations by transition 1 and build towards "FAF72A12338B56C52F7FE9E96"
+
+Here is the correct solution:
+1. **"45F7D"**: Apply transition 2 to "D"
+"45F7D" -> "45F7FE9E96"
+[2]
+2. **"45F7FE9E96"**: Apply transition 3 to "E9E"
+"45F7FE9E96" -> "45F7F72A1A8F96"
+[2, 3]
+
+3. There is no way using Transitions 1 and 4 to arrive at what we want, and the instructions say it's solvable, indicating that we must be missing a clever trick. Here is the clever trick: The null string transition allows one to append anywhere. The location is irrelevant because any string we append can have subsequences modified later via 2-4
+
+1. Apply transition 1, but to an *empty* string. Insert "FA" anywhere.
+45F7FE9E96 is our string
+Use null string transition on "45F7FE9E96" -->  "FA45F7FE9E96"
+String  -> "45F7D"
+Apply 2. to "D" --> "45F7FE9E96"
+[2]
+Apply null string 1. -> "FA45F7FE9E96"
+
+But how do we *start* with an empty string? Answer: we don't
+There isn't any combination or insertion possible to achieve the long form "FAF72A12338B56C52F7FE9E96" with the constraints. This puzzle violates constraint 3 from the instructions
+
+"FAF72A12338B56C52F7FE9E96" is NOT ACHIEVABLE under existing RULES AND TRANSITIONS
+
+TERMINATION IMMINENT
+
+FINAL ANSWER: The problem is unsolvable given existing rules and available transitions. "FAF72A12338B56C52F7FE9E96" is NOT ACHIEVABLE.

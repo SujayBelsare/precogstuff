@@ -1,0 +1,696 @@
+[
+    {
+        "problem_id": "000",
+        "initial_string": "EDDAC",
+        "transitions": [
+            {
+                "src": "EDDA",
+                "tgt": "FF"
+            },
+            {
+                "src": "C",
+                "tgt": "CD"
+            },
+            {
+                "src": "FFCDDD",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "001",
+        "initial_string": "CADBB",
+        "transitions": [
+            {
+                "src": "DBB",
+                "tgt": "DF"
+            },
+            {
+                "src": "CADF",
+                "tgt": "ADF"
+            },
+            {
+                "src": "A",
+                "tgt": "AD"
+            },
+            {
+                "src": "ADDDF",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "002",
+        "initial_string": "EBDDB",
+        "transitions": [
+            {
+                "src": "",
+                "tgt": "BF"
+            },
+            {
+                "src": "BFBFBFBFEBDDB",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "003",
+        "initial_string": "EDCBE",
+        "transitions": [
+            {
+                "src": "DCBE",
+                "tgt": "DDCC"
+            },
+            {
+                "src": "ED",
+                "tgt": "CC"
+            },
+            {
+                "src": "",
+                "tgt": "FD"
+            },
+            {
+                "src": "FDFDCCDCC",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "004",
+        "initial_string": "BDACCEFEFBD",
+        "transitions": [
+            {
+                "src": "EFEFBD",
+                "tgt": "DDBD"
+            },
+            {
+                "src": "D",
+                "tgt": "AE"
+            },
+            {
+                "src": "BAEACCAEAEBD",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "005",
+        "initial_string": "FAFEFD",
+        "transitions": [
+            {
+                "src": "FD",
+                "tgt": "FE"
+            },
+            {
+                "src": "E",
+                "tgt": "DC"
+            },
+            {
+                "src": "FAFDCCFE",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "006",
+        "initial_string": "BCCBDDEC",
+        "transitions": [
+            {
+                "src": "DD",
+                "tgt": "EF"
+            },
+            {
+                "src": "",
+                "tgt": "DC"
+            },
+            {
+                "src": "DCDCDCBCCBEFEC",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "007",
+        "initial_string": "AFCAE",
+        "transitions": [
+            {
+                "src": "",
+                "tgt": "BC"
+            },
+            {
+                "src": "BCBCBCBCAFCAE",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "008",
+        "initial_string": "FDBEF",
+        "transitions": [
+            {
+                "src": "DBEF",
+                "tgt": "FFB"
+            },
+            {
+                "src": "FF",
+                "tgt": "EE"
+            },
+            {
+                "src": "B",
+                "tgt": "CB"
+            },
+            {
+                "src": "EEFCCB",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "009",
+        "initial_string": "BACECFFAA",
+        "transitions": [
+            {
+                "src": "ACECF",
+                "tgt": "FBAA"
+            },
+            {
+                "src": "AF",
+                "tgt": "DF"
+            },
+            {
+                "src": "",
+                "tgt": "FE"
+            },
+            {
+                "src": "FEFEBFBADFAA",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "010",
+        "initial_string": "BADDFD",
+        "transitions": [
+            {
+                "src": "DDFD",
+                "tgt": "ECA"
+            },
+            {
+                "src": "CA",
+                "tgt": "FA"
+            },
+            {
+                "src": "BAEF",
+                "tgt": "FDA"
+            },
+            {
+                "src": "",
+                "tgt": "DC"
+            },
+            {
+                "src": "DCFDAA",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "011",
+        "initial_string": "BCCFEEFC",
+        "transitions": [
+            {
+                "src": "CCFEE",
+                "tgt": "ABBE"
+            },
+            {
+                "src": "BAB",
+                "tgt": "AAE"
+            },
+            {
+                "src": "AAEB",
+                "tgt": "FD"
+            },
+            {
+                "src": "EF",
+                "tgt": "CD"
+            },
+            {
+                "src": "FDCDC",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "012",
+        "initial_string": "CBBEC",
+        "transitions": [
+            {
+                "src": "BEC",
+                "tgt": "CD"
+            },
+            {
+                "src": "BC",
+                "tgt": "BB"
+            },
+            {
+                "src": "CBB",
+                "tgt": "EEF"
+            },
+            {
+                "src": "FD",
+                "tgt": "ED"
+            },
+            {
+                "src": "EEED",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "013",
+        "initial_string": "ADDFD",
+        "transitions": [
+            {
+                "src": "DFD",
+                "tgt": "FE"
+            },
+            {
+                "src": "E",
+                "tgt": "BE"
+            },
+            {
+                "src": "ADFBBBE",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "014",
+        "initial_string": "DAFBA",
+        "transitions": [
+            {
+                "src": "B",
+                "tgt": "FC"
+            },
+            {
+                "src": "",
+                "tgt": "FB"
+            },
+            {
+                "src": "FFCFBDAFFCA",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "015",
+        "initial_string": "BCECE",
+        "transitions": [
+            {
+                "src": "ECE",
+                "tgt": "EA"
+            },
+            {
+                "src": "",
+                "tgt": "BB"
+            },
+            {
+                "src": "BBBBBBBCEA",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "016",
+        "initial_string": "AEAAD",
+        "transitions": [
+            {
+                "src": "AE",
+                "tgt": "CB"
+            },
+            {
+                "src": "AD",
+                "tgt": "DF"
+            },
+            {
+                "src": "CBDF",
+                "tgt": "BBB"
+            },
+            {
+                "src": "BBBF",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "017",
+        "initial_string": "DBFACCE",
+        "transitions": [
+            {
+                "src": "FA",
+                "tgt": "BD"
+            },
+            {
+                "src": "",
+                "tgt": "EB"
+            },
+            {
+                "src": "EBEBEBDBBDCCE",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "018",
+        "initial_string": "ACDBC",
+        "transitions": [
+            {
+                "src": "CDB",
+                "tgt": "DD"
+            },
+            {
+                "src": "D",
+                "tgt": "DA"
+            },
+            {
+                "src": "ADAAADC",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "019",
+        "initial_string": "DEDCE",
+        "transitions": [
+            {
+                "src": "DC",
+                "tgt": "CD"
+            },
+            {
+                "src": "DEC",
+                "tgt": "BE"
+            },
+            {
+                "src": "E",
+                "tgt": "AF"
+            },
+            {
+                "src": "BAFDAF",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "020",
+        "initial_string": "CCBDA",
+        "transitions": [
+            {
+                "src": "",
+                "tgt": "ED"
+            },
+            {
+                "src": "CBDA",
+                "tgt": "AA"
+            },
+            {
+                "src": "EDEDEDCAA",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "021",
+        "initial_string": "DAABCCB",
+        "transitions": [
+            {
+                "src": "CCB",
+                "tgt": "CC"
+            },
+            {
+                "src": "",
+                "tgt": "BF"
+            },
+            {
+                "src": "BFBFBFDAABCC",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "022",
+        "initial_string": "BBEDF",
+        "transitions": [
+            {
+                "src": "BBED",
+                "tgt": "BB"
+            },
+            {
+                "src": "BBF",
+                "tgt": "DEC"
+            },
+            {
+                "src": "C",
+                "tgt": "CA"
+            },
+            {
+                "src": "DECAA",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "023",
+        "initial_string": "EDFDDBECF",
+        "transitions": [
+            {
+                "src": "CF",
+                "tgt": "DF"
+            },
+            {
+                "src": "EDFDDBE",
+                "tgt": "EBAEE"
+            },
+            {
+                "src": "",
+                "tgt": "CB"
+            },
+            {
+                "src": "CBCBEBAEEDF",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "024",
+        "initial_string": "FFADA",
+        "transitions": [
+            {
+                "src": "A",
+                "tgt": "AF"
+            },
+            {
+                "src": "FFAFFFFDA",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "025",
+        "initial_string": "BCBAA",
+        "transitions": [
+            {
+                "src": "BC",
+                "tgt": "FD"
+            },
+            {
+                "src": "D",
+                "tgt": "DC"
+            },
+            {
+                "src": "A",
+                "tgt": "BF"
+            },
+            {
+                "src": "FDCCBBFA",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "026",
+        "initial_string": "EDDEBADCFFCFAC",
+        "transitions": [
+            {
+                "src": "AC",
+                "tgt": "BF"
+            },
+            {
+                "src": "DE",
+                "tgt": "AB"
+            },
+            {
+                "src": "E",
+                "tgt": "EB"
+            },
+            {
+                "src": "EBBDABBADCFFCFBF",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "027",
+        "initial_string": "BCEEF",
+        "transitions": [
+            {
+                "src": "CEEF",
+                "tgt": "AC"
+            },
+            {
+                "src": "",
+                "tgt": "CD"
+            },
+            {
+                "src": "CDCDCDBAC",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "028",
+        "initial_string": "FECEA",
+        "transitions": [
+            {
+                "src": "FEC",
+                "tgt": "BC"
+            },
+            {
+                "src": "EA",
+                "tgt": "FB"
+            },
+            {
+                "src": "BCF",
+                "tgt": "FD"
+            },
+            {
+                "src": "FD",
+                "tgt": "BA"
+            },
+            {
+                "src": "BAB",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "029",
+        "initial_string": "BEDFE",
+        "transitions": [
+            {
+                "src": "E",
+                "tgt": "FD"
+            },
+            {
+                "src": "FFD",
+                "tgt": "BE"
+            },
+            {
+                "src": "BFDDBFD",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "030",
+        "initial_string": "ADABBBACBFAA",
+        "transitions": [
+            {
+                "src": "BB",
+                "tgt": "EB"
+            },
+            {
+                "src": "EBAC",
+                "tgt": "CCDB"
+            },
+            {
+                "src": "ADAECCDEBFAA",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "031",
+        "initial_string": "DFBCE",
+        "transitions": [
+            {
+                "src": "",
+                "tgt": "DD"
+            },
+            {
+                "src": "DDDDDDDDDFBCE",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "032",
+        "initial_string": "ABBFAEABF",
+        "transitions": [
+            {
+                "src": "A",
+                "tgt": "EF"
+            },
+            {
+                "src": "EFE",
+                "tgt": "EFF"
+            },
+            {
+                "src": "EFBBFEFFEFBF",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "033",
+        "initial_string": "BBBCAFBDEC",
+        "transitions": [
+            {
+                "src": "CAFBDEC",
+                "tgt": "FFBCA"
+            },
+            {
+                "src": "BBFFB",
+                "tgt": "FEBD"
+            },
+            {
+                "src": "EBDCA",
+                "tgt": "FFE"
+            },
+            {
+                "src": "FFE",
+                "tgt": "BBC"
+            },
+            {
+                "src": "BFBBC",
+                "tgt": ""
+            }
+        ]
+    },
+    {
+        "problem_id": "034",
+        "initial_string": "FABFF",
+        "transitions": [
+            {
+                "src": "F",
+                "tgt": "EE"
+            },
+            {
+                "src": "",
+                "tgt": "AC"
+            },
+            {
+                "src": "ACEEABEEEE",
+                "tgt": ""
+            }
+        ]
+    }
+]
