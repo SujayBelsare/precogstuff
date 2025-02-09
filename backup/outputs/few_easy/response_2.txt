@@ -1,0 +1,31 @@
+Let's solve the Sed Puzzle Game problem.
+
+Initial string: "CADBB"
+
+Available transitions:
+1) "DBB"->"DF"
+2) "CADF"->"ADF"
+3) "A"->"AD"
+4) "ADDDF"->""
+
+Step 1: Apply transition 1 to "CADBB". The first match of "DBB" is at the end of the string.
+CADBB -> CADF
+[1]
+
+Step 2: Apply transition 2 to "CADF". The first match of "CADF" is at the beginning of the string.
+CADF -> ADF
+[1, 2]
+
+Step 3: Apply transition 3 to "ADF". The first match of "A" is at the beginning of the string.
+ADF -> ADDF
+[1, 2, 3]
+
+Step 4: Apply transition 3 to "ADDF". The first match of "A" is at the beginning of the string.
+ADDF -> ADDDF
+[1, 2, 3, 3]
+
+Step 5: Apply transition 4 to "ADDDF". The first match of "ADDDF" is at the beginning of the string.
+ADDDF -> ""
+[1, 2, 3, 3, 4]
+
+Final Answer: The solution is [1, 2, 3, 3, 4].

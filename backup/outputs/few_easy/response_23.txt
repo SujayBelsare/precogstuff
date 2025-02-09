@@ -1,0 +1,83 @@
+Okay, let's solve the Sed Puzzle Game problem.
+
+Initial string: "BBEDF"
+
+Available transitions:
+1) "BBED"->"BB"
+2) "BBF"->"DEC"
+3) "C"->"CA"
+4) "DECAA"->""
+
+Goal: "" (empty string)
+
+Reasoning:
+
+1.  We want to get rid of 'F' at the end since none of the other transitions apply at first glance. Applying transition rule 2 results in BBF changing to DEC. So apply Transition rule 2.
+    BBEDF -> BDEC
+
+2. The current string BDEC cannot be directly resolved using any of the other transitions. In order to reduce "DEC", we should consider the second transition rule of "BBF"->"DEC" in reverse. From BBED to BB, we may able to convert into DECAA to achieve emptiness, so from BDEC, how may we turn it to BB and have "DECAA" available for elimination. 
+    BDEC -> We see no transition leads here except to obtain "DECAA", so transition rule 2 isn't effective immediately for the "DEC". The transition rule of 3 only makes strings longer, which isn't ideal for "" emptyness in goal. Transition rule 1 requires us to make BBED which transition rule one can deal with; we only need to make F into D
+
+3. Looking from the start, we should target "BBED"->"BB" at any means; hence we should attempt BBE. It means we may have to move away from the last character F directly using BBF->DEC. Since it can generate "DE", it also opens up future applications to transition rule of 4.
+    BBEDF->Applying transition 2 (BBF->"DEC")-> BDEC.
+
+4. No directly transition resolves BDEC into a "" but from there, we notice "BBED"->"BB" and we have "DE", hence we want to obtain a BBED somehow, and from DECAA -> "" with adding CAA can somehow get us the answer with C -> CA rule.
+
+5. We currently have BDEC from the second rule of "BBF"->"DEC" to "BBEDF", so we attempt to transition in reverse as much as possible to achieve "DECAA", so let's explore all possibilities to achieving "".
+    Currently have: BDEC
+
+6. Try converting into transition rule 4 via. Applying transition 3 which is "C"->"CA". BDEC->BDECA
+
+7. Applying transition rule 3 which is "C"->"CA". BDECA->BDECAA
+
+8. BDECAA ->Applying transition rule 4 : DECAA->"" -> B becomes "". No more. Since our current start of "BBEDF", so the final rule must transition.
+    Therefore, to resolve the given case:
+    BBEDF->BDEC->BDECA->BDECAA->BBCAA->BB; this transitions cannot be fully correct so transition rules are impossible to solve into ""!
+
+    The approach has to be different:
+
+1. BBEDF ->Using Rule #2: BBF->"DEC" -> BDEC
+
+2. Apply Rule #3 on C: C->"CA" ; BDEC -> BDECA
+
+3. Apply Rule #3 on C again: C->"CA" ; BDECA -> BDECAA
+
+4. Apply Rule #1 (Introduce the first BBED) : (BBED -> BB):
+    - We want to create: BB and some variation of B-> DECAA
+    -BDECAA cannot transition straight.
+    - Cannot use 3 anymore as the string can become extremely huge.
+
+If the start goes with BBED->"BB", then the string will become: BF. And there will not be any transitions to solve anything.
+
+The starting has to apply with transition #2 which is: BBEDF-> BDEC
+Since there is BB -> so can Rule #1 : transition it BDEC cannot
+So try BB transition first! Not BBEDF transition one
+
+Let start from step 0 again!
+String: BBEDF->Use RULE #1 ->(BBED->"BB")->BF is impossible! Therefore start the transition again with different thinking strategy!!
+
+String: BBEDF->BDEC->RULE #2, and RULE #3(C->"CA"
+ BBEDF transition rule of 3 never seems to transition into anything!!
+
+BBEDF->Since "DECAA" must get "empty", that is, C always gets in the WAY. Transition rule of: "C"->"CA" gets longger.
+Therefore there is no valid rule to obtain "", therefore there is a logical fallacy!
+Since there is no BBEDF direct match of transition 4 directly!!!!
+
+I believe these combinations and rules are IMPOSSIBLE!! since any case makes the answer impossible. No further answer can solve!
+BBEDF: It seems not even can transition by the second item? If it is BBF? NO BB to the left!!
+
+Solution:
+
+The trick is to make BBE(something that is to the left of DECAA. And with Transition Rule #3 for any "C")
+
+1)Apply Rule 2: BBEDF => BDEC
+
+2) Apply Rule 3 (C->"CA"): BDEC=> BDECA
+
+3) Apply Rule 3 (C->"CA"): BDECA=> BDECAA
+
+4) Apply Rule 4 (DECAA->""): BDECAA=>B
+
+Impossible there exist no Rule To apply it
+
+Final Answer: The final answer is $\boxed{Impossible}$

@@ -1,0 +1,26 @@
+Okay, let's break down the problem step by step.
+Initial string: "FECEA"
+Available transitions:
+1) "FEC"->"BC"
+2) "EA"->"FB"
+3) "BCF"->"FD"
+4) "FD"->"BA"
+5) "BAB"->""
+
+The initial string is FECEA. We want to get to an empty string using the transitions provided. The final transition must be BAB->"". Thus, let's look for a route to derive "BAB".
+
+1. FECEA. The only directly applicable transition is 2: "EA"->"FB".
+   FECEA -> FECFB.
+
+2. FECFB. The only directly applicable transition is 1: "FEC"->"BC".
+   FECFB -> BCFB.
+
+3. BCFB. The only directly applicable transition is 3: "BCF"->"FD".
+   BCFB -> FDFB.
+
+4. FDFB. Apply transition 4 to FD
+    FDFB-> BAB
+5. BAB. Apply transition 5
+    BAB->""
+Therefore, the correct order of transitions is [2, 1, 3, 4, 5].
+FINAL ANSWER: [2, 1, 3, 4, 5]

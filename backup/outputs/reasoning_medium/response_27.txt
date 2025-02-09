@@ -1,0 +1,138 @@
+Okay, let's analyze this problem step-by-step to reduce "CBAEF" to an empty string.
+
+Initial string: "CBAEF"
+
+Available transitions:
+1) "F"->"DE"
+2) "DE"->"AC"
+3) "CBAEAC"->"BE"
+4) ""->"AC"
+5) "ACACBE"->""
+
+First, let's look at what directly acts on "CBAEF".  The only applicable rule is Rule 1, which can replace "F" with "DE".
+"CBAEF" -> "CBADE"  [1]
+
+Now we have "CBADE".  Rule 2 can change the "DE" substring to "AC".
+"CBADE" -> "CBAAC" [2]
+
+We want to make the whole string go to "ACACBE". Let's look for what we can do on "CBAAC"
+
+Looking at our final rule, number 5,  "ACACBE"->"" so we want to get to 'ACACBE', let us investigate how.
+Now examine the options with the rules
+CBAAC
+1) Not applicable
+2) Not applicable
+3) Not applicable
+4) Not applicable. This can apply to an empty string only.
+5) Not applicable
+
+Here, it will be important to not do greedy algorithms, so we must choose the order carefully.
+With "CBAAC", we want to somehow get to "ACACBE"
+With the steps we have taken and the rules we have, this is impossible. Instead, we must restart, and look at different options.
+Let us look back to our transitions again, and see if we can see which are essential.
+
+The transitions available are
+1) "F"->"DE"
+2) "DE"->"AC"
+3) "CBAEAC"->"BE"
+4) ""->"AC"
+5) "ACACBE"->""
+
+Our initial string is CBAEF, where the obvious step is F->DE to produce CBAEDE. This can also change to CBAEAC which we can reduce to BE, meaning rule 3 may be a pivotal rule.
+
+Let's backtrack from the goal, "".  We can achieve this via "ACACBE"->"".  We need to craft "ACACBE". The target string starts and includes "AC". Rule 2 gives us a simple "DE"->"AC", so DE seems important as well, which again reverts back to F->DE. So, we need to use F->DE somewhere.
+
+Restart with Initial String: "CBAEF"
+
+"CBAEF" -> "CBADE" [1] (F->DE)
+Now "CBADE" . It appears "DE" can transform to AC again.
+"CBADE" -> "CBAAC" [2] (DE->AC)
+
+So now it appears as if with 'CBAAC', rule 3 might apply.
+
+Our initial string must be made to "ACACBE" since only then can it lead to "".
+Let's go through the list once more
+Our target is "ACACBE".
+We have "CBAEF". "CBADE". "CBAAC".
+
+The "BE" substring is present in both Rule 3 and Rule 5
+
+Going from 'CBAEF', it is crucial to realize it MUST pass through ->DE conversion to make a conversion of->AC using "DE->AC" rule 2.
+"CBAEF" - > "CBADE" [1]
+"CBADE" -> "CBAAC" [2]
+
+At this stage 'CBAAC'. It is tempting to involve transition 3 due to 'CBAEAC' existing. But "CBAAC" only has "CBA" to begin with so lets avoid it. Transition 3 should involve an 'E' and "AC"
+
+From 'CBAEF', We may start with, making CBAEAC. Let's revisit:
+We must have a form of "ACACBE", can 'CBADE' to anything that ends up to that point?
+The best way is to form "CBAE" so the rest of the process should involve AC
+"CBAEF" -> CBADE, or, F = AC by rule 2 "CBADE = CBAAC" [1, 2]
+
+We may require forming of: CBAE - CBAEAC-BE.
+Or maybe, 'CBAE' -> ACACB then apply rule ACACBE
+
+Let us go back and think one more time, the start and end points with steps involved
+
+CBAEF -> "" (Goal), ACACBE is our last transition
+
+ACACBE can form back to rule [3, CBAEAC->BE, maybe use the backwards format].
+
+Given string, we should go backwards
+
+CBAEF =
+[F to DE, which creates AC]
+
+Since the final form requires a "BE" which can only be formed using transition [3]. 'CBAEAC'
+
+Going Back,
+
+"CBAEF" to ->ACACBE
+"CBAEF" -> "CBADE" [1] ,
+to use to get
+"CBADE" -> "CBAAC"[2], DE->AC
+
+[3]
+
+CBAEF, start by F to DE, it becomes AC by one conversion
+Next up
+From now
+we could CBAAC convert BE with CBAEAC ->BE rule or F->AE or Rule4 to be used to empty state only
+it looks like: AC A( rule F= to F = DE ), CBAAC ,
+
+From , 'CBAAC'. If we somehow formed another "AC", then we get 'ACAC', if its not that possible
+It turns AC. Let us restart it again
+
+CBAEF. Lets try Rule 1 first, followed by Rule2 again which allows a "BE" formation due to using F to DE from the beginning stage [1->[2]. If its the case. we now form it
+
+"CBAEF" [Start] to ACB CAE AEAEACA
+Starting it off
+
+Start it and its only path which only has DE - > to DE [Rule One which has a end state to only DE = and it may start something
+
+RuleOne may be only and its most logical starting since [1->[2]:
+Okay , try
+
+"CBAEF = ,CBADE = C "CBAA .[C]B
+Let and look again. The key lies only
+""A
+
+Solution. Revisit back to rules where must go last stage
+The steps go"BA to makeA.
+Try from , must BEAC E,Ato 
+Re start it with end backto and use must
+["BE"]
+BECA
+
+Result. Must use back rules
+
+CBAEF=0 CBA,
+[BE""
+
+(restart
+Solution:)Start back it from must empty.
+.
+.[]Restart from . .and use rule.from []
+
+```
+[1, 2, 3, 5]
+```

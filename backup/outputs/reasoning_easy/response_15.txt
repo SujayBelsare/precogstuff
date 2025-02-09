@@ -1,0 +1,36 @@
+Okay, let's tackle this Sed Puzzle Game problem with careful reasoning.
+
+Initial string: "DAFBA"
+
+Available transitions:
+1) "B"->"FC"
+2) ""->"FB"  (This one is tricky and likely not usable given the rule that it must modify a matching substring)
+3) "FFCFBDAFFCA"->""
+
+The goal is to reach "".
+
+First, let's consider the target "FFCFBDAFFCA". This is our only path to empty the string. We need to figure out how to introduce this substring through legal operations. The only transition that modifies the string other than the target is "B" -> "FC".
+
+Starting with "DAFBA", let's apply the "B"->"FC" transition:
+DAFBA -> DAFCA
+
+We seem to be going in the wrong direction, we want to introduce F's but are removing them. The "DAF" part is close to "FF", "F" can only come from the initial "B" transitioning into "FC", therefore let's start backwards:
+
+We want FFCFBDAFFCA. So where did the initial string come from? Rule 1, replaces all Bs with FCs. Rule 3 gets us empty.
+
+Let us analyze this further:
+The transition "B"->"FC" only allows for us to replace any instances of B. Notice that since we start with DAFBA we can replace it with DAFCA. Now, we need to make this transform to  "FFCFBDAFFCA". Since B only transitions to "FC" it will be very difficult to make this transition a reality. Furthermore the addition rule, transition rule 2, is illegal to apply on the current initial condition.
+
+Instead let's see if applying "B"->"FC" to our initial state and then reapplying it again leads to the desired substring.
+
+DAFBA -> DAFCA (Rule 1)
+
+The only way we can obtain an 'F' at the start of the target pattern is from replacing the initial "B", implying we cannot remove this 'B'. This might be the right observation.
+However "FC" only can derive from "B", "FFCFBDAFFCA" has the letter "D", thus the starting substring "DAFBA" requires the starting "D" letter in "FFCFBDAFFCA". Also, if "B" becomes "FC" we are removing the letter B from ever getting there again to fulfill the letter B in "FFCFBDAFFCA" which is bad news bears.
+
+Let's explore more. "DAFBA", so it would seem rule 3 gets us to the answer, somehow. So this tells us to reach an impossible state.
+
+This is actually unsolvable. Due to rule 2 being unavailable for use, we will always result in failure because "" cannot become something given a non-empty initial string and so rule 3 can never apply.
+
+Output:
+[]

@@ -1,0 +1,65 @@
+Okay, let's solve the Sed Puzzle Game problem:
+
+Available transitions:
+1) "BB"->"EB"
+2) "EBAC"->"CCDB"
+3) "ADAECCDEBFAA"->""
+
+Initial string: "ADABBBACBFAA"
+
+Goal: Convert to "".
+
+Here's my attempt to find the correct sequence:
+
+1. **ADABBBACBFAA**: The string starts with "ADABBB...". Let's first consolidate the "BB" into "EB" using rule 1.
+2. **ADEBABACBFAA**: Applies transition 1: "BB" -> "EB".
+
+3. **ADAEBACBFAA**: Another 'BB' appears, but this time rule 2 may apply later, lets keep substituting 'BB'.
+4. **ADAEBACEACBFAA**: Applies transition 1: "BB" -> "EB".
+5. **ADAEACCDDBFAA**: Using transition 2 'EBAC' to 'CCDB'
+6. **ADAECCDEBFAA**: Applying transition 1 results in nothing helpful. Instead apply rule 2 'EBAC' to 'CCDB', to make a match with rule 3. It transforms 'EBAC' to 'CCDB'.
+7. **""**: We can finish the string by applying rule 3.
+    Applies Transition 3: "ADAECCDEBFAA"->""
+
+**Solution**: [1, 1, 2, 3]
+
+**Reasoning:**
+1. **ADABBBACBFAA** -> **ADEBABACBFAA**: We apply transition 1 to the first "BB", replacing it with "EB".
+2. **ADEBABACBFAA** -> **ADAEBACBFAA**: We apply transition 1 to the second "BB", replacing it with "EB". This gives us the subsequence "EBAC" which is useful in the next step.
+3. **ADAEBACBFAA** -> **ADAECCDBFAA**: The subsequence "EBAC" matches rule 2, allowing us to apply that rule. This turns 'EBAC' into 'CCDB'.
+4. **ADAECCDBFAA**: Looking for rule 3 to be applicable, apply rule 3: "ADAECCDBFAA" is equivalent to rule '3'.
+   Using "ADAECCDEBFAA" and noticing that transition three reduces the whole string. Applying transition '2', allows '3' to perform it's actions.
+
+Therefore, the steps [1,1,2, 3] get us to "":
+"ADABBBACBFAA" -> "ADEBABACBFAA" -> "ADAEBACBFAA" -> "ADAECCDBFAA"->""
+This does not allow complete transition, need another step.
+I made mistake in the forth step.
+New attempt:
+
+1. **ADABBBACBFAA**: The string starts with "ADABBB...". Let's first consolidate the "BB" into "EB" using rule 1.
+2. **ADEBABACBFAA**: Applies transition 1: "BB" -> "EB".
+
+3. **ADAEBACBFAA**: Another 'BB' appears, this looks like something rule 2 may apply later.
+4. **ADAECCDBFAA**: Using transition 2 'EBAC' to 'CCDB'
+
+Since we want a pattern that aligns with rule 3. Apply transition 1 again
+5. **ADAECCDEBFAA**: apply rule 1: "CCDBFAA" -> CCDEBFAA.
+6. **""**: We can finish the string by applying rule 3.
+    Applies Transition 3: "ADAECCDEBFAA"->""
+
+**Solution:** [1, 2, 1, 3]
+Reasoning:
+
+1.ADABBBACBFAA -> ADEBABACBFAA [Apply rule 1 "BB"->"EB"]. ADEBABACBFAA
+2.ADEBABACBFAA -> ADAEBCCDBFAA [apply rule 2 "EBAC"->"CCDB"].ADAECCDBFAA.
+3.ADAECCDBFAA ->ADAECCDEBFAA Apply rule 1 "DB" -> "EB". ADAECCDEBFAA
+4.ADAECCDEBFAA -> "" [Apply rule 3 "ADAECCDEBFAA"->""].""
+
+Therefore [1, 2, 1, 3] yields:
+ADABBBACBFAA
+ADEBABACBFAA
+ADAECCDBFAA
+ADAECCDEBFAA
+""
+Output:
+[1, 2, 1, 3]
