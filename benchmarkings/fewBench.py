@@ -5,7 +5,7 @@ from collections import deque
 def load_data():
     with open("../dataset/combined.json", "r") as f:
         input_data = json.load(f)
-    with open("../outputs/fewshot/fewshot_08.json", "r") as f:
+    with open("../outputs/fewshot/fewshot-1.4/fewshot.json", "r") as f:
         output_data = json.load(f)
     return input_data, output_data
 
