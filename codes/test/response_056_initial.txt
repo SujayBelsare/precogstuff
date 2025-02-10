@@ -1,0 +1,50 @@
+Let's analyze the problem. The initial string is "CEEAC", and the goal is to reduce it to an empty string using the given transitions.
+
+Available transitions:
+1) "AC"->"FC"
+2) "EEFC"->"CE"
+3) "C"->"CEAFBF"
+4) "CEAFBFEAFBFEAFBFCE"->""
+
+Let's try applying the transitions step by step.
+"CEEAC"
+
+1. Applying rule 1 (AC -> FC) to "CEEAC" results in "CEEFC".
+2. Applying rule 2 (EEFC -> CE) to "CEEFC" results in "CCE".
+3. Applying rule 3 (C -> CEAFBF) to "CCE" results in "CEAFBFCE".
+4. Applying rule 3 (C -> CEAFBF) to "CEAFBFCE" results in "CEAFBFCEAFBF".
+This is not leading to anywhere.
+
+Let's try a different approach. We need to get to the string "CEAFBFEAFBFEAFBFCE". So, let's try to introduce more 'C's.
+"CEEAC"
+1. Apply rule 1 "AC"->"FC" to get "CEEFC"
+2. Apply rule 2 "EEFC"->"CE" to get "CCE"
+3. Apply rule 3 "C"->"CEAFBF" to get "CEAFBFCE"
+4. Apply rule 3 "C"->"CEAFBF" to get "CEAFBFCEAFBF"
+5. Apply rule 3 "C"->"CEAFBF" to get "CEAFBFEAFBFEAFBF"
+Now we need CE at the end.
+"CEAFBFEAFBFEAFBF"
+We need to somehow put CE at the end.
+We can try to replace C to CEAFBF again.
+Let's look at the final string. "CEAFBFEAFBFEAFBFCE". This has three "EAFBF"s.
+Let's go back to "CEEAC"
+"CEEAC"
+1. Apply rule 1 "AC"->"FC" to get "CEEFC"
+2. Apply rule 2 "EEFC"->"CE" to get "CCE"
+3. Apply rule 3 "C"->"CEAFBF" to get "CEAFBFCE"
+4. Apply rule 3 "C"->"CEAFBF" to get "CEAFBFCEAFBF"
+5. Apply rule 3 "C"->"CEAFBF" to get "CEAFBFEAFBFEAFBF"
+Now we need "CE" at the end.
+
+Let's try it again.
+
+"CEEAC"
+1. Apply rule 1: "AC"->"FC"  => "CEEFC"
+2. Apply rule 2: "EEFC"->"CE" => "CCE"
+3. Apply rule 3: "C"->"CEAFBF" => "CEAFBFCE"
+4. Apply rule 3: "C"->"CEAFBF" => "CEAFBFCEAFBF"
+5. Apply rule 3: "C"->"CEAFBF" => "CEAFBFEAFBFEAFBF"
+We need to add CE to the end. This is not possible.
+
+JW HELP!
+STOP

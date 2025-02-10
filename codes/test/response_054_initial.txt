@@ -1,0 +1,85 @@
+Let's analyze the initial string "CCCBDF" and the available transitions to find a path to an empty string.
+
+The transitions are:
+1) "CCBDF"->"ADBAEA"
+2) "DB"->"ADAD"
+3) "A"->"DD"
+4) "AD"->"EFF"
+5) ""->"CB"
+6) "CBCDDEFFADAEA"->""
+
+Starting with "CCCBDF", we can apply transition 1:
+
+"CCCBDF" -> "ADBAEAC"
+
+Now we have "ADBAEAC". We need to get to "CBCDDEFFADAEA". Let's try applying rule 3 to expand all 'A's into 'DD's
+
+"ADBAEAC" -> "DDBDDDEDDC"
+
+That doesn't seem to be getting us closer. Let's go back to "ADBAEAC" and try a different approach. Let's examine what we need to create. We need "CBCDDEFFADAEA". We have "ADBAEAC".
+Let's try to create "EFF" from "AD".
+
+"ADBAEAC" -> "EFFBAEAC"
+
+Now we have "EFFBAEAC". We want to create "CBCDDEFFADAEA". We have "EFFBAEAC". This doesn't seem to be going anywhere.
+
+Let's rethink. We have the following transitions
+1) "CCBDF"->"ADBAEA"
+2) "DB"->"ADAD"
+3) "A"->"DD"
+4) "AD"->"EFF"
+5) ""->"CB"
+6) "CBCDDEFFADAEA"->""
+
+Initial string: "CCCBDF"
+
+Let's apply the first transition:
+"CCCBDF" -> "ADBAEA"
+
+Now we have "ADBAEA". We need to transform this into "CBCDDEFFADAEA".
+Let's try expanding the A's.
+"ADBAEA" -> "EFFBAEEFF"
+
+Let's focus on the final transition "CBCDDEFFADAEA"->""
+We need to create this string.
+We have "ADBAEA".
+
+Let's try applying rule 3 to all A's:
+"ADBAEA" -> "DDBDDBDDEEDD"
+
+That's getting us nowhere.
+
+Let's look at rule 4: "AD"->"EFF".
+
+"ADBAEA" -> "EFFBAEA"
+Now we need to create "CBCDDEFFADAEA" from "EFFBAEA".
+
+Let's try rule 3: "A"->"DD"
+
+"EFFBAEA" -> "EFFBDDEDD"
+
+Still nowhere. Let's go back.
+
+"ADBAEA"
+
+Let's apply rule 3 to the first A.
+
+"ADBAEA" -> "DDBBAEA"
+
+No.
+
+Let's think outside the box.
+We have "CCCBDF".
+We want "CBCDDEFFADAEA".
+We apply "CCBDF"->"ADBAEA".
+
+"CCCBDF" -> "ADBAEA"
+
+Now, we have "ADBAEA". We need to get to "CBCDDEFFADAEA".
+Let's apply rule 3 to every A.
+"ADBAEA" -> "DDBDDBDDEEDD"
+
+That's not right.
+
+JW HELP!
+STOP

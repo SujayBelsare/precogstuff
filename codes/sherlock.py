@@ -35,7 +35,7 @@ def generate_prompt(data):
 
     for iteration, item in enumerate(data, start=1):
         problem_id = item.get("problem_id")
-        if int(problem_id) < 21:
+        if int(problem_id) < 41:
             continue
         initial_string = item.get("initial_string")
         transitions = item.get("transitions", [])
@@ -170,7 +170,7 @@ def generate_prompt(data):
                 f"{problem_statement}\n"
                 "The AI's current solution attempt is:\n"
                 f"{current_solution}\n"
-                "Please provide your feedback.\n"
+                "Please provide your feedback after looking for patterns in the transitions.\n"
             )
             try:
                 feedback_response = john_session.send_message(feedback_prompt)
@@ -194,6 +194,7 @@ def generate_prompt(data):
                 "John Watson provided the following feedback:\n"
                 f"{feedback}\n"
                 "Based on this feedback, please provide an improved solution attempt.\n"
+                "Explain each and every step with full detail.\n"
                 "Output the transitions as a list (e.g., [1, 3, 1, 1, 4]).\n"
             )
 

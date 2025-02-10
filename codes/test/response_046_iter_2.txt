@@ -1,0 +1,180 @@
+I apologize. I was trapped in local optima and not exploring the state space effectively. Let's map each game state to the previous state.
+
+Target: CBFDBB
+
+Available transitions:
+1) "CDBCC"->"AA"
+2) "AA"->"FD"
+3) "FF"->"BD"
+4) "BD"->"BF"
+5) "A"->"BB"
+6) "CBFDBB"->""
+
+Initial string: "CFACDBCC"
+
+1. Apply Rule 1: CDBCC -> AA
+CFACDBCC -> CFAAA
+
+2. Apply Rule 5 to the first A: A -> BB
+CFAAA -> CFBBA
+
+3. Apply Rule 5 to the second A: A -> BB
+CFBBA -> CFBBBB
+
+That doesn't work.
+
+Let's try this:
+
+CFACDBCC
+
+1. Apply Rule 5 to the A: A -> BB
+CFACDBCC -> CFBBCDBCC
+
+2. Apply Rule 1: CDBCC -> AA
+CFBBCDBCC -> CFBBAA
+
+3. Apply Rule 5 to the first A: A -> BB
+CFBBAA -> CFBBBB
+
+This is not working.
+
+Let's start from the target.
+CBFDBB
+
+CFACDBCC
+
+1. Apply Rule 1: CDBCC -> AA
+CFACDBCC -> CFAAA
+
+2. Apply Rule 2: AA -> FD (Not Applicable)
+
+3. Apply Rule 5 to the first A: A -> BB
+CFACDBCC -> CFBBCDBCC
+
+4. Apply Rule 1: CDBCC -> AA
+CFBBCDBCC -> CFBBAA
+
+5. Apply Rule 5 to the first A: CFBBAA -> CFBBBB
+
+Nope. This is not working either.
+
+CFACDBCC
+1. Rule 5: CFACDBCC -> CFBBCDBCC
+2. Rule 1: CFBBCDBCC -> CFBBAA
+3. Rule 2: CFBBAA -> CFBFD
+
+I need to apply Rule 5 twice, but where?
+
+CFACDBCC
+1. Rule 1: CFACDBCC -> CFAAA
+2. Rule 5: CFAAA -> CFBBA
+3. Rule 5: CFBBA -> CFBBBB
+
+Let's try to think outside the box.
+If we could apply rule 5 at the end somehow.
+
+CFACDBCC
+1. Rule 5: CFACDBCC -> CFBBCDBCC
+2. Rule 1: CFBBCDBCC -> CFBBAA
+
+Okay. Let's step back.
+
+CFACDBCC
+1. Rule 1: CFACDBCC -> CFAAA
+2. Rule 5: CFBBA
+3. Rule 5: CFBBBB
+
+CFACDBCC
+
+1. Rule 1: CDBCC -> AA
+CFACDBCC -> CFAAA
+
+2. Rule 5 to A: A-> BB
+CFAAA -> CFBBA
+
+3. Rule 5 to the other A: A -> BB
+CFBBA -> CFBBBB
+
+4. Rule 5 to other A: A -> BB
+
+CFACDBCC
+1. Rule 1: CDBCC -> AA
+CFACDBCC -> CFAAA
+
+Okay, so the problem is I need to somehow get DBB.
+
+CFACDBCC
+1. Rule 1: CDBCC -> AA
+CFACDBCC -> CFAAA
+
+2. Rule 5 to first A: A -> BB
+CFAAA -> CFBBA
+
+3. Rule 2: AA -> FD, Not Applicable
+
+Let's try this:
+CFACDBCC
+1. Rule 5: CFACDBCC -> CFBBCDBCC
+2. Rule 1: CFBBCDBCC -> CFBBAA
+
+Let's try this:
+CFACDBCC
+1. Rule 5: CFACDBCC -> CFBBCDBCC
+2. Rule 1: CFBBCDBCC -> CFBBAA
+3. Rule 2: CFBBAA -> CFBFD
+
+CBFDBB
+
+CFACDBCC
+1. Rule 5: CFACDBCC -> CFBBCDBCC
+2. Rule 1: CFBBCDBCC -> CFBBAA
+3. Rule 5: CFBBAA -> CFBBBB
+4. Rule 3: Not Applicable
+5. Rule 4: Not Applicable.
+
+CFACDBCC
+1. Rule 1: CFACDBCC -> CFAAA
+2. Rule 5: CFAAA -> CFBBA
+3. Rule 5: CFBBA -> CFBBBB
+
+This is not working.
+
+CFACDBCC
+1. Rule 5: CFACDBCC -> CFBBCDBCC
+2. Rule 1: CFBBCDBCC -> CFBBAA
+3. Rule 5: CFBBAA -> CFBBBB
+
+This cannot be the correct approach.
+
+CFACDBCC
+1. Rule 1: CFACDBCC -> CFAAA
+
+Okay, I need to get DBB. The only way to get BB is from A.
+
+CFACDBCC
+1. Rule 1: CFACDBCC -> CFAAA
+2. Rule 5: CFAAA -> CFBBA
+
+3. Rule 5: CFBBA -> CFBBBB
+
+Let's try this:
+CFACDBCC
+1. Rule 5: CFACDBCC -> CFBBCDBCC
+2. Rule 1: CFBBCDBCC -> CFBBAA
+3. Rule 5: CFBBAA -> CFBBBB
+
+No.
+
+CFACDBCC
+1. Rule 5: CFACDBCC -> CFBBCDBCC
+2. Rule 1: CFBBCDBCC -> CFBBAA
+
+What if we apply rule 5 to the second A.
+CFBBAA -> CFABBB
+
+CFACDBCC
+1. Rule 1: CFACDBCC -> CFAAA
+2. Rule 5: CFAAA -> CFBBA
+
+This is not working.
+JW HELP!
