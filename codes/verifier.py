@@ -47,7 +47,7 @@ def check_all_problems(filename):
 
 
 if __name__ == "__main__":
-    filename = "../dataset/3-hard.json"
+    filename = "../test.json"
     results = check_all_problems(filename)
 
     for problem_id, result in results.items():
