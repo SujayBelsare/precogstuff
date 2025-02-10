@@ -1,0 +1,86 @@
+Okay, let's analyze the problem carefully. The goal is to transform "EEFDDBBDFDEF" into an empty string using the given transitions.
+
+Available transitions:
+1) "BDF"->"AA"
+2) "BAADE"->"EFAA"
+3) "E"->"BB"
+4) "AF"->"FC"
+5) "BBBBFDDEFAFC"->""
+
+Initial string: "EEFDDBBDFDEF"
+
+Let's apply the transitions step-by-step.
+
+1. **EEFDDBBDFDEF** -> We can apply rule 3 to the first E.
+   **BBFDDBBDFDEF**  [3]
+
+2. **BBFDDBBDFDEF** -> Apply rule 3 to the first E.
+   **BBFDDBBDFDBBDEF** [3]
+
+3. **BBFDDBBDFDBBDEF** -> Apply rule 3 to the first E.
+   **BBFDDBBDFDBBDBBDEF** [3]
+
+This seems like a dead end. Let's try a different approach. We want to create "BBBBFDDEFAFC". Let's apply rule 3 to all E's.
+
+1. **EEFDDBBDFDEF** -> Apply rule 3 to the first E.
+   **BBFDDBBDFDEF** [3]
+
+2. **BBFDDBBDFDEF** -> Apply rule 3 to the first E.
+   **BBFDDBBDFDBBDEF** [3]
+
+3. **BBFDDBBDFDBBDEF** -> Apply rule 3 to the first E.
+   **BBFDDBBDFDBBDBBDEF** [3]
+
+4. **BBFDDBBDFDBBDBBDEF** -> Apply rule 3 to the last E.
+   **BBFDDBBDFDBBDBBDBBDF** [3]
+
+5. **BBFDDBBDFDBBDBBDBBDF** -> Apply rule 3 to the first E.
+   **BBFDDBBDFDBBDBBDBBDF** [3]
+
+This doesn't seem right. Let's go back to the original string.
+
+**EEFDDBBDFDEF**
+
+Let's try to create BDF using rule 3.
+1. Apply rule 3 to the first E.
+**BBFDDBBDFDEF** [3]
+
+Now, can we create BDF? Yes, we already have it at the beginning.
+Let's try to make BDF -> AA using rule 1
+2. Apply rule 1 to "BDF"
+**BBAADDBBDFDEF** [1]
+
+Let's try to apply rule 3 to the remaining E's.
+3. Apply rule 3 to E
+**BBAADDBBDFDBBDF** [3]
+4. Apply rule 3 to E
+**BBAADDBBDFDBBDBBDF** [3]
+5. Apply rule 3 to E
+**BBAADDBBDFDBBDBBDBBDF** [3]
+
+This is not going anywhere.
+
+**EEFDDBBDFDEF**
+
+Let's try to find the occurrences of BDF.
+We have one "BDF" at index 2.
+
+1. Apply rule 1
+**EEAADBDFDEF** is incorrect
+**EEAADB** is not a substring.
+
+Let's try a different strategy.
+What if we apply rule 3 to all E's first?
+**EEFDDBBDFDEF** -> **BBBBFDDBBDFDBBDF** [3,3,3,3]
+
+Now we have multiple BDF.
+BBBBFDDBBDFDBBDF
+
+Apply rule 1 twice.
+BBBBFDDBBDFDBBDF -> BBBAADDBBDFDBBDF [1]
+BBBAADDBBDFDBBDF -> BBBAADDAADDBBDF [1]
+
+This still does not create the pattern.
+
+Let's call for help.
+JW HELP!

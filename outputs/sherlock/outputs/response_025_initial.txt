@@ -1,0 +1,133 @@
+Okay, let's analyze the problem carefully.
+
+Available transitions:
+1) "BC"->"FD"
+2) "D"->"DC"
+3) "A"->"BF"
+4) "FDCCBBFA"->""
+
+Initial string: "BCBAA"
+
+Goal: ""
+
+Let's try a few steps:
+BCBAA -> FD BAA (1)
+FDBAA -> FD BFBFA (3)
+This doesn't seem to be leading anywhere useful.
+
+Let's try another approach. We need to somehow get to "FDCCBBFA". Let's see if we can build up the string from the beginning.
+
+BCBAA -> FD BAA (1)
+BCBAA -> BC BF BF (3,3)
+BCBAA -> FD BF BF (1, 3, 3)
+
+Let's try to apply rule 3 first.
+
+BCBAA -> BC BFB F (3)
+BCBAA -> FDBF BF (1, 3)
+BCBAA -> FD BA BF (3)
+FD BAA -> FD BF BF (3)
+
+Let's work backward from the goal "FDCCBBFA". We need to get this exact string. We have the following transitions:
+"BC"->"FD"
+"D"->"DC"
+"A"->"BF"
+
+Let's try applying the rules to the initial string to match the goal string.
+BCBAA
+
+1) BC -> FD
+FD BAA
+We now have FD at the beginning. The goal has FD.
+
+2) D -> DC
+FD BAA
+We don't have any D's.
+
+3) A -> BF
+FD BAA -> FD BF BF
+
+The goal is FDCCBBFA
+
+Let's try another approach.
+We want to transform BCBAA into FDCCBBFA
+
+BCBAA
+Apply (3) twice:
+BCBFBF
+Apply (1):
+FDBFBF
+
+This doesn't seem right.
+
+Let's try to create the string backwards
+
+FDCCBBFA
+
+A -> BF, so FA -> FBF
+D -> DC so FD -> FDC
+
+BC -> FD so FD -> BC
+
+Let's think step by step.
+BCBAA
+We want to get FDCCBBFA
+
+Let's apply rule 3 twice.
+
+BCBAA -> BCBFBF
+
+Now we apply rule 1.
+
+BCBFBF -> FDBFBF
+
+This doesn't look right.
+
+Let's analyze the goal. FDCCBBFA.
+The important part is the A at the end.
+
+So the last step must be A -> BF.
+So the string before the last step must be FDCCBBF.
+
+Let's try to transform BCBAA into FDCCBBF.
+
+BCBAA -> BCBFBF (3,3)
+BCBFBF -> FDBFBF (1)
+
+This doesn't work.
+
+Let's try something else.
+BCBAA
+Apply rule 3 once:
+BCBFA
+Now, we need to get two C's, two B's, and an F before the A.
+The only way to get C is from D -> DC
+The only way to get B is from A -> BF.
+
+Let's try this order.
+
+BCBAA
+BCBFA (3)
+Let's use transition 1 on the first two characters.
+FDBFA (1)
+Now we have the FD.
+
+Let's apply rule 2 on the D
+
+FDCBFA (2)
+
+Now we need another C.
+
+FDCBFA (2)
+FDCCBFA
+Now we need another B.
+
+FDCCBFA (3)
+FDCCBBFA
+
+So the steps are:
+3, 1, 2, 2, 3
+
+Solution: [3, 1, 2, 2, 3]
+
+STOP

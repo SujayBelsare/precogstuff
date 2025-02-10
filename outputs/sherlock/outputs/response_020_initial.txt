@@ -1,0 +1,16 @@
+Okay, let's analyze the problem. The initial string is "CCBDA" and the goal is to reach an empty string using the given transitions:
+
+1) ""->"ED"
+2) "CBDA"->"AA"
+3) "EDEDEDCAA"->""
+
+It's unusual to have a transition that creates a string from an empty string (transition 1). This suggests that we might need to *add* characters strategically to enable the other transitions. Transition 3, "EDEDEDCAA"->"", looks like the main target for elimination. Transition 2, "CBDA"->"AA", seems useful in simplifying the initial string.
+
+Here's my attempt at a solution:
+
+1. **CCBDA -> CCA** (Apply transition 2 to "CBDA")
+2. **CCA**
+
+Now, we need to somehow create "EDEDEDCAA" from "CCA". This looks impossible. I'm stuck and will need John Watson's help.
+
+JW HELP!

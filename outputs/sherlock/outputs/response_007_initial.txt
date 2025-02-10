@@ -1,0 +1,13 @@
+The initial string is "AFCAE". The goal is to transform it into "".
+Available transitions:
+1) ""->"BC"
+2) "BCBCBCBCAFCAE"->""
+
+It seems impossible to directly reduce "AFCAE" to an empty string using the available transitions. The only way to get rid of it is to have "BCBCBCBCAFCAE".
+Since rule 1 adds "BC" to the string, we need to find a way to insert "BCBCBCBCAF" before "CAE".
+We need to transform "AFCAE" into "BCBCBCBCAFCAE". Then we apply rule 2.
+
+Let's analyze the difference between the initial string "AFCAE" and the target string "BCBCBCBCAFCAE".
+We need to add "BCBCBCBC" before "AFCAE". This cannot be done because Rule 1 adds "BC" *after* the current string, not before.
+
+JW HELP!

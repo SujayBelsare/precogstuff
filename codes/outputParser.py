@@ -53,7 +53,7 @@ def process_files(
 
             # Extract the numeric part from the filename to use as problem_id (padded to three digits)
             match = re.search(r"response_(\d+)\.txt", filename)
-            problem_id = str(int(match.group(1)) + 70).zfill(3) if match else "070"
+            problem_id = str(int(match.group(1))).zfill(3) if match else "000"
             # Construct a prompt. Adjust this string to instruct the model as desired.
             prompt = (
                 f"Go through the following data and parse it to find the list with final operations. Please only find the final operations and not the ones done in between. If the file says it's impossible to solve please mark correct field as false. Do not try to solve the problem yourself. Only parse it.\n"

@@ -1,0 +1,21 @@
+The goal is to transform "DFBCE" to "".
+We have two transitions:
+1) ""->"DD"
+2) "DDDDDDDDDFBCE"->""
+
+The initial string is "DFBCE". We want to reach "".
+
+The second rule can consume "DFBCE" if we have eight "D"s in front of it. The first rule allows us to add "DD" at the beginning of the string.
+
+DFBCE -> DDDFBCE -> DDDDDFBCE -> DDDDDDFBCE -> DDDDDDDDFBCE -> DDDDDDDDDDFBCE -> ""
+
+The sequence is [1, 1, 1, 1, 1, 1, 1, 2].
+
+```
+[1, 1, 1, 1, 1, 1, 1, 2]
+```
+
+Reasoning:
+The initial string is "DFBCE". The target is "". The available rules are ""->"DD" and "DDDDDDDDDFBCE"->"". We need to transform the initial string to "DDDDDDDDDFBCE". Each application of rule 1 adds "DD" to the beginning of the string. We repeatedly apply rule 1 until we have eight "D"s at the beginning of the string, which will look like "DDDDDDDDDFBCE". Then we apply rule 2 to reduce the string to "".
+
+STOP

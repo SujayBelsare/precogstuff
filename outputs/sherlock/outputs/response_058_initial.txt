@@ -1,0 +1,38 @@
+Okay, let's start.
+
+Initial string: "ECBEFABAED"
+Available transitions:
+1) "ECBEF"->"EBEB"
+2) "ED"->"FF"
+3) "ABA"->"CF"
+4) "EB"->"AB"
+5) "ABABCFFF"->""
+
+ECBEFABAED -> EBEBABAED [1]
+EBEBABAED -> ABABABAED [4]
+ABABABAED -> ABABACFED [3]
+ABABACFED -> ABABCFFED [3]
+ABABCFFED -> ABABCFFFFF [2]
+Now, I need to make it into ABABCFFF.
+
+I made a mistake. Let's try again.
+
+ECBEFABAED -> EBEBABAED [1]
+EBEBABAED -> ABABABAED [4, twice]
+ABABABAED -> ABABCFED [3]
+ABABCFFED -> ABABCFFFFF [2]
+
+I need to get to ABABCFFF.
+Let's try another approach.
+
+ECBEFABAED
+ECBEF -> EBEB. Let's apply that first.
+EBEBABAED
+EB -> AB. Let's apply that twice.
+ABABABAED
+ABA -> CF. Let's apply that twice.
+CFCFED
+This is not working.
+
+JW HELP!
+STOP

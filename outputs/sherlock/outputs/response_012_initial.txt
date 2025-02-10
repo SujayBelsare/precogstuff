@@ -1,0 +1,103 @@
+Okay, let's analyze the problem and find a solution.
+
+Initial string: "CBBEC"
+Available transitions:
+1) "BEC"->"CD"
+2) "BC"->"BB"
+3) "CBB"->"EEF"
+4) "FD"->"ED"
+5) "EEED"->""
+
+We want to reach an empty string. Let's try to apply the rules strategically.
+
+CBBEC -> Applying rule 1 is not possible.
+CBBEC -> Applying rule 2 is not possible.
+CBBEC -> Applying rule 3: CBBEC -> EEFEC
+EEFEC - > No rules apply.
+
+Let's try a different approach.
+
+CBBEC -> Try to create an FD or EEED
+CBBEC -> Applying rule 2 is not possible.
+CBBEC -> Apply rule 3: CBBEC -> EEFEC
+
+Let's try another approach.
+CBBEC -> Apply rule 1 is not possible.
+CBBEC -> Try to create BEC
+CBBEC -> Apply rule 2: CBBEC -> CB BEC is not possible.
+
+Let's try rule 3 first.
+CBBEC -> EEFEC
+
+Now, we want to get to EEED.
+
+EEFEC -> no rules possible
+
+Let's rethink. We want to get rid of the C.
+
+CBBEC ->
+If we could turn CBB into something, then we would have BEC which converts to CD.
+
+CBBEC -> EEFEC
+
+Let's try to go backwards.
+To get "", we need EEED.
+Before that, FD -> ED
+Before that, BEC -> CD
+Before that, CBB -> EEF
+Before that, BC -> BB
+
+CBBEC
+
+Apply rule 3: CBBEC -> EEFEC
+Apply rule 4 is not possible
+Apply rule 5 is not possible
+
+Let's try a different approach.
+
+We want to remove the C.
+
+CBBEC. If we apply rule 1 first:
+CBBEC is not possible.
+
+Let's try applying rule 3:
+CBBEC -> EEFEC.
+
+Now we need to somehow turn this into EEED.
+
+EEFEC. No rules applicable.
+
+Let's try a different approach.
+CBBEC
+If we apply rule 2: BC -> BB is not possible.
+If we apply rule 3: CBB -> EEF
+CBBEC -> EEFEC
+
+We want to make EEED.
+
+Let's try to make BEC using rule 2: BC -> BB is not possible.
+
+Let's apply rule 3: CBBEC -> EEFEC
+
+Let's try another approach.
+
+CBBEC
+
+Apply rule 3: CBBEC -> EEFEC
+No rules apply.
+
+Let's try to do this backwards.
+
+EEED -> ""
+FD -> ED
+BEC -> CD
+CBB -> EEF
+BC -> BB
+
+CBBEC
+
+Apply rule 3: CBBEC -> EEFEC
+No rules apply.
+
+Let's call for help.
+JW HELP!

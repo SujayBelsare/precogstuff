@@ -1,0 +1,89 @@
+Okay, let's analyze the problem. We have the following transitions:
+
+1) "FD"->"FE"
+2) "E"->"DC"
+3) "FAFDCCFE"->""
+
+Initial string: "FAFEFD"
+
+We want to transform "FAFEFD" to "". Let's try applying the rules systematically.
+
+FAFEFD -> applying rule 1 is not possible as FD is only at the end
+FAFEFD -> applying rule 2 is possible "FAFEFD" -> "FADCFEFD"
+FAFEFD -> applying rule 3 is not possible
+
+Let's try applying rule 1 first. It seems like we need to have "FD" sequence.
+
+FAFEFD -> applying rule 1 is not possible
+Let's try to make "FAFDCCFE". We can't.
+
+FAFEFD. Let's analyze the target string. It has "FA...FD...CCFE".
+We have "FA...FEFD".
+Let's try rule 1:
+FAFEFD -> No match
+
+Let's apply rule 2 to the Es.
+FAFEFD -> FADCFEFD
+FADCFEFD -> No matches
+
+Let's consider the target: FAFDCCFE -> ""
+
+If we could turn FAFEFD to FAFDCCFE, we can solve the problem.
+We need to turn E -> D and FD -> CCFE
+
+Let's try a different approach.
+
+FAFEFD
+Apply rule 2 to E:
+FADCFEFD
+No matches
+
+Let's try to create an FD next to FA:
+FAFEFD -> No.
+Let's try to create FAFDCCFE in steps.
+
+FAFEFD
+We want to get FAFDCCFE
+We already have FA...FD
+So we want to transform EF -> CCFE
+E -> DC. So we want to transform DCF -> CCFE
+
+Let's try applying rule 1 to get FE:
+FAFEFD -> No match.
+
+Let's apply rule 2 to the E's:
+FAFEFD -> FADCFEFD
+
+Let's try a different approach.
+We need to transform FAFEFD to FAFDCCFE
+FAFEFD
+1) FD -> FE
+2) E -> DC
+3) FAFDCCFE -> ""
+
+Let's try to get FAFDCCFE
+FAFEFD -> we need to make FD and CCFE.
+We have FEFD. If we apply 2, we have FADCFEFD.
+
+FAFEFD
+We want to get to FAFDCCFE
+We have FAFEFD
+We need to change the Es to get to D and CCFE.
+
+Let's try a breadth-first search approach.
+
+FAFEFD
+Rule 1: No
+Rule 2: FADCFEFD
+
+FADCFEFD
+Rule 1: FADCFEFD
+Rule 2: FADCDCCFD
+
+FADCDCCFD
+Rule 1: No
+Rule 2: No
+
+This is not leading anywhere.
+
+JW HELP!

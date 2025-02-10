@@ -1,0 +1,62 @@
+BDEEEFC
+
+1) "FC"->"BE"
+2) ""->"CB"
+3) "E"->"EF"
+4) "BBDEFEEB"->"EBBB"
+5) "BE"->"AB"
+6) "CEBBAB"->""
+
+BDEEEFC -> BDEEEBE (1)
+BDEEEBE -> BDEFEBE (3)
+BDEFEBE -> BDEFEAB (5)
+BDEFEAB -> BDEABAB (5) No, this is wrong. Let's start over.
+
+BDEEEFC -> BDEEEBE (1)
+BDEEEBE -> BDFFEEBE (3)
+BDFFEEBE -> BDFEEABE (5)
+BDFEEABE -> BDFEABAB (5) No, this is wrong. Let's start over again.
+
+BDEEEFC -> BDEEEBE (1)
+BDEEEBE -> BDFFEEBE (3)
+BDFFEEBE -> BDFFEEAB (5) This doesn't seem right either. Let's try a different approach.
+
+We want to get to "CEBBAB". Let's see what happens if we apply rule 3 multiple times in the beginning.
+
+BDEEEFC -> BDFFEEFC (3)
+BDFFEEFC -> BDFFEFBE (1) This doesn't seem helpful.
+
+Let's try something else.
+
+BDEEEFC -> BDEEEBE (1)
+BDEEEBE -> BDFFEEBE (3)
+BDFFEEBE -> BDFFEEAB (5) Not helpful.
+
+Let's try going backwards from "CEBBAB".
+CEBBAB comes from rule 6.
+To get "CEBBAB", we need to create a 'C' at the beginning. The only way to do this is to create the empty string and apply rule 2. This is a dead end.
+
+Let's examine the string "BBDEFEEB".
+The string we start with is "BDEEEFC".
+
+Let's try to make the string shorter.
+BDEEEFC -> BDEEEBE (1)
+
+Let's try to get rid of the 'F'.
+
+BDEEEFC -> BDEEEBE (1)
+BDEEEBE -> BDFFEEBE (3)
+BDFFEEBE -> BDFFEEAB (5)
+BDFFEEAB -> BDFEABAB (5)
+
+Let's try to get rid of the 'D' first.
+
+BDEEEFC -> BDEEEBE (1)
+Let's try to create "BBDEFEEB" from BDEEEBE. It seems impossible.
+
+Let's try this:
+BDEEEFC -> BDEEEBE (1)
+BDEEEBE -> EBEBBDEF (something)
+
+JW HELP!
+STOP

@@ -1,0 +1,41 @@
+Okay, John Watson is saying I need to use rule 1 strategically, even if not immediately applicable. This implies I need to use it *again*, even though I can't directly. This means I need to *create* CAFBDEC again.
+
+1. BBBCAFBDEC -> BBBFBCAFFBCA (Rule 1)
+
+We have "BBBFBCAFFBCA".
+
+Let's analyze this.
+
+We have BBBFBCAFFBCA.
+We need BFBBC at the beginning.
+
+Here is the crucial insight.
+
+1. BBBCAFBDEC -> BBBFBCAFFBCA (1)
+2. Apply BBFFB -> FEBD
+
+But we don't have BBFFB.
+
+Okay, let's rethink everything.
+
+We need to create CAFBDEC again.
+
+BBBCAFBDEC -> BBBFBCAFFBCA
+
+CAFFBCA.
+
+The goal is to get BFBBC.
+
+I see it.
+
+1. BBBCAFBDEC -> BBBFBCAFFBCA (1)
+
+Okay, the key insight is that after applying rule 1, we need to apply rule 2 (BBFFB -> FEBD). THEN, apply rule 3 (EBDCA -> FFE), and then rule 4 (FFE -> BBC) and then rule 5 (BFBBC -> "").
+
+HOWEVER, we don't have BBFFB.
+
+But we have BBBFBCAFFBCA.
+
+Let's call John Watson again.
+
+JW HELP!

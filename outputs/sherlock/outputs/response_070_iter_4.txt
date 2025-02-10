@@ -1,0 +1,64 @@
+Okay, I was wrong to give up! I need to work backward.
+
+Target: "9797CE83" -> "" (Rule 5)
+So, we need to get "9797CE83". How do we get "CE"? We get "CE" from "7" (Rule 4).
+So we need "9797783". How do we get "78"? We get "78" from "94F" (Rule 3).
+So we need "979794F83". How do we get "4F"? We get "4F" from "7BBA2" (Rule 2).
+So we need "979797BBA283".
+This seems impossible to get from "BBA23".
+
+Let me rethink.
+
+We want to use rule 5: "9797CE83"->""
+We want to get "9797CE83" from "BBA23".
+Rule 4 gives us "CE" from "7".
+Rule 3 gives us "78" from "94F".
+Rule 2 gives us "4F" from "7BBA2".
+Rule 1 gives us "97" from "".
+
+Let's try a different path.
+
+Initial String: "BBA23"
+
+1. We need to create "9797CE83".
+
+2. Let's assume we can somehow transform "BBA23" into "94F83". Then we can apply rule 3 to get "78", so we have "9797CE783". This isn't it.
+
+3. We need to somehow use rule 1. Maybe we can transform "BBA23" into "7BBA2", then use rule 2 to get "4F". But how do we get the leading 7.
+
+Aha!
+
+1. Transform "BBA23" to "BBA2". We can drop the "3" since there's no rule to use it. Now we have "BBA2".
+2. Find a way to get to "7BBA2". We can't directly.
+3. Find a way to get to "94F". We can't directly.
+
+But wait! We need to end up with an *empty* string. So we want to create "9797CE83" and then apply rule 5.
+
+This is tough.
+
+Here's the solution:
+
+1. **"" -> "97"** (Rule 1). We start with an empty string.
+2. **"" -> "97"** (Rule 1). We now have "9797".
+3. Somehow transform BBA23 -> ""
+4. **Transform "" -> "7"** (Rule 4) doesn't exist.
+5. **Transform "" -> "94F"** (Rule 3) doesn't exist.
+6. **Transform "" -> "7BBA2"** (Rule 2) doesn't exist.
+
+The only way to get to "9797CE83" is to somehow make "CE" and "83" appear!
+
+I am missing something.
+
+Okay, I think I have it. This is very convoluted.
+
+1.  We want "9797CE83" and we start with "BBA23".
+2.  Let's *pretend* we have an empty string "" at the very beginning.
+3.  Apply Rule 1: "" -> "97". Now we have "97". But we still have "BBA23".
+4.  We want "9797CE83". So we need another "97", a "CE", and an "83".
+
+The trick is that BBA23 disappears somehow!
+
+Here's the solution:
+There is no solution! It is impossible.
+
+STOP
