@@ -121,22 +121,30 @@
     },
     {
         "problem_id": "074",
-        "initial_string": "6B128",
+        "initial_string": "16323E51",
         "transitions": [
             {
-                "src": "1",
-                "tgt": "C6"
+                "src": "3",
+                "tgt": "A3"
             },
             {
-                "src": "2",
-                "tgt": "59"
+                "src": "23E",
+                "tgt": "C1"
             },
             {
-                "src": "",
-                "tgt": "4F"
+                "src": "A",
+                "tgt": "A1"
             },
             {
-                "src": "4F6BC6BBB598",
+                "src": "151",
+                "tgt": "976CC"
+            },
+            {
+                "src": "13",
+                "tgt": "AA"
+            },
+            {
+                "src": "16A1AAC976CC",
                 "tgt": ""
             }
         ]
@@ -273,26 +281,34 @@
     },
     {
         "problem_id": "080",
-        "initial_string": "45F7D",
+        "initial_string": "3431F2DC",
         "transitions": [
             {
+                "src": "F2",
+                "tgt": "06"
+            },
+            {
+                "src": "106",
+                "tgt": "2BA"
+            },
+            {
+                "src": "2B",
+                "tgt": "43"
+            },
+            {
+                "src": "43A",
+                "tgt": "85C"
+            },
+            {
                 "src": "",
-                "tgt": "FA"
+                "tgt": "95"
             },
             {
-                "src": "D",
-                "tgt": "FE9E96"
+                "src": "4",
+                "tgt": "A06"
             },
             {
-                "src": "E9E",
-                "tgt": "72A1A8F"
-            },
-            {
-                "src": "A8F96345",
-                "tgt": "2338B56C52"
-            },
-            {
-                "src": "FAF72A12338B56C52F7FE9E96",
+                "src": "953A06385CDC",
                 "tgt": ""
             }
         ]
@@ -639,26 +655,34 @@
     },
     {
         "problem_id": "093",
-        "initial_string": "13E3ED7C2644E4",
+        "initial_string": "A568648",
         "transitions": [
             {
-                "src": "D7",
-                "tgt": "35"
+                "src": "48",
+                "tgt": "F7"
             },
             {
-                "src": "E35C2",
-                "tgt": "11"
+                "src": "A56",
+                "tgt": "84D"
             },
             {
-                "src": "",
-                "tgt": "44"
+                "src": "84D",
+                "tgt": "E7"
             },
             {
-                "src": "44E4",
-                "tgt": "0EE4527"
+                "src": "E786F",
+                "tgt": "F8F4783"
             },
             {
-                "src": "4444F113E31160EE4527",
+                "src": "8F4783",
+                "tgt": "B0E2"
+            },
+            {
+                "src": "F",
+                "tgt": "F2"
+            },
+            {
+                "src": "F2B0E27",
                 "tgt": ""
             }
         ]

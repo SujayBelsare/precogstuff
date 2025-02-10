@@ -114,7 +114,7 @@ def generate_prompt(data):
         response = chat_session.send_message(prompt)
 
         # Save response to file
-        filename = f"./reasoning_hard/response_{iteration}.txt"
+        filename = f"./test/response_{iteration}.txt"
         with open(filename, "w", encoding="utf-8") as fo:
             fo.write(response.text)
 
@@ -122,7 +122,7 @@ def generate_prompt(data):
 
 
 # Read dataset from file
-dataset_path = "../dataset/3-hard.json"
+dataset_path = "../new.json"
 if not os.path.exists(dataset_path):
     raise FileNotFoundError(f"Dataset file not found: {dataset_path}")
 

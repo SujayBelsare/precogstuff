@@ -19,22 +19,26 @@
     },
     {
         "problem_id": "036",
-        "initial_string": "DEFEBB",
+        "initial_string": "CDFDF",
         "transitions": [
             {
-                "src": "EF",
-                "tgt": "FF"
+                "src": "DFDF",
+                "tgt": "EF"
             },
             {
-                "src": "B",
-                "tgt": "AB"
+                "src": "C",
+                "tgt": "DD"
             },
             {
-                "src": "F",
-                "tgt": "FC"
+                "src": "DEF",
+                "tgt": "CAFA"
             },
             {
-                "src": "DFCFEEAABB",
+                "src": "AF",
+                "tgt": "EF"
+            },
+            {
+                "src": "DDDEFA",
                 "tgt": ""
             }
         ]
@@ -461,26 +465,26 @@
     },
     {
         "problem_id": "053",
-        "initial_string": "FAEED",
+        "initial_string": "FBEEDAF",
         "transitions": [
             {
-                "src": "EE",
-                "tgt": "FE"
+                "src": "DAF",
+                "tgt": "DBC"
             },
             {
-                "src": "FED",
-                "tgt": "EAC"
+                "src": "EED",
+                "tgt": "CA"
             },
             {
-                "src": "",
-                "tgt": "CE"
+                "src": "BCA",
+                "tgt": "CBAB"
             },
             {
-                "src": "DF",
-                "tgt": "AB"
+                "src": "CBABBC",
+                "tgt": "BCA"
             },
             {
-                "src": "CEABFAEAC",
+                "src": "FCBAB",
                 "tgt": ""
             }
         ]
@@ -616,27 +620,27 @@
         ]
     },
     {
-        "problem_id": "059",
-        "initial_string": "FCCBDAFAB",
+        "problem_id": "046",
+        "initial_string": "FCFFD",
         "transitions": [
             {
-                "src": "DA",
-                "tgt": "EB"
+                "src": "FF",
+                "tgt": "CCECD"
             },
             {
-                "src": "FCCB",
-                "tgt": "CEB"
+                "src": "EC",
+                "tgt": "FF"
             },
             {
-                "src": "CEBDDFAB",
-                "tgt": "CCCDABC"
+                "src": "CFFD",
+                "tgt": "DD"
             },
             {
-                "src": "CEBBC",
-                "tgt": "ACCD"
+                "src": "CD",
+                "tgt": "DB"
             },
             {
-                "src": "CCACCD",
+                "src": "FDBBDD",
                 "tgt": ""
             }
         ]

@@ -56,6 +56,12 @@ def makerFunction(
 
         source: str = current[left : right + 1]
 
+        while source in rules:
+            left = random.randint(0, n - 1)
+            right = int(random.gauss(left, 4))
+            left, right = sorted((left, right))
+            source = current[left : right + 1]
+
         # want to reduce the length by each replacement, but not by too much and not consistently.
         meanLength = max(len(source) - 1, 1)
         stdDev = ruleReplaceDifference
@@ -92,7 +98,7 @@ def decideParameters(iteration: int) -> Tuple[int, int, float, int]:
 if __name__ == "__main__":
     results = []
     start: int = 0
-    end: int = 5
+    end: int = 100
 
     for i in range(start, end):
         startLen, maxSteps, ruleReuseProbability, ruleReplaceDifference = (
