@@ -620,7 +620,7 @@
         ]
     },
     {
-        "problem_id": "046",
+        "problem_id": "059",
         "initial_string": "FCFFD",
         "transitions": [
             {
