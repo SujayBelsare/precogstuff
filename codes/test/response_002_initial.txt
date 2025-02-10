@@ -1,0 +1,14 @@
+The initial string is "EBDDB". The goal is to transform it to "".
+
+Available transitions:
+1) ""->"BF"
+2) "BFBFBFBFEBDDB"->""
+
+The only transition that can directly affect the string is transition 2, but it requires the string to be "BFBFBFBFEBDDB". Since the initial string is "EBDDB", we need to add "BFBFBFBFE" to the beginning of the string, or replace "E" with it.
+
+The only transition that can add characters to the string is transition 1, which adds "BF". However, this transition can only be applied to an empty string. This means it is useless, and we need to find a different approach.
+
+Let's try to think backwards. We want to get "BFBFBFBFEBDDB". We currently have "EBDDB". We need to insert "BFBFBFBF" before the "E". Since we can only apply transition 1 to the empty string, this is impossible.
+
+Let's call for help.
+JW HELP!

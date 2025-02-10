@@ -1,0 +1,39 @@
+Okay, let's analyze the problem.
+
+Initial string: "EDDAC"
+Available transitions:
+1) "EDDA"->"FF"
+2) "C"->"CD"
+3) "FFCDDD"->""
+
+We want to reach an empty string. The only transition that leads to an empty string is rule 3: "FFCDDD"->""
+
+So, we need to somehow transform "EDDAC" into "FFCDDD".
+
+Let's try applying the rules sequentially.
+1. "EDDAC" -> Apply rule 1 (EDDA -> FF): "FFC"
+2. "FFC" -> Apply rule 2 (C -> CD): "FFCD"
+
+Now we have "FFCD". We want "FFCDDD". We can add the "DD" using rule 2. However, rule 2 only changes a 'C' to 'CD', and we don't have any more 'C's.
+
+A different approach is needed. Let's try to reason backward.
+We want to get to "FFCDDD". To get there, we can apply rules 1 and 2.
+We have "EDDAC".
+Apply rule 2 to "EDDAC": "EDDACD"
+Apply rule 1 to "EDDACD" to get FF... doesn't work.
+
+Let's revisit the initial attempt.
+"EDDAC"
+1. Apply rule 1: "EDDA"->"FF": "FFC"
+2. Apply rule 2: "C"->"CD": "FFCD"
+We need "FFCDDD".
+
+Let's try applying rule 2 first.
+"EDDAC"
+1. Apply rule 2: "C"->"CD": "EDDACD"
+Now we have "EDDACD". We want an "EDDA" substring. We have it.
+2. Apply rule 1: "EDDA"->"FF": "FFCD"
+Now we have "FFCD". We want "FFCDDD". We are missing "DD".
+We can't use rule 2 anymore, because we don't have a "C".
+
+JW HELP!
