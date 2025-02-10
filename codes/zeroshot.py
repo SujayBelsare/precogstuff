@@ -3,7 +3,6 @@ import os
 import time
 import google.generativeai as genai
 
-# Configure API Key safely
 api_key = "AIzaSyB2-7zMkGOvUyhik4XfPspk671FwmelP5c"
 if not api_key:
     raise ValueError(

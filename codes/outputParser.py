@@ -41,9 +41,6 @@ def process_files(
         generation_config=generation_config,
     )
 
-    # Start a chat session
-
-    # List to store output for each file
     results = []
 
     # Loop over all files matching the pattern response_*.txt in the input folder
@@ -86,6 +83,5 @@ def process_files(
     print(f"Results written to {output_file}")
 
 
-# To run the processing function
 if __name__ == "__main__":
     process_files()

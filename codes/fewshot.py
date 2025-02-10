@@ -40,7 +40,6 @@ def generate_prompt(data):
         initial_string = item["initial_string"]
         transitions = item["transitions"]
 
-        # Format transitions into numbered list
         transition_list = [
             f'{i}) "{trans["src"]}"->"{trans["tgt"]}"'
             for i, trans in enumerate(transitions, start=1)
