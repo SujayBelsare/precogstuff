@@ -35,6 +35,8 @@ def generate_prompt(data):
 
     for iteration, item in enumerate(data, start=1):
         problem_id = item.get("problem_id")
+        if int(problem_id) < 14:
+            continue
         initial_string = item.get("initial_string")
         transitions = item.get("transitions", [])
 
