@@ -1,0 +1,26 @@
+Okay, let's solve the Sed Puzzle Game problem.
+
+Initial string: "FECEA"
+Available transitions:
+1) "FEC"->"BC"
+2) "EA"->"FB"
+3) "BCF"->"FD"
+4) "FD"->"BA"
+5) "BAB"->""
+
+Step 1: Apply transition 1 to "FECEA".  "FEC" is at the beginning.
+FECEA -> BCEA
+
+Step 2: Apply transition 2 to "BCEA". "EA" is present.
+BCEA -> BCFB
+
+Step 3: Apply transition 3 to "BCFB". "BCF" is at the beginning.
+BCFB -> FDB
+
+Step 4: Apply transition 4 to "FDB". "FD" is present.
+FDB -> BAB
+
+Step 5: Apply transition 5 to "BAB". "BAB" is present.
+BAB -> ""
+
+Solution: [1, 2, 3, 4, 5]

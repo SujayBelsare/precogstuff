@@ -6,9 +6,7 @@ from google.ai.generativelanguage_v1beta.types import content
 import time
 
 
-def process_files(
-    input_folder="../outputs/reasoning/reasoning_hard", output_file="reasoning2.json"
-):
+def process_files(input_folder="./test", output_file="fewshot_08.json"):
     # Configure Gemini API key (make sure GEMINI_API_KEY is set in your environment)
     genai.configure(api_key="AIzaSyB2-7zMkGOvUyhik4XfPspk671FwmelP5c")
 

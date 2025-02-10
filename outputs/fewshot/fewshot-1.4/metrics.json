@@ -1,0 +1,3678 @@
+[
+    {
+        "initial_string": "FAFEFD",
+        "initial_length": 6,
+        "steps": [
+            {
+                "current_string": "FAFEFD",
+                "move": 1,
+                "applied_transition": {
+                    "src": "FD",
+                    "tgt": "FE"
+                },
+                "result_string": "FAFEFE"
+            },
+            {
+                "current_string": "FAFEFE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "E",
+                    "tgt": "DC"
+                },
+                "result_string": "FAFDCFE"
+            },
+            {
+                "current_string": "FAFDCFE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "E",
+                    "tgt": "DC"
+                },
+                "result_string": "FAFDCFDC"
+            },
+            {
+                "current_string": "FAFDCFDC",
+                "move": 3,
+                "error": "Transition 3 (src='FAFDCCFE') cannot be applied to 'FAFDCFDC'."
+            }
+        ],
+        "final_string": "FAFDCFDC",
+        "final_length": 8,
+        "reduction": -2,
+        "correct_moves_count": 3,
+        "total_moves": 4,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "006"
+    },
+    {
+        "initial_string": "EDDAC",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "EDDAC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "EDDA",
+                    "tgt": "FF"
+                },
+                "result_string": "FFC"
+            },
+            {
+                "current_string": "FFC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "CD"
+                },
+                "result_string": "FFCD"
+            },
+            {
+                "current_string": "FFCD",
+                "move": 2,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "CD"
+                },
+                "result_string": "FFCDD"
+            },
+            {
+                "current_string": "FFCDD",
+                "move": 2,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "CD"
+                },
+                "result_string": "FFCDDD"
+            },
+            {
+                "current_string": "FFCDDD",
+                "move": 3,
+                "applied_transition": {
+                    "src": "FFCDDD",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 5,
+        "correct_moves_count": 5,
+        "total_moves": 5,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "001"
+    },
+    {
+        "initial_string": "BADDFD",
+        "initial_length": 6,
+        "steps": [
+            {
+                "current_string": "BADDFD",
+                "move": 1,
+                "applied_transition": {
+                    "src": "DDFD",
+                    "tgt": "ECA"
+                },
+                "result_string": "BAECA"
+            },
+            {
+                "current_string": "BAECA",
+                "move": 2,
+                "applied_transition": {
+                    "src": "CA",
+                    "tgt": "FA"
+                },
+                "result_string": "BAEFA"
+            },
+            {
+                "current_string": "BAEFA",
+                "move": 3,
+                "applied_transition": {
+                    "src": "BAEF",
+                    "tgt": "FDA"
+                },
+                "result_string": "FDAA"
+            }
+        ],
+        "final_string": "FDAA",
+        "final_length": 4,
+        "reduction": 2,
+        "correct_moves_count": 3,
+        "total_moves": 3,
+        "valid": false,
+        "bfs_distance": 2,
+        "problem_id": "011"
+    },
+    {
+        "initial_string": "BCEEF",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "BCEEF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "CEEF",
+                    "tgt": "AC"
+                },
+                "result_string": "BAC"
+            }
+        ],
+        "final_string": "BAC",
+        "final_length": 3,
+        "reduction": 2,
+        "correct_moves_count": 1,
+        "total_moves": 1,
+        "valid": false,
+        "bfs_distance": 4,
+        "problem_id": "028"
+    },
+    {
+        "initial_string": "EDCBE",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "EDCBE",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "004"
+    },
+    {
+        "initial_string": "BDACCEFEFBD",
+        "initial_length": 11,
+        "steps": [
+            {
+                "current_string": "BDACCEFEFBD",
+                "move": 1,
+                "applied_transition": {
+                    "src": "EFEFBD",
+                    "tgt": "DDBD"
+                },
+                "result_string": "BDACCDDBD"
+            },
+            {
+                "current_string": "BDACCDDBD",
+                "move": 2,
+                "applied_transition": {
+                    "src": "D",
+                    "tgt": "AE"
+                },
+                "result_string": "BAEACCDDBD"
+            },
+            {
+                "current_string": "BAEACCDDBD",
+                "move": 2,
+                "applied_transition": {
+                    "src": "D",
+                    "tgt": "AE"
+                },
+                "result_string": "BAEACCAEDBD"
+            },
+            {
+                "current_string": "BAEACCAEDBD",
+                "move": 2,
+                "applied_transition": {
+                    "src": "D",
+                    "tgt": "AE"
+                },
+                "result_string": "BAEACCAEAEBD"
+            },
+            {
+                "current_string": "BAEACCAEAEBD",
+                "move": 3,
+                "applied_transition": {
+                    "src": "BAEACCAEAEBD",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 11,
+        "correct_moves_count": 5,
+        "total_moves": 5,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "005"
+    },
+    {
+        "initial_string": "BCECE",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "BCECE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "BB"
+                },
+                "result_string": "BBBCECE"
+            },
+            {
+                "current_string": "BBBCECE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "BB"
+                },
+                "result_string": "BBBBBCECE"
+            },
+            {
+                "current_string": "BBBBBCECE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "BB"
+                },
+                "result_string": "BBBBBBBCECE"
+            },
+            {
+                "current_string": "BBBBBBBCECE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "BB"
+                },
+                "result_string": "BBBBBBBBBCECE"
+            },
+            {
+                "current_string": "BBBBBBBBBCECE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "BB"
+                },
+                "result_string": "BBBBBBBBBBBCECE"
+            },
+            {
+                "current_string": "BBBBBBBBBBBCECE",
+                "move": 1,
+                "applied_transition": {
+                    "src": "ECE",
+                    "tgt": "EA"
+                },
+                "result_string": "BBBBBBBBBBBCEA"
+            },
+            {
+                "current_string": "BBBBBBBBBBBCEA",
+                "move": 3,
+                "applied_transition": {
+                    "src": "BBBBBBBCEA",
+                    "tgt": ""
+                },
+                "result_string": "BBBB"
+            }
+        ],
+        "final_string": "BBBB",
+        "final_length": 4,
+        "reduction": 1,
+        "correct_moves_count": 7,
+        "total_moves": 7,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "016"
+    },
+    {
+        "initial_string": "DBFACCE",
+        "initial_length": 7,
+        "steps": [
+            {
+                "current_string": "DBFACCE",
+                "move": 1,
+                "applied_transition": {
+                    "src": "FA",
+                    "tgt": "BD"
+                },
+                "result_string": "DBBDCCE"
+            },
+            {
+                "current_string": "DBBDCCE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "EB"
+                },
+                "result_string": "EBDBBDCCE"
+            },
+            {
+                "current_string": "EBDBBDCCE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "EB"
+                },
+                "result_string": "EBEBDBBDCCE"
+            },
+            {
+                "current_string": "EBEBDBBDCCE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "EB"
+                },
+                "result_string": "EBEBEBDBBDCCE"
+            },
+            {
+                "current_string": "EBEBEBDBBDCCE",
+                "move": 3,
+                "applied_transition": {
+                    "src": "EBEBEBDBBDCCE",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 7,
+        "correct_moves_count": 5,
+        "total_moves": 5,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "018"
+    },
+    {
+        "initial_string": "CBBEC",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "CBBEC",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "013"
+    },
+    {
+        "initial_string": "ADABBBACBFAA",
+        "initial_length": 12,
+        "steps": [
+            {
+                "current_string": "ADABBBACBFAA",
+                "move": 3,
+                "error": "Transition 3 (src='ADAECCDEBFAA') cannot be applied to 'ADABBBACBFAA'."
+            }
+        ],
+        "final_string": "ADABBBACBFAA",
+        "final_length": 12,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 1,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "031"
+    },
+    {
+        "initial_string": "BCCBDDEC",
+        "initial_length": 8,
+        "steps": [],
+        "final_string": "BCCBDDEC",
+        "final_length": 8,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "007"
+    },
+    {
+        "initial_string": "AEAAD",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "AEAAD",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "017"
+    },
+    {
+        "initial_string": "ADDFD",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "ADDFD",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "014"
+    },
+    {
+        "initial_string": "BACECFFAA",
+        "initial_length": 9,
+        "steps": [],
+        "final_string": "BACECFFAA",
+        "final_length": 9,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "010"
+    },
+    {
+        "initial_string": "ABBFAEABF",
+        "initial_length": 9,
+        "steps": [
+            {
+                "current_string": "ABBFAEABF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "A",
+                    "tgt": "EF"
+                },
+                "result_string": "EFBBFAEABF"
+            },
+            {
+                "current_string": "EFBBFAEABF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "A",
+                    "tgt": "EF"
+                },
+                "result_string": "EFBBFEFEABF"
+            },
+            {
+                "current_string": "EFBBFEFEABF",
+                "move": 3,
+                "error": "Transition 3 (src='EFBBFEFFEFBF') cannot be applied to 'EFBBFEFEABF'."
+            }
+        ],
+        "final_string": "EFBBFEFEABF",
+        "final_length": 11,
+        "reduction": -2,
+        "correct_moves_count": 2,
+        "total_moves": 3,
+        "valid": false,
+        "bfs_distance": 3,
+        "problem_id": "033"
+    },
+    {
+        "initial_string": "BBBCAFBDEC",
+        "initial_length": 10,
+        "steps": [
+            {
+                "current_string": "BBBCAFBDEC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "CAFBDEC",
+                    "tgt": "FFBCA"
+                },
+                "result_string": "BBBFFBCA"
+            },
+            {
+                "current_string": "BBBFFBCA",
+                "move": 2,
+                "applied_transition": {
+                    "src": "BBFFB",
+                    "tgt": "FEBD"
+                },
+                "result_string": "BFEBDCA"
+            },
+            {
+                "current_string": "BFEBDCA",
+                "move": 3,
+                "applied_transition": {
+                    "src": "EBDCA",
+                    "tgt": "FFE"
+                },
+                "result_string": "BFFFE"
+            },
+            {
+                "current_string": "BFFFE",
+                "move": 4,
+                "applied_transition": {
+                    "src": "FFE",
+                    "tgt": "BBC"
+                },
+                "result_string": "BFBBC"
+            },
+            {
+                "current_string": "BFBBC",
+                "move": 5,
+                "applied_transition": {
+                    "src": "BFBBC",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 10,
+        "correct_moves_count": 5,
+        "total_moves": 5,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "034"
+    },
+    {
+        "initial_string": "EDFDDBECF",
+        "initial_length": 9,
+        "steps": [],
+        "final_string": "EDFDDBECF",
+        "final_length": 9,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "024"
+    },
+    {
+        "initial_string": "DFBCE",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "DFBCE",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "032"
+    },
+    {
+        "initial_string": "BCBAA",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "BCBAA",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "026"
+    },
+    {
+        "initial_string": "CCBDA",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "CCBDA",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "021"
+    },
+    {
+        "initial_string": "BCCFEEFC",
+        "initial_length": 8,
+        "steps": [
+            {
+                "current_string": "BCCFEEFC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "CCFEE",
+                    "tgt": "ABBE"
+                },
+                "result_string": "BABBEFC"
+            },
+            {
+                "current_string": "BABBEFC",
+                "move": 4,
+                "applied_transition": {
+                    "src": "EF",
+                    "tgt": "CD"
+                },
+                "result_string": "BABBCDC"
+            },
+            {
+                "current_string": "BABBCDC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "BAB",
+                    "tgt": "AAE"
+                },
+                "result_string": "AAEBCDC"
+            },
+            {
+                "current_string": "AAEBCDC",
+                "move": 3,
+                "applied_transition": {
+                    "src": "AAEB",
+                    "tgt": "FD"
+                },
+                "result_string": "FDCDC"
+            },
+            {
+                "current_string": "FDCDC",
+                "move": 5,
+                "applied_transition": {
+                    "src": "FDCDC",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 8,
+        "correct_moves_count": 5,
+        "total_moves": 5,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "012"
+    },
+    {
+        "initial_string": "ACDBC",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "ACDBC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "CDB",
+                    "tgt": "DD"
+                },
+                "result_string": "ADDC"
+            },
+            {
+                "current_string": "ADDC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "D",
+                    "tgt": "DA"
+                },
+                "result_string": "ADADC"
+            },
+            {
+                "current_string": "ADADC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "D",
+                    "tgt": "DA"
+                },
+                "result_string": "ADAADC"
+            },
+            {
+                "current_string": "ADAADC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "D",
+                    "tgt": "DA"
+                },
+                "result_string": "ADAAADC"
+            },
+            {
+                "current_string": "ADAAADC",
+                "move": 3,
+                "applied_transition": {
+                    "src": "ADAAADC",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 5,
+        "correct_moves_count": 5,
+        "total_moves": 5,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "019"
+    },
+    {
+        "initial_string": "BEDFE",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "BEDFE",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "030"
+    },
+    {
+        "initial_string": "FABFF",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "FABFF",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "035"
+    },
+    {
+        "initial_string": "DAABCCB",
+        "initial_length": 7,
+        "steps": [],
+        "final_string": "DAABCCB",
+        "final_length": 7,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "022"
+    },
+    {
+        "initial_string": "CADF",
+        "initial_length": 4,
+        "steps": [
+            {
+                "current_string": "CADF",
+                "move": 1,
+                "error": "Transition 1 (src='DBB') cannot be applied to 'CADF'."
+            }
+        ],
+        "final_string": "CADF",
+        "final_length": 4,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 5,
+        "valid": false,
+        "bfs_distance": 4,
+        "problem_id": "002"
+    },
+    {
+        "initial_string": "DEDCE",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "DEDCE",
+                "move": 3,
+                "applied_transition": {
+                    "src": "E",
+                    "tgt": "AF"
+                },
+                "result_string": "DAFDCE"
+            }
+        ],
+        "final_string": "DAFDCE",
+        "final_length": 6,
+        "reduction": -1,
+        "correct_moves_count": 1,
+        "total_moves": 1,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "020"
+    },
+    {
+        "initial_string": "EBDDB",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "EBDDB",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "003"
+    },
+    {
+        "initial_string": "DAFBA",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "DAFBA",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "015"
+    },
+    {
+        "initial_string": "FFADA",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "FFADA",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "025"
+    },
+    {
+        "initial_string": "FDBEF",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "FDBEF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "DBEF",
+                    "tgt": "FFB"
+                },
+                "result_string": "FFFB"
+            },
+            {
+                "current_string": "FFFB",
+                "move": 2,
+                "applied_transition": {
+                    "src": "FF",
+                    "tgt": "EE"
+                },
+                "result_string": "EEFB"
+            },
+            {
+                "current_string": "EEFB",
+                "move": 3,
+                "applied_transition": {
+                    "src": "B",
+                    "tgt": "CB"
+                },
+                "result_string": "EEFCB"
+            },
+            {
+                "current_string": "EEFCB",
+                "move": 3,
+                "applied_transition": {
+                    "src": "B",
+                    "tgt": "CB"
+                },
+                "result_string": "EEFCCB"
+            },
+            {
+                "current_string": "EEFCCB",
+                "move": 4,
+                "applied_transition": {
+                    "src": "EEFCCB",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 5,
+        "correct_moves_count": 5,
+        "total_moves": 5,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "009"
+    },
+    {
+        "initial_string": "AFCAE",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "AFCAE",
+                "move": 2,
+                "error": "Transition 2 (src='BCBCBCBCAFCAE') cannot be applied to 'AFCAE'."
+            }
+        ],
+        "final_string": "AFCAE",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 1,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "008"
+    },
+    {
+        "initial_string": "FECEA",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "FECEA",
+                "move": 1,
+                "applied_transition": {
+                    "src": "FEC",
+                    "tgt": "BC"
+                },
+                "result_string": "BCEA"
+            },
+            {
+                "current_string": "BCEA",
+                "move": 2,
+                "applied_transition": {
+                    "src": "EA",
+                    "tgt": "FB"
+                },
+                "result_string": "BCFB"
+            },
+            {
+                "current_string": "BCFB",
+                "move": 3,
+                "applied_transition": {
+                    "src": "BCF",
+                    "tgt": "FD"
+                },
+                "result_string": "FDB"
+            },
+            {
+                "current_string": "FDB",
+                "move": 4,
+                "applied_transition": {
+                    "src": "FD",
+                    "tgt": "BA"
+                },
+                "result_string": "BAB"
+            },
+            {
+                "current_string": "BAB",
+                "move": 5,
+                "applied_transition": {
+                    "src": "BAB",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 5,
+        "correct_moves_count": 5,
+        "total_moves": 5,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "029"
+    },
+    {
+        "initial_string": "BBEDF",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "BBEDF",
+                "move": 2,
+                "error": "Transition 2 (src='BBF') cannot be applied to 'BBEDF'."
+            }
+        ],
+        "final_string": "BBEDF",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 4,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "023"
+    },
+    {
+        "initial_string": "EDDEBADCFFCFAC",
+        "initial_length": 14,
+        "steps": [],
+        "final_string": "EDDEBADCFFCFAC",
+        "final_length": 14,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 5,
+        "problem_id": "027"
+    },
+    {
+        "initial_string": "DFDDACBEC",
+        "initial_length": 9,
+        "steps": [
+            {
+                "current_string": "DFDDACBEC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "CBEC",
+                    "tgt": "CB"
+                },
+                "result_string": "DFDDACB"
+            },
+            {
+                "current_string": "DFDDACB",
+                "move": 1,
+                "applied_transition": {
+                    "src": "DFDD",
+                    "tgt": "BEA"
+                },
+                "result_string": "BEAACB"
+            }
+        ],
+        "final_string": "BEAACB",
+        "final_length": 6,
+        "reduction": 3,
+        "correct_moves_count": 2,
+        "total_moves": 2,
+        "valid": false,
+        "bfs_distance": 4,
+        "problem_id": "041"
+    },
+    {
+        "initial_string": "DBFFA",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "DBFFA",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "036"
+    },
+    {
+        "initial_string": "EBAEACBFFEDBC",
+        "initial_length": 13,
+        "steps": [
+            {
+                "current_string": "EBAEACBFFEDBC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "DF"
+                },
+                "result_string": "EBAEADFBFFEDBC"
+            },
+            {
+                "current_string": "EBAEADFBFFEDBC",
+                "move": 4,
+                "applied_transition": {
+                    "src": "DF",
+                    "tgt": "DC"
+                },
+                "result_string": "EBAEADCBFFEDBC"
+            },
+            {
+                "current_string": "EBAEADCBFFEDBC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "DF"
+                },
+                "result_string": "EBAEADDFBFFEDBC"
+            },
+            {
+                "current_string": "EBAEADDFBFFEDBC",
+                "move": 4,
+                "applied_transition": {
+                    "src": "DF",
+                    "tgt": "DC"
+                },
+                "result_string": "EBAEADDCBFFEDBC"
+            },
+            {
+                "current_string": "EBAEADDCBFFEDBC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "DF"
+                },
+                "result_string": "EBAEADDDFBFFEDBC"
+            },
+            {
+                "current_string": "EBAEADDDFBFFEDBC",
+                "move": 4,
+                "applied_transition": {
+                    "src": "DF",
+                    "tgt": "DC"
+                },
+                "result_string": "EBAEADDDCBFFEDBC"
+            },
+            {
+                "current_string": "EBAEADDDCBFFEDBC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "DF"
+                },
+                "result_string": "EBAEADDDDFBFFEDBC"
+            },
+            {
+                "current_string": "EBAEADDDDFBFFEDBC",
+                "move": 4,
+                "applied_transition": {
+                    "src": "DF",
+                    "tgt": "DC"
+                },
+                "result_string": "EBAEADDDDCBFFEDBC"
+            },
+            {
+                "current_string": "EBAEADDDDCBFFEDBC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "DF"
+                },
+                "result_string": "EBAEADDDDDFBFFEDBC"
+            },
+            {
+                "current_string": "EBAEADDDDDFBFFEDBC",
+                "move": 5,
+                "error": "Transition 5 (src='FDCDFBFFAAF') cannot be applied to 'EBAEADDDDDFBFFEDBC'."
+            }
+        ],
+        "final_string": "EBAEADDDDDFBFFEDBC",
+        "final_length": 18,
+        "reduction": -5,
+        "correct_moves_count": 9,
+        "total_moves": 10,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "046"
+    },
+    {
+        "initial_string": "ABEBC",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "ABEBC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "EBC",
+                    "tgt": "CCA"
+                },
+                "result_string": "ABCCA"
+            },
+            {
+                "current_string": "ABCCA",
+                "move": 2,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "FD"
+                },
+                "result_string": "ABFDCA"
+            },
+            {
+                "current_string": "ABFDCA",
+                "move": 2,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "FD"
+                },
+                "result_string": "ABFDFDA"
+            },
+            {
+                "current_string": "ABFDFDA",
+                "move": 4,
+                "error": "Transition 4 (src='FFDFDA') cannot be applied to 'ABFDFDA'."
+            }
+        ],
+        "final_string": "ABFDFDA",
+        "final_length": 7,
+        "reduction": -2,
+        "correct_moves_count": 3,
+        "total_moves": 4,
+        "valid": false,
+        "bfs_distance": 3,
+        "problem_id": "063"
+    },
+    {
+        "initial_string": "EADCF",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "EADCF",
+                "move": 3,
+                "applied_transition": {
+                    "src": "EA",
+                    "tgt": "BF"
+                },
+                "result_string": "BFDCF"
+            },
+            {
+                "current_string": "BFDCF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "F",
+                    "tgt": "EA"
+                },
+                "result_string": "BEADCF"
+            },
+            {
+                "current_string": "BEADCF",
+                "move": 3,
+                "applied_transition": {
+                    "src": "EA",
+                    "tgt": "BF"
+                },
+                "result_string": "BBFDCF"
+            },
+            {
+                "current_string": "BBFDCF",
+                "move": 5,
+                "error": "Transition 5 (src='BCDEABCBD') cannot be applied to 'BBFDCF'."
+            }
+        ],
+        "final_string": "BBFDCF",
+        "final_length": 6,
+        "reduction": -1,
+        "correct_moves_count": 3,
+        "total_moves": 4,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "039"
+    },
+    {
+        "initial_string": "EEDCEFDDD",
+        "initial_length": 9,
+        "steps": [],
+        "final_string": "EEDCEFDDD",
+        "final_length": 9,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "040"
+    },
+    {
+        "initial_string": "CFBEE",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "CFBEE",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "051"
+    },
+    {
+        "initial_string": "ACDFDEBABBCBCFFDDF",
+        "initial_length": 18,
+        "steps": [],
+        "final_string": "ACDFDEBABBCBCFFDDF",
+        "final_length": 18,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "053"
+    },
+    {
+        "initial_string": "BCFCE",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "BCFCE",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "048"
+    },
+    {
+        "initial_string": "EEFDDBBDFDEF",
+        "initial_length": 12,
+        "steps": [],
+        "final_string": "EEFDDBBDFDEF",
+        "final_length": 12,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "066"
+    },
+    {
+        "initial_string": "BFCCA",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "BFCCA",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "042"
+    },
+    {
+        "initial_string": "BDEEEFC",
+        "initial_length": 7,
+        "steps": [],
+        "final_string": "BDEEEFC",
+        "final_length": 7,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "052"
+    },
+    {
+        "initial_string": "FEBDADEFB",
+        "initial_length": 9,
+        "steps": [
+            {
+                "current_string": "FEBDADEFB",
+                "move": 1,
+                "applied_transition": {
+                    "src": "FE",
+                    "tgt": "AC"
+                },
+                "result_string": "ACBDADEFB"
+            },
+            {
+                "current_string": "ACBDADEFB",
+                "move": 2,
+                "applied_transition": {
+                    "src": "ADE",
+                    "tgt": "DCAE"
+                },
+                "result_string": "ACBDDCAEFB"
+            },
+            {
+                "current_string": "ACBDDCAEFB",
+                "move": 5,
+                "error": "Transition 5 (src='DE') cannot be applied to 'ACBDDCAEFB'."
+            }
+        ],
+        "final_string": "ACBDDCAEFB",
+        "final_length": 10,
+        "reduction": -1,
+        "correct_moves_count": 2,
+        "total_moves": 4,
+        "valid": false,
+        "bfs_distance": 4,
+        "problem_id": "049"
+    },
+    {
+        "initial_string": "BCBADDCC",
+        "initial_length": 8,
+        "steps": [
+            {
+                "current_string": "BCBADDCC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "A",
+                    "tgt": "DF"
+                },
+                "result_string": "BCBDFDDCC"
+            },
+            {
+                "current_string": "BCBDFDDCC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "DDC",
+                    "tgt": "ED"
+                },
+                "result_string": "BCBDFEDC"
+            },
+            {
+                "current_string": "BCBDFEDC",
+                "move": 3,
+                "applied_transition": {
+                    "src": "BCBDFEDC",
+                    "tgt": "BECF"
+                },
+                "result_string": "BECF"
+            },
+            {
+                "current_string": "BECF",
+                "move": 4,
+                "applied_transition": {
+                    "src": "F",
+                    "tgt": "FD"
+                },
+                "result_string": "BECFD"
+            },
+            {
+                "current_string": "BECFD",
+                "move": 4,
+                "applied_transition": {
+                    "src": "F",
+                    "tgt": "FD"
+                },
+                "result_string": "BECFDD"
+            },
+            {
+                "current_string": "BECFDD",
+                "move": 5,
+                "applied_transition": {
+                    "src": "BECFDD",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 8,
+        "correct_moves_count": 6,
+        "total_moves": 6,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "045"
+    },
+    {
+        "initial_string": "CEEDDDCCBBEA",
+        "initial_length": 12,
+        "steps": [],
+        "final_string": "CEEDDDCCBBEA",
+        "final_length": 12,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "068"
+    },
+    {
+        "initial_string": "DFEEFDECFDCABBA",
+        "initial_length": 15,
+        "steps": [],
+        "final_string": "DFEEFDECFDCABBA",
+        "final_length": 15,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "069"
+    },
+    {
+        "initial_string": "ECBEFABAED",
+        "initial_length": 10,
+        "steps": [
+            {
+                "current_string": "ECBEFABAED",
+                "move": 1,
+                "applied_transition": {
+                    "src": "ECBEF",
+                    "tgt": "EBEB"
+                },
+                "result_string": "EBEBABAED"
+            },
+            {
+                "current_string": "EBEBABAED",
+                "move": 3,
+                "applied_transition": {
+                    "src": "ABA",
+                    "tgt": "CF"
+                },
+                "result_string": "EBEBCFED"
+            },
+            {
+                "current_string": "EBEBCFED",
+                "move": 2,
+                "applied_transition": {
+                    "src": "ED",
+                    "tgt": "FF"
+                },
+                "result_string": "EBEBCFFF"
+            },
+            {
+                "current_string": "EBEBCFFF",
+                "move": 4,
+                "applied_transition": {
+                    "src": "EB",
+                    "tgt": "AB"
+                },
+                "result_string": "ABEBCFFF"
+            },
+            {
+                "current_string": "ABEBCFFF",
+                "move": 5,
+                "error": "Transition 5 (src='ABABCFFF') cannot be applied to 'ABEBCFFF'."
+            }
+        ],
+        "final_string": "ABEBCFFF",
+        "final_length": 8,
+        "reduction": 2,
+        "correct_moves_count": 4,
+        "total_moves": 5,
+        "valid": false,
+        "bfs_distance": 2,
+        "problem_id": "059"
+    },
+    {
+        "initial_string": "CDEEF",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "CDEEF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "DEE",
+                    "tgt": "DAC"
+                },
+                "result_string": "CDACF"
+            },
+            {
+                "current_string": "CDACF",
+                "move": 2,
+                "applied_transition": {
+                    "src": "CF",
+                    "tgt": "FAB"
+                },
+                "result_string": "CDAFAB"
+            },
+            {
+                "current_string": "CDAFAB",
+                "move": 5,
+                "error": "Transition 5 (src='AE') cannot be applied to 'CDAFAB'."
+            }
+        ],
+        "final_string": "CDAFAB",
+        "final_length": 6,
+        "reduction": -1,
+        "correct_moves_count": 2,
+        "total_moves": 13,
+        "valid": false,
+        "bfs_distance": 4,
+        "problem_id": "067"
+    },
+    {
+        "initial_string": "CCBDAF",
+        "initial_length": 6,
+        "steps": [
+            {
+                "current_string": "CCBDAF",
+                "move": 3,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "FF"
+                },
+                "result_string": "FFCBDAF"
+            },
+            {
+                "current_string": "FFCBDAF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "CB",
+                    "tgt": "FD"
+                },
+                "result_string": "FFFDDAF"
+            },
+            {
+                "current_string": "FFFDDAF",
+                "move": 5,
+                "applied_transition": {
+                    "src": "F",
+                    "tgt": "AB"
+                },
+                "result_string": "ABFFDDAF"
+            },
+            {
+                "current_string": "ABFFDDAF",
+                "move": 5,
+                "applied_transition": {
+                    "src": "F",
+                    "tgt": "AB"
+                },
+                "result_string": "ABABFDDAF"
+            },
+            {
+                "current_string": "ABABFDDAF",
+                "move": 4,
+                "applied_transition": {
+                    "src": "AB",
+                    "tgt": "BE"
+                },
+                "result_string": "BEABFDDAF"
+            },
+            {
+                "current_string": "BEABFDDAF",
+                "move": 5,
+                "applied_transition": {
+                    "src": "F",
+                    "tgt": "AB"
+                },
+                "result_string": "BEABABDDAF"
+            },
+            {
+                "current_string": "BEABABDDAF",
+                "move": 6,
+                "error": "Transition 6 (src='ABFFDBE') cannot be applied to 'BEABABDDAF'."
+            }
+        ],
+        "final_string": "BEABABDDAF",
+        "final_length": 10,
+        "reduction": -4,
+        "correct_moves_count": 6,
+        "total_moves": 7,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "061"
+    },
+    {
+        "initial_string": "FEBACDD",
+        "initial_length": 7,
+        "steps": [
+            {
+                "current_string": "FEBACDD",
+                "move": 3,
+                "error": "Transition 3 (src='FBA') cannot be applied to 'FEBACDD'."
+            }
+        ],
+        "final_string": "FEBACDD",
+        "final_length": 7,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 2,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "056"
+    },
+    {
+        "initial_string": "CFACDBCC",
+        "initial_length": 8,
+        "steps": [],
+        "final_string": "CFACDBCC",
+        "final_length": 8,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "047"
+    },
+    {
+        "initial_string": "FBEEDAF",
+        "initial_length": 7,
+        "steps": [],
+        "final_string": "FBEEDAF",
+        "final_length": 7,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "054"
+    },
+    {
+        "initial_string": "DBADACDA",
+        "initial_length": 8,
+        "steps": [
+            {
+                "current_string": "DBADACDA",
+                "move": 1,
+                "applied_transition": {
+                    "src": "D",
+                    "tgt": "DE"
+                },
+                "result_string": "DEBADACDA"
+            },
+            {
+                "current_string": "DEBADACDA",
+                "move": 1,
+                "applied_transition": {
+                    "src": "D",
+                    "tgt": "DE"
+                },
+                "result_string": "DEEBADACDA"
+            },
+            {
+                "current_string": "DEEBADACDA",
+                "move": 1,
+                "applied_transition": {
+                    "src": "D",
+                    "tgt": "DE"
+                },
+                "result_string": "DEEEBADACDA"
+            },
+            {
+                "current_string": "DEEEBADACDA",
+                "move": 2,
+                "applied_transition": {
+                    "src": "DA",
+                    "tgt": "FD"
+                },
+                "result_string": "DEEEBAFDCDA"
+            }
+        ],
+        "final_string": "DEEEBAFDCDA",
+        "final_length": 11,
+        "reduction": -3,
+        "correct_moves_count": 4,
+        "total_moves": 4,
+        "valid": false,
+        "bfs_distance": 2,
+        "problem_id": "065"
+    },
+    {
+        "initial_string": "BFEFCCDCADC",
+        "initial_length": 11,
+        "steps": [
+            {
+                "current_string": "BFEFCCDCADC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "DCADC",
+                    "tgt": "CEBCC"
+                },
+                "result_string": "BFEFCCCEBCC"
+            },
+            {
+                "current_string": "BFEFCCCEBCC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "BD"
+                },
+                "result_string": "BFEFBDCCEBCC"
+            },
+            {
+                "current_string": "BFEFBDCCEBCC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "BD"
+                },
+                "result_string": "BFEFBDBDCEBCC"
+            },
+            {
+                "current_string": "BFEFBDBDCEBCC",
+                "move": 3,
+                "error": "Transition 3 (src='BDEBCC') cannot be applied to 'BFEFBDBDCEBCC'."
+            }
+        ],
+        "final_string": "BFEFBDBDCEBCC",
+        "final_length": 13,
+        "reduction": -2,
+        "correct_moves_count": 3,
+        "total_moves": 8,
+        "valid": false,
+        "bfs_distance": 3,
+        "problem_id": "070"
+    },
+    {
+        "initial_string": "CEEAC",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "CEEAC",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "057"
+    },
+    {
+        "initial_string": "CDFDF",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "CDFDF",
+                "move": 2,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "DD"
+                },
+                "result_string": "DDDFDF"
+            },
+            {
+                "current_string": "DDDFDF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "DFDF",
+                    "tgt": "EF"
+                },
+                "result_string": "DDEF"
+            },
+            {
+                "current_string": "DDEF",
+                "move": 3,
+                "applied_transition": {
+                    "src": "DEF",
+                    "tgt": "CAFA"
+                },
+                "result_string": "DCAFA"
+            },
+            {
+                "current_string": "DCAFA",
+                "move": 4,
+                "applied_transition": {
+                    "src": "AF",
+                    "tgt": "EF"
+                },
+                "result_string": "DCEFA"
+            },
+            {
+                "current_string": "DCEFA",
+                "move": 5,
+                "error": "Transition 5 (src='DDDEFA') cannot be applied to 'DCEFA'."
+            }
+        ],
+        "final_string": "DCEFA",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 4,
+        "total_moves": 5,
+        "valid": false,
+        "bfs_distance": 2,
+        "problem_id": "037"
+    },
+    {
+        "initial_string": "CCCBDF",
+        "initial_length": 6,
+        "steps": [
+            {
+                "current_string": "CCCBDF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "CCBDF",
+                    "tgt": "ADBAEA"
+                },
+                "result_string": "CADBAEA"
+            },
+            {
+                "current_string": "CADBAEA",
+                "move": 4,
+                "applied_transition": {
+                    "src": "AD",
+                    "tgt": "EFF"
+                },
+                "result_string": "CEFFBAEA"
+            },
+            {
+                "current_string": "CEFFBAEA",
+                "move": 3,
+                "applied_transition": {
+                    "src": "A",
+                    "tgt": "DD"
+                },
+                "result_string": "CEFFBDDEA"
+            },
+            {
+                "current_string": "CEFFBDDEA",
+                "move": 6,
+                "error": "Transition 6 (src='CBCDDEFFADAEA') cannot be applied to 'CEFFBDDEA'."
+            }
+        ],
+        "final_string": "CEFFBDDEA",
+        "final_length": 9,
+        "reduction": -3,
+        "correct_moves_count": 3,
+        "total_moves": 4,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "055"
+    },
+    {
+        "initial_string": "FFDAADCEDAEEF",
+        "initial_length": 13,
+        "steps": [
+            {
+                "current_string": "FFDAADCEDAEEF",
+                "move": 3,
+                "applied_transition": {
+                    "src": "F",
+                    "tgt": "EC"
+                },
+                "result_string": "ECFDAADCEDAEEF"
+            },
+            {
+                "current_string": "ECFDAADCEDAEEF",
+                "move": 2,
+                "applied_transition": {
+                    "src": "EC",
+                    "tgt": "CB"
+                },
+                "result_string": "CBFDAADCEDAEEF"
+            },
+            {
+                "current_string": "CBFDAADCEDAEEF",
+                "move": 1,
+                "error": "Transition 1 (src='FFDAADCE') cannot be applied to 'CBFDAADCEDAEEF'."
+            }
+        ],
+        "final_string": "CBFDAADCEDAEEF",
+        "final_length": 14,
+        "reduction": -1,
+        "correct_moves_count": 2,
+        "total_moves": 5,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "038"
+    },
+    {
+        "initial_string": "FEBFC",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "FEBFC",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "050"
+    },
+    {
+        "initial_string": "FCFFD",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "FCFFD",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "060"
+    },
+    {
+        "initial_string": "DDECFACFBDCDEBCF",
+        "initial_length": 16,
+        "steps": [
+            {
+                "current_string": "DDECFACFBDCDEBCF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "EBC",
+                    "tgt": "EC"
+                },
+                "result_string": "DDECFACFBDCDECF"
+            },
+            {
+                "current_string": "DDECFACFBDCDECF",
+                "move": 2,
+                "applied_transition": {
+                    "src": "CD",
+                    "tgt": "DF"
+                },
+                "result_string": "DDECFACFBDDFECF"
+            },
+            {
+                "current_string": "DDECFACFBDDFECF",
+                "move": 4,
+                "applied_transition": {
+                    "src": "ACFBDDFECF",
+                    "tgt": "DAEBFD"
+                },
+                "result_string": "DDECFDAEBFD"
+            },
+            {
+                "current_string": "DDECFDAEBFD",
+                "move": 5,
+                "applied_transition": {
+                    "src": "DDECFDAEBFD",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 16,
+        "correct_moves_count": 4,
+        "total_moves": 4,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "044"
+    },
+    {
+        "initial_string": "FFADDAEEB",
+        "initial_length": 9,
+        "steps": [
+            {
+                "current_string": "FFADDAEEB",
+                "move": 1,
+                "applied_transition": {
+                    "src": "B",
+                    "tgt": "FB"
+                },
+                "result_string": "FFADDAEEFB"
+            },
+            {
+                "current_string": "FFADDAEEFB",
+                "move": 1,
+                "applied_transition": {
+                    "src": "B",
+                    "tgt": "FB"
+                },
+                "result_string": "FFADDAEEFFB"
+            },
+            {
+                "current_string": "FFADDAEEFFB",
+                "move": 2,
+                "applied_transition": {
+                    "src": "FADDA",
+                    "tgt": "BDC"
+                },
+                "result_string": "FBDCEEFFB"
+            },
+            {
+                "current_string": "FBDCEEFFB",
+                "move": 3,
+                "applied_transition": {
+                    "src": "CEEF",
+                    "tgt": "AF"
+                },
+                "result_string": "FBDAFFB"
+            },
+            {
+                "current_string": "FBDAFFB",
+                "move": 4,
+                "error": "Transition 4 (src='FFBDAFFB') cannot be applied to 'FBDAFFB'."
+            }
+        ],
+        "final_string": "FBDAFFB",
+        "final_length": 7,
+        "reduction": 2,
+        "correct_moves_count": 4,
+        "total_moves": 5,
+        "valid": false,
+        "bfs_distance": 2,
+        "problem_id": "043"
+    },
+    {
+        "initial_string": "BAFFFDFC",
+        "initial_length": 8,
+        "steps": [],
+        "final_string": "BAFFFDFC",
+        "final_length": 8,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "064"
+    },
+    {
+        "initial_string": "DAEADCF",
+        "initial_length": 7,
+        "steps": [
+            {
+                "current_string": "DAEADCF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "EA",
+                    "tgt": "DD"
+                },
+                "result_string": "DADDDCF"
+            },
+            {
+                "current_string": "DADDDCF",
+                "move": 2,
+                "applied_transition": {
+                    "src": "DDC",
+                    "tgt": "ABDED"
+                },
+                "result_string": "DADABDEDF"
+            },
+            {
+                "current_string": "DADABDEDF",
+                "move": 4,
+                "applied_transition": {
+                    "src": "BDEDF",
+                    "tgt": "CDFDD"
+                },
+                "result_string": "DADACDFDD"
+            },
+            {
+                "current_string": "DADACDFDD",
+                "move": 1,
+                "error": "Transition 1 (src='EA') cannot be applied to 'DADACDFDD'."
+            }
+        ],
+        "final_string": "DADACDFDD",
+        "final_length": 9,
+        "reduction": -2,
+        "correct_moves_count": 3,
+        "total_moves": 5,
+        "valid": false,
+        "bfs_distance": 3,
+        "problem_id": "058"
+    },
+    {
+        "initial_string": "CBAEF",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "CBAEF",
+                "move": 1,
+                "applied_transition": {
+                    "src": "F",
+                    "tgt": "DE"
+                },
+                "result_string": "CBAEDE"
+            },
+            {
+                "current_string": "CBAEDE",
+                "move": 2,
+                "applied_transition": {
+                    "src": "DE",
+                    "tgt": "AC"
+                },
+                "result_string": "CBAEAC"
+            },
+            {
+                "current_string": "CBAEAC",
+                "move": 3,
+                "applied_transition": {
+                    "src": "CBAEAC",
+                    "tgt": "BE"
+                },
+                "result_string": "BE"
+            },
+            {
+                "current_string": "BE",
+                "move": 4,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "AC"
+                },
+                "result_string": "ACBE"
+            },
+            {
+                "current_string": "ACBE",
+                "move": 4,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "AC"
+                },
+                "result_string": "ACACBE"
+            },
+            {
+                "current_string": "ACACBE",
+                "move": 5,
+                "applied_transition": {
+                    "src": "ACACBE",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 5,
+        "correct_moves_count": 6,
+        "total_moves": 6,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "062"
+    },
+    {
+        "initial_string": "13CFE6D3349EC692",
+        "initial_length": 16,
+        "steps": [
+            {
+                "current_string": "13CFE6D3349EC692",
+                "move": 3,
+                "applied_transition": {
+                    "src": "3CFE6",
+                    "tgt": "A5"
+                },
+                "result_string": "1A5D3349EC692"
+            },
+            {
+                "current_string": "1A5D3349EC692",
+                "move": 1,
+                "applied_transition": {
+                    "src": "3349EC6",
+                    "tgt": "37EEC2"
+                },
+                "result_string": "1A5D37EEC292"
+            },
+            {
+                "current_string": "1A5D37EEC292",
+                "move": 5,
+                "applied_transition": {
+                    "src": "D3",
+                    "tgt": "B0"
+                },
+                "result_string": "1A5B07EEC292"
+            },
+            {
+                "current_string": "1A5B07EEC292",
+                "move": 2,
+                "applied_transition": {
+                    "src": "292",
+                    "tgt": "9F5"
+                },
+                "result_string": "1A5B07EEC9F5"
+            },
+            {
+                "current_string": "1A5B07EEC9F5",
+                "move": 4,
+                "applied_transition": {
+                    "src": "EC9",
+                    "tgt": "EB"
+                },
+                "result_string": "1A5B07EEBF5"
+            },
+            {
+                "current_string": "1A5B07EEBF5",
+                "move": 6,
+                "applied_transition": {
+                    "src": "EB",
+                    "tgt": "76"
+                },
+                "result_string": "1A5B07E76F5"
+            }
+        ],
+        "final_string": "1A5B07E76F5",
+        "final_length": 11,
+        "reduction": 5,
+        "correct_moves_count": 6,
+        "total_moves": 6,
+        "valid": false,
+        "bfs_distance": 1,
+        "problem_id": "076"
+    },
+    {
+        "initial_string": "BBA23",
+        "initial_length": 5,
+        "steps": [],
+        "final_string": "BBA23",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 7,
+        "problem_id": "071"
+    },
+    {
+        "initial_string": "3431F2DC",
+        "initial_length": 8,
+        "steps": [
+            {
+                "current_string": "3431F2DC",
+                "move": 6,
+                "applied_transition": {
+                    "src": "4",
+                    "tgt": "A06"
+                },
+                "result_string": "3A0631F2DC"
+            },
+            {
+                "current_string": "3A0631F2DC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "F2",
+                    "tgt": "06"
+                },
+                "result_string": "3A063106DC"
+            },
+            {
+                "current_string": "3A063106DC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "106",
+                    "tgt": "2BA"
+                },
+                "result_string": "3A0632BADC"
+            },
+            {
+                "current_string": "3A0632BADC",
+                "move": 3,
+                "applied_transition": {
+                    "src": "2B",
+                    "tgt": "43"
+                },
+                "result_string": "3A06343ADC"
+            },
+            {
+                "current_string": "3A06343ADC",
+                "move": 4,
+                "applied_transition": {
+                    "src": "43A",
+                    "tgt": "85C"
+                },
+                "result_string": "3A06385CDC"
+            },
+            {
+                "current_string": "3A06385CDC",
+                "move": 7,
+                "error": "Transition 7 (src='953A06385CDC') cannot be applied to '3A06385CDC'."
+            }
+        ],
+        "final_string": "3A06385CDC",
+        "final_length": 10,
+        "reduction": -2,
+        "correct_moves_count": 5,
+        "total_moves": 6,
+        "valid": false,
+        "bfs_distance": 2,
+        "problem_id": "081"
+    },
+    {
+        "initial_string": "070B6C4",
+        "initial_length": 7,
+        "steps": [
+            {
+                "current_string": "070B6C4",
+                "move": 2,
+                "applied_transition": {
+                    "src": "70",
+                    "tgt": "DE"
+                },
+                "result_string": "0DEB6C4"
+            },
+            {
+                "current_string": "0DEB6C4",
+                "move": 1,
+                "applied_transition": {
+                    "src": "C4",
+                    "tgt": "B1E"
+                },
+                "result_string": "0DEB6B1E"
+            },
+            {
+                "current_string": "0DEB6B1E",
+                "move": 5,
+                "applied_transition": {
+                    "src": "B1",
+                    "tgt": "CD9"
+                },
+                "result_string": "0DEB6CD9E"
+            },
+            {
+                "current_string": "0DEB6CD9E",
+                "move": 3,
+                "applied_transition": {
+                    "src": "E",
+                    "tgt": "27"
+                },
+                "result_string": "0D27B6CD9E"
+            },
+            {
+                "current_string": "0D27B6CD9E",
+                "move": 6,
+                "error": "Transition 6 (src='0D1D6CD927') cannot be applied to '0D27B6CD9E'."
+            }
+        ],
+        "final_string": "0D27B6CD9E",
+        "final_length": 10,
+        "reduction": -3,
+        "correct_moves_count": 4,
+        "total_moves": 5,
+        "valid": false,
+        "bfs_distance": 3,
+        "problem_id": "098"
+    },
+    {
+        "initial_string": "3A0FD2EF",
+        "initial_length": 8,
+        "steps": [],
+        "final_string": "3A0FD2EF",
+        "final_length": 8,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 7,
+        "problem_id": "074"
+    },
+    {
+        "initial_string": "16323E51",
+        "initial_length": 8,
+        "steps": [
+            {
+                "current_string": "16323E51",
+                "move": 1,
+                "applied_transition": {
+                    "src": "3",
+                    "tgt": "A3"
+                },
+                "result_string": "16A323E51"
+            },
+            {
+                "current_string": "16A323E51",
+                "move": 1,
+                "applied_transition": {
+                    "src": "3",
+                    "tgt": "A3"
+                },
+                "result_string": "16AA323E51"
+            },
+            {
+                "current_string": "16AA323E51",
+                "move": 1,
+                "applied_transition": {
+                    "src": "3",
+                    "tgt": "A3"
+                },
+                "result_string": "16AAA323E51"
+            },
+            {
+                "current_string": "16AAA323E51",
+                "move": 2,
+                "applied_transition": {
+                    "src": "23E",
+                    "tgt": "C1"
+                },
+                "result_string": "16AAA3C151"
+            },
+            {
+                "current_string": "16AAA3C151",
+                "move": 3,
+                "applied_transition": {
+                    "src": "A",
+                    "tgt": "A1"
+                },
+                "result_string": "16A1AA3C151"
+            },
+            {
+                "current_string": "16A1AA3C151",
+                "move": 3,
+                "applied_transition": {
+                    "src": "A",
+                    "tgt": "A1"
+                },
+                "result_string": "16A11AA3C151"
+            },
+            {
+                "current_string": "16A11AA3C151",
+                "move": 3,
+                "applied_transition": {
+                    "src": "A",
+                    "tgt": "A1"
+                },
+                "result_string": "16A111AA3C151"
+            },
+            {
+                "current_string": "16A111AA3C151",
+                "move": 5,
+                "error": "Transition 5 (src='13') cannot be applied to '16A111AA3C151'."
+            }
+        ],
+        "final_string": "16A111AA3C151",
+        "final_length": 13,
+        "reduction": -5,
+        "correct_moves_count": 7,
+        "total_moves": 10,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "075"
+    },
+    {
+        "initial_string": "9C3FEC0F9",
+        "initial_length": 9,
+        "steps": [],
+        "final_string": "9C3FEC0F9",
+        "final_length": 9,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 7,
+        "problem_id": "086"
+    },
+    {
+        "initial_string": "43CD3DA5DA0A8978",
+        "initial_length": 16,
+        "steps": [
+            {
+                "current_string": "43CD3DA5DA0A8978",
+                "move": 2,
+                "applied_transition": {
+                    "src": "3C",
+                    "tgt": "F1"
+                },
+                "result_string": "4F1D3DA5DA0A8978"
+            },
+            {
+                "current_string": "4F1D3DA5DA0A8978",
+                "move": 5,
+                "applied_transition": {
+                    "src": "F1D3",
+                    "tgt": "D8"
+                },
+                "result_string": "4D8DA5DA0A8978"
+            },
+            {
+                "current_string": "4D8DA5DA0A8978",
+                "move": 3,
+                "applied_transition": {
+                    "src": "A5",
+                    "tgt": "2C"
+                },
+                "result_string": "4D8D2CDA0A8978"
+            },
+            {
+                "current_string": "4D8D2CDA0A8978",
+                "move": 4,
+                "applied_transition": {
+                    "src": "8",
+                    "tgt": "5FF"
+                },
+                "result_string": "4D5FFD2CDA0A8978"
+            },
+            {
+                "current_string": "4D5FFD2CDA0A8978",
+                "move": 1,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "09"
+                },
+                "result_string": "094D5FFD2CDA0A8978"
+            },
+            {
+                "current_string": "094D5FFD2CDA0A8978",
+                "move": 1,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "09"
+                },
+                "result_string": "09094D5FFD2CDA0A8978"
+            },
+            {
+                "current_string": "09094D5FFD2CDA0A8978",
+                "move": 6,
+                "error": "Transition 6 (src='09094D8D2CDA0A5FF978') cannot be applied to '09094D5FFD2CDA0A8978'."
+            }
+        ],
+        "final_string": "09094D5FFD2CDA0A8978",
+        "final_length": 20,
+        "reduction": -4,
+        "correct_moves_count": 6,
+        "total_moves": 7,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "088"
+    },
+    {
+        "initial_string": "777338E9",
+        "initial_length": 8,
+        "steps": [
+            {
+                "current_string": "777338E9",
+                "move": 5,
+                "applied_transition": {
+                    "src": "77",
+                    "tgt": "EF"
+                },
+                "result_string": "EF7338E9"
+            },
+            {
+                "current_string": "EF7338E9",
+                "move": 1,
+                "applied_transition": {
+                    "src": "9",
+                    "tgt": "AE3"
+                },
+                "result_string": "EF7338EAE3"
+            },
+            {
+                "current_string": "EF7338EAE3",
+                "move": 6,
+                "applied_transition": {
+                    "src": "E",
+                    "tgt": "8E"
+                },
+                "result_string": "8EF7338EAE3"
+            },
+            {
+                "current_string": "8EF7338EAE3",
+                "move": 2,
+                "applied_transition": {
+                    "src": "338EA",
+                    "tgt": "3B"
+                },
+                "result_string": "8EF73BE3"
+            },
+            {
+                "current_string": "8EF73BE3",
+                "move": 3,
+                "applied_transition": {
+                    "src": "BE3",
+                    "tgt": "DA"
+                },
+                "result_string": "8EF73DA"
+            },
+            {
+                "current_string": "8EF73DA",
+                "move": 4,
+                "applied_transition": {
+                    "src": "DA",
+                    "tgt": "0B"
+                },
+                "result_string": "8EF730B"
+            },
+            {
+                "current_string": "8EF730B",
+                "move": 7,
+                "applied_transition": {
+                    "src": "8EF730B",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 8,
+        "correct_moves_count": 7,
+        "total_moves": 7,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "083"
+    },
+    {
+        "initial_string": "27B39FE",
+        "initial_length": 7,
+        "steps": [],
+        "final_string": "27B39FE",
+        "final_length": 7,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 7,
+        "problem_id": "077"
+    },
+    {
+        "initial_string": "B9F504266C66",
+        "initial_length": 12,
+        "steps": [
+            {
+                "current_string": "B9F504266C66",
+                "move": 3,
+                "applied_transition": {
+                    "src": "B9",
+                    "tgt": "00"
+                },
+                "result_string": "00F504266C66"
+            },
+            {
+                "current_string": "00F504266C66",
+                "move": 1,
+                "applied_transition": {
+                    "src": "04266",
+                    "tgt": "3BF"
+                },
+                "result_string": "00F53BFC66"
+            },
+            {
+                "current_string": "00F53BFC66",
+                "move": 4,
+                "applied_transition": {
+                    "src": "66",
+                    "tgt": "A3"
+                },
+                "result_string": "00F53BFCA3"
+            }
+        ],
+        "final_string": "00F53BFCA3",
+        "final_length": 10,
+        "reduction": 2,
+        "correct_moves_count": 3,
+        "total_moves": 3,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "087"
+    },
+    {
+        "initial_string": "889C5CBAABA",
+        "initial_length": 11,
+        "steps": [
+            {
+                "current_string": "889C5CBAABA",
+                "move": 1,
+                "applied_transition": {
+                    "src": "9C",
+                    "tgt": "1C7"
+                },
+                "result_string": "881C75CBAABA"
+            },
+            {
+                "current_string": "881C75CBAABA",
+                "move": 2,
+                "applied_transition": {
+                    "src": "BA",
+                    "tgt": "B792"
+                },
+                "result_string": "881C75CB792ABA"
+            },
+            {
+                "current_string": "881C75CB792ABA",
+                "move": 3,
+                "applied_transition": {
+                    "src": "B792",
+                    "tgt": "37E"
+                },
+                "result_string": "881C75C37EABA"
+            },
+            {
+                "current_string": "881C75C37EABA",
+                "move": 4,
+                "applied_transition": {
+                    "src": "37E",
+                    "tgt": "63D1"
+                },
+                "result_string": "881C75C63D1ABA"
+            },
+            {
+                "current_string": "881C75C63D1ABA",
+                "move": 2,
+                "applied_transition": {
+                    "src": "BA",
+                    "tgt": "B792"
+                },
+                "result_string": "881C75C63D1AB792"
+            },
+            {
+                "current_string": "881C75C63D1AB792",
+                "move": 3,
+                "applied_transition": {
+                    "src": "B792",
+                    "tgt": "37E"
+                },
+                "result_string": "881C75C63D1A37E"
+            },
+            {
+                "current_string": "881C75C63D1A37E",
+                "move": 5,
+                "applied_transition": {
+                    "src": "881C75C63D1A37E",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 11,
+        "correct_moves_count": 7,
+        "total_moves": 7,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "084"
+    },
+    {
+        "initial_string": "54B9E8",
+        "initial_length": 6,
+        "steps": [],
+        "final_string": "54B9E8",
+        "final_length": 6,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 7,
+        "problem_id": "080"
+    },
+    {
+        "initial_string": "A568648",
+        "initial_length": 7,
+        "steps": [
+            {
+                "current_string": "A568648",
+                "move": 1,
+                "applied_transition": {
+                    "src": "48",
+                    "tgt": "F7"
+                },
+                "result_string": "A5686F7"
+            },
+            {
+                "current_string": "A5686F7",
+                "move": 2,
+                "applied_transition": {
+                    "src": "A56",
+                    "tgt": "84D"
+                },
+                "result_string": "84D86F7"
+            },
+            {
+                "current_string": "84D86F7",
+                "move": 3,
+                "applied_transition": {
+                    "src": "84D",
+                    "tgt": "E7"
+                },
+                "result_string": "E786F7"
+            },
+            {
+                "current_string": "E786F7",
+                "move": 4,
+                "applied_transition": {
+                    "src": "E786F",
+                    "tgt": "F8F4783"
+                },
+                "result_string": "F8F47837"
+            },
+            {
+                "current_string": "F8F47837",
+                "move": 5,
+                "applied_transition": {
+                    "src": "8F4783",
+                    "tgt": "B0E2"
+                },
+                "result_string": "FB0E27"
+            },
+            {
+                "current_string": "FB0E27",
+                "move": 6,
+                "applied_transition": {
+                    "src": "F",
+                    "tgt": "F2"
+                },
+                "result_string": "F2B0E27"
+            },
+            {
+                "current_string": "F2B0E27",
+                "move": 7,
+                "applied_transition": {
+                    "src": "F2B0E27",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 7,
+        "correct_moves_count": 7,
+        "total_moves": 7,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "094"
+    },
+    {
+        "initial_string": "4E387CC50",
+        "initial_length": 9,
+        "steps": [
+            {
+                "current_string": "4E387CC50",
+                "move": 2,
+                "applied_transition": {
+                    "src": "4",
+                    "tgt": "4B"
+                },
+                "result_string": "4BE387CC50"
+            },
+            {
+                "current_string": "4BE387CC50",
+                "move": 3,
+                "applied_transition": {
+                    "src": "4B",
+                    "tgt": "B6"
+                },
+                "result_string": "B6E387CC50"
+            },
+            {
+                "current_string": "B6E387CC50",
+                "move": 4,
+                "applied_transition": {
+                    "src": "E3",
+                    "tgt": "3D76C679F"
+                },
+                "result_string": "B63D76C679F87CC50"
+            },
+            {
+                "current_string": "B63D76C679F87CC50",
+                "move": 6,
+                "applied_transition": {
+                    "src": "87",
+                    "tgt": "691"
+                },
+                "result_string": "B63D76C679F691CC50"
+            },
+            {
+                "current_string": "B63D76C679F691CC50",
+                "move": 1,
+                "applied_transition": {
+                    "src": "C50",
+                    "tgt": "AF"
+                },
+                "result_string": "B63D76C679F691CAF"
+            },
+            {
+                "current_string": "B63D76C679F691CAF",
+                "move": 5,
+                "applied_transition": {
+                    "src": "CAF",
+                    "tgt": "16"
+                },
+                "result_string": "B63D76C679F69116"
+            },
+            {
+                "current_string": "B63D76C679F69116",
+                "move": 7,
+                "applied_transition": {
+                    "src": "B63D76C679F69116",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 9,
+        "correct_moves_count": 7,
+        "total_moves": 7,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "096"
+    },
+    {
+        "initial_string": "A031B5",
+        "initial_length": 6,
+        "steps": [],
+        "final_string": "A031B5",
+        "final_length": 6,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 7,
+        "problem_id": "091"
+    },
+    {
+        "initial_string": "28381",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "28381",
+                "move": 1,
+                "applied_transition": {
+                    "src": "8381",
+                    "tgt": "595"
+                },
+                "result_string": "2595"
+            },
+            {
+                "current_string": "2595",
+                "move": 2,
+                "applied_transition": {
+                    "src": "59",
+                    "tgt": "BF"
+                },
+                "result_string": "2BF5"
+            },
+            {
+                "current_string": "2BF5",
+                "move": 4,
+                "applied_transition": {
+                    "src": "2B",
+                    "tgt": "52A"
+                },
+                "result_string": "52AF5"
+            },
+            {
+                "current_string": "52AF5",
+                "move": 3,
+                "applied_transition": {
+                    "src": "F5",
+                    "tgt": "12"
+                },
+                "result_string": "52A12"
+            }
+        ],
+        "final_string": "52A12",
+        "final_length": 5,
+        "reduction": 0,
+        "correct_moves_count": 4,
+        "total_moves": 4,
+        "valid": false,
+        "bfs_distance": 3,
+        "problem_id": "082"
+    },
+    {
+        "initial_string": "DDC31FC",
+        "initial_length": 7,
+        "steps": [
+            {
+                "current_string": "DDC31FC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "C31FC",
+                    "tgt": "EA27C"
+                },
+                "result_string": "DDEA27C"
+            },
+            {
+                "current_string": "DDEA27C",
+                "move": 2,
+                "applied_transition": {
+                    "src": "DEA2",
+                    "tgt": "1DA"
+                },
+                "result_string": "D1DA7C"
+            },
+            {
+                "current_string": "D1DA7C",
+                "move": 4,
+                "applied_transition": {
+                    "src": "C",
+                    "tgt": "00"
+                },
+                "result_string": "D1DA700"
+            },
+            {
+                "current_string": "D1DA700",
+                "move": 3,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "5B9"
+                },
+                "result_string": "5B9D1DA700"
+            },
+            {
+                "current_string": "5B9D1DA700",
+                "move": 5,
+                "applied_transition": {
+                    "src": "5B",
+                    "tgt": "7E"
+                },
+                "result_string": "7E9D1DA700"
+            },
+            {
+                "current_string": "7E9D1DA700",
+                "move": 6,
+                "error": "Transition 6 (src='7E95B9D1DA700') cannot be applied to '7E9D1DA700'."
+            }
+        ],
+        "final_string": "7E9D1DA700",
+        "final_length": 10,
+        "reduction": -3,
+        "correct_moves_count": 5,
+        "total_moves": 6,
+        "valid": false,
+        "bfs_distance": null,
+        "problem_id": "089"
+    },
+    {
+        "initial_string": "167B5D",
+        "initial_length": 6,
+        "steps": [
+            {
+                "current_string": "167B5D",
+                "move": 1,
+                "applied_transition": {
+                    "src": "167B",
+                    "tgt": "9E"
+                },
+                "result_string": "9E5D"
+            },
+            {
+                "current_string": "9E5D",
+                "move": 2,
+                "applied_transition": {
+                    "src": "9E5",
+                    "tgt": "B2"
+                },
+                "result_string": "B2D"
+            },
+            {
+                "current_string": "B2D",
+                "move": 3,
+                "applied_transition": {
+                    "src": "B2D",
+                    "tgt": "A1"
+                },
+                "result_string": "A1"
+            },
+            {
+                "current_string": "A1",
+                "move": 4,
+                "applied_transition": {
+                    "src": "A",
+                    "tgt": "BE5"
+                },
+                "result_string": "BE51"
+            },
+            {
+                "current_string": "BE51",
+                "move": 5,
+                "applied_transition": {
+                    "src": "E",
+                    "tgt": "27"
+                },
+                "result_string": "B2751"
+            },
+            {
+                "current_string": "B2751",
+                "move": 6,
+                "applied_transition": {
+                    "src": "751",
+                    "tgt": "F5"
+                },
+                "result_string": "B2F5"
+            },
+            {
+                "current_string": "B2F5",
+                "move": 7,
+                "applied_transition": {
+                    "src": "B2F5",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 6,
+        "correct_moves_count": 7,
+        "total_moves": 7,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "100"
+    },
+    {
+        "initial_string": "40BB9DC",
+        "initial_length": 7,
+        "steps": [
+            {
+                "current_string": "40BB9DC",
+                "move": 1,
+                "applied_transition": {
+                    "src": "40B",
+                    "tgt": "A5A"
+                },
+                "result_string": "A5AB9DC"
+            },
+            {
+                "current_string": "A5AB9DC",
+                "move": 2,
+                "applied_transition": {
+                    "src": "A5AB",
+                    "tgt": "4710E"
+                },
+                "result_string": "4710E9DC"
+            },
+            {
+                "current_string": "4710E9DC",
+                "move": 3,
+                "applied_transition": {
+                    "src": "4710E9DC",
+                    "tgt": "62D6576"
+                },
+                "result_string": "62D6576"
+            },
+            {
+                "current_string": "62D6576",
+                "move": 4,
+                "applied_transition": {
+                    "src": "D6",
+                    "tgt": "C2"
+                },
+                "result_string": "62C2576"
+            },
+            {
+                "current_string": "62C2576",
+                "move": 5,
+                "applied_transition": {
+                    "src": "62C25",
+                    "tgt": "30"
+                },
+                "result_string": "3076"
+            },
+            {
+                "current_string": "3076",
+                "move": 6,
+                "applied_transition": {
+                    "src": "0",
+                    "tgt": "83"
+                },
+                "result_string": "38376"
+            },
+            {
+                "current_string": "38376",
+                "move": 7,
+                "applied_transition": {
+                    "src": "38376",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 7,
+        "correct_moves_count": 7,
+        "total_moves": 7,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "092"
+    },
+    {
+        "initial_string": "4E592",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "4E592",
+                "move": 1,
+                "applied_transition": {
+                    "src": "4E",
+                    "tgt": "0F"
+                },
+                "result_string": "0F592"
+            },
+            {
+                "current_string": "0F592",
+                "move": 3,
+                "applied_transition": {
+                    "src": "5",
+                    "tgt": "B2"
+                },
+                "result_string": "0FB292"
+            },
+            {
+                "current_string": "0FB292",
+                "move": 2,
+                "applied_transition": {
+                    "src": "2",
+                    "tgt": "8D"
+                },
+                "result_string": "0FB8D92"
+            },
+            {
+                "current_string": "0FB8D92",
+                "move": 2,
+                "applied_transition": {
+                    "src": "2",
+                    "tgt": "8D"
+                },
+                "result_string": "0FB8D98D"
+            },
+            {
+                "current_string": "0FB8D98D",
+                "move": 4,
+                "applied_transition": {
+                    "src": "98D",
+                    "tgt": "E8"
+                },
+                "result_string": "0FB8DE8"
+            },
+            {
+                "current_string": "0FB8DE8",
+                "move": 5,
+                "applied_transition": {
+                    "src": "DE",
+                    "tgt": "F0"
+                },
+                "result_string": "0FB8F08"
+            },
+            {
+                "current_string": "0FB8F08",
+                "move": 6,
+                "applied_transition": {
+                    "src": "0FB8F08",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 5,
+        "correct_moves_count": 7,
+        "total_moves": 7,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "072"
+    },
+    {
+        "initial_string": "9E3368D",
+        "initial_length": 7,
+        "steps": [
+            {
+                "current_string": "9E3368D",
+                "move": 7,
+                "error": "Transition 7 (src='931B5D') cannot be applied to '9E3368D'."
+            }
+        ],
+        "final_string": "9E3368D",
+        "final_length": 7,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 1,
+        "valid": false,
+        "bfs_distance": 7,
+        "problem_id": "090"
+    },
+    {
+        "initial_string": "A728DB0EA3550",
+        "initial_length": 13,
+        "steps": [
+            {
+                "current_string": "A728DB0EA3550",
+                "move": 1,
+                "applied_transition": {
+                    "src": "3550",
+                    "tgt": "883"
+                },
+                "result_string": "A728DB0EA883"
+            },
+            {
+                "current_string": "A728DB0EA883",
+                "move": 4,
+                "applied_transition": {
+                    "src": "883",
+                    "tgt": "64"
+                },
+                "result_string": "A728DB0EA64"
+            },
+            {
+                "current_string": "A728DB0EA64",
+                "move": 2,
+                "applied_transition": {
+                    "src": "B0EA",
+                    "tgt": "1E"
+                },
+                "result_string": "A728D1E64"
+            },
+            {
+                "current_string": "A728D1E64",
+                "move": 5,
+                "applied_transition": {
+                    "src": "E6",
+                    "tgt": "C83"
+                },
+                "result_string": "A728D1C834"
+            },
+            {
+                "current_string": "A728D1C834",
+                "move": 3,
+                "applied_transition": {
+                    "src": "8D",
+                    "tgt": "C8"
+                },
+                "result_string": "A72C81C834"
+            },
+            {
+                "current_string": "A72C81C834",
+                "move": 6,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "4BD"
+                },
+                "result_string": "4BDA72C81C834"
+            },
+            {
+                "current_string": "4BDA72C81C834",
+                "move": 7,
+                "applied_transition": {
+                    "src": "4BDA72C81C834",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 13,
+        "correct_moves_count": 7,
+        "total_moves": 7,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "073"
+    },
+    {
+        "initial_string": "74865EC56AF",
+        "initial_length": 11,
+        "steps": [
+            {
+                "current_string": "74865EC56AF",
+                "move": 2,
+                "applied_transition": {
+                    "src": "C56AF",
+                    "tgt": "2044CF7E"
+                },
+                "result_string": "74865E2044CF7E"
+            }
+        ],
+        "final_string": "74865E2044CF7E",
+        "final_length": 14,
+        "reduction": -3,
+        "correct_moves_count": 1,
+        "total_moves": 1,
+        "valid": false,
+        "bfs_distance": 6,
+        "problem_id": "085"
+    },
+    {
+        "initial_string": "9C48701F4",
+        "initial_length": 9,
+        "steps": [
+            {
+                "current_string": "9C48701F4",
+                "move": 1,
+                "applied_transition": {
+                    "src": "01",
+                    "tgt": "7A0"
+                },
+                "result_string": "9C4877A0F4"
+            },
+            {
+                "current_string": "9C4877A0F4",
+                "move": 2,
+                "applied_transition": {
+                    "src": "77A0F",
+                    "tgt": "487774A"
+                },
+                "result_string": "9C48487774A4"
+            },
+            {
+                "current_string": "9C48487774A4",
+                "move": 3,
+                "applied_transition": {
+                    "src": "4848",
+                    "tgt": "AB"
+                },
+                "result_string": "9CAB7774A4"
+            },
+            {
+                "current_string": "9CAB7774A4",
+                "move": 5,
+                "applied_transition": {
+                    "src": "7774",
+                    "tgt": "A28C4"
+                },
+                "result_string": "9CABA28C4A4"
+            },
+            {
+                "current_string": "9CABA28C4A4",
+                "move": 6,
+                "applied_transition": {
+                    "src": "28C",
+                    "tgt": "48374"
+                },
+                "result_string": "9CABA483744A4"
+            },
+            {
+                "current_string": "9CABA483744A4",
+                "move": 4,
+                "applied_transition": {
+                    "src": "9C",
+                    "tgt": "FD"
+                },
+                "result_string": "FDABA483744A4"
+            },
+            {
+                "current_string": "FDABA483744A4",
+                "move": 7,
+                "applied_transition": {
+                    "src": "FDABA483744A4",
+                    "tgt": ""
+                },
+                "result_string": ""
+            }
+        ],
+        "final_string": "",
+        "final_length": 0,
+        "reduction": 9,
+        "correct_moves_count": 7,
+        "total_moves": 7,
+        "valid": true,
+        "bfs_distance": 0,
+        "problem_id": "095"
+    },
+    {
+        "initial_string": "8BB86503B248",
+        "initial_length": 12,
+        "steps": [],
+        "final_string": "8BB86503B248",
+        "final_length": 12,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 7,
+        "problem_id": "079"
+    },
+    {
+        "initial_string": "B7FCD61",
+        "initial_length": 7,
+        "steps": [],
+        "final_string": "B7FCD61",
+        "final_length": 7,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 7,
+        "problem_id": "078"
+    },
+    {
+        "initial_string": "CBAB3801447",
+        "initial_length": 11,
+        "steps": [
+            {
+                "current_string": "CBAB3801447",
+                "move": 2,
+                "applied_transition": {
+                    "src": "AB",
+                    "tgt": "41"
+                },
+                "result_string": "CB413801447"
+            },
+            {
+                "current_string": "CB413801447",
+                "move": 6,
+                "applied_transition": {
+                    "src": "B",
+                    "tgt": "01"
+                },
+                "result_string": "C01413801447"
+            },
+            {
+                "current_string": "C01413801447",
+                "move": 1,
+                "applied_transition": {
+                    "src": "44",
+                    "tgt": "D0"
+                },
+                "result_string": "C01413801D07"
+            },
+            {
+                "current_string": "C01413801D07",
+                "move": 3,
+                "applied_transition": {
+                    "src": "7",
+                    "tgt": "D8"
+                },
+                "result_string": "C01413801D0D8"
+            },
+            {
+                "current_string": "C01413801D0D8",
+                "move": 5,
+                "applied_transition": {
+                    "src": "80",
+                    "tgt": "EB"
+                },
+                "result_string": "C01413EB1D0D8"
+            },
+            {
+                "current_string": "C01413EB1D0D8",
+                "move": 4,
+                "applied_transition": {
+                    "src": "0D8",
+                    "tgt": "CF"
+                },
+                "result_string": "C01413EB1DCF"
+            },
+            {
+                "current_string": "C01413EB1DCF",
+                "move": 1,
+                "error": "Transition 1 (src='44') cannot be applied to 'C01413EB1DCF'."
+            }
+        ],
+        "final_string": "C01413EB1DCF",
+        "final_length": 12,
+        "reduction": -1,
+        "correct_moves_count": 6,
+        "total_moves": 8,
+        "valid": false,
+        "bfs_distance": 1,
+        "problem_id": "099"
+    },
+    {
+        "initial_string": "3EDC5",
+        "initial_length": 5,
+        "steps": [
+            {
+                "current_string": "3EDC5",
+                "move": 1,
+                "applied_transition": {
+                    "src": "3E",
+                    "tgt": "94"
+                },
+                "result_string": "94DC5"
+            },
+            {
+                "current_string": "94DC5",
+                "move": 2,
+                "applied_transition": {
+                    "src": "4DC5",
+                    "tgt": "91"
+                },
+                "result_string": "991"
+            },
+            {
+                "current_string": "991",
+                "move": 3,
+                "applied_transition": {
+                    "src": "99",
+                    "tgt": "334C6"
+                },
+                "result_string": "334C61"
+            },
+            {
+                "current_string": "334C61",
+                "move": 6,
+                "applied_transition": {
+                    "src": "1",
+                    "tgt": "4E"
+                },
+                "result_string": "334C64E"
+            },
+            {
+                "current_string": "334C64E",
+                "move": 4,
+                "applied_transition": {
+                    "src": "",
+                    "tgt": "EE"
+                },
+                "result_string": "EE334C64E"
+            },
+            {
+                "current_string": "EE334C64E",
+                "move": 7,
+                "error": "Transition 7 (src='A534C64E') cannot be applied to 'EE334C64E'."
+            }
+        ],
+        "final_string": "EE334C64E",
+        "final_length": 9,
+        "reduction": -4,
+        "correct_moves_count": 5,
+        "total_moves": 6,
+        "valid": false,
+        "bfs_distance": 2,
+        "problem_id": "093"
+    },
+    {
+        "initial_string": "9ADF6D9E39211",
+        "initial_length": 13,
+        "steps": [],
+        "final_string": "9ADF6D9E39211",
+        "final_length": 13,
+        "reduction": 0,
+        "correct_moves_count": 0,
+        "total_moves": 0,
+        "valid": false,
+        "bfs_distance": 7,
+        "problem_id": "097"
+    }
+]

@@ -1,0 +1,26 @@
+Let's analyze the initial string "ACDBC" and the available transitions to find a sequence that leads to an empty string.
+
+Initial string: "ACDBC"
+
+Transitions:
+1) "CDB"->"DD"
+2) "D"->"DA"
+3) "ADAAADC"->""
+
+Step 1: Apply transition 1 to "ACDBC".
+ACDBC -> ADDDC
+[1]
+
+Step 2: Apply transition 2 to the first D in "ADDDC".
+ADDDC -> ADAADC
+[1, 2]
+
+Step 3: Apply transition 2 to the first D in "ADAADC".
+ADAADC -> ADAAADC
+[1, 2, 2]
+
+Step 4: Apply transition 3 to "ADAAADC".
+ADAAADC -> ""
+[1, 2, 2, 3]
+
+Final Answer: [1, 2, 2, 3]

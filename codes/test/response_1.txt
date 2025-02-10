@@ -1,0 +1,31 @@
+Okay, let's solve this Sed Puzzle Game problem. The goal is to transform "EDDAC" to "" using the provided transitions.
+
+Initial string: "EDDAC"
+
+Available transitions:
+1) "EDDA"->"FF"
+2) "C"->"CD"
+3) "FFCDDD"->""
+
+Step 1: Apply transition 1 to "EDDAC". "EDDA" is found at the beginning of the string.
+EDDAC -> FFC
+[1]
+
+Step 2: Apply transition 2 to "FFC". "C" is found at the end of the string.
+FFC -> FFCD
+[1, 2]
+
+Step 3: Apply transition 2 to "FFCD". "C" is found in the middle of the string.
+FFCD -> FFCDD
+[1, 2, 2]
+
+Step 4: Apply transition 2 to "FFCDD". "C" is found in the middle of the string.
+FFCDD -> FFCDDD
+[1, 2, 2, 2]
+
+Step 5: Apply transition 3 to "FFCDDD". "FFCDDD" matches the entire string.
+FFCDDD -> ""
+[1, 2, 2, 2, 3]
+
+Final Answer:
+[1, 2, 2, 2, 3]

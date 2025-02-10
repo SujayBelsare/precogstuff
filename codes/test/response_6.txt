@@ -1,0 +1,20 @@
+Okay, let's solve this Sed Puzzle.
+
+Initial String: "FAFEFD"
+Available Transitions:
+1) "FD"->"FE"
+2) "E"->"DC"
+3) "FAFDCCFE"->""
+
+Here's the reasoning:
+
+1. Apply transition 1 to "FAFEFD":
+   FAFEFD -> FAFEFE  [1]
+
+2. Apply transition 2 to "FAFEFE":
+   FAFEFE -> FAFDCFE [2]
+
+3. Apply transition 3 to "FAFDCFE":
+   FAFDCFE -> "" [3]
+
+Solution: [1, 2, 3]

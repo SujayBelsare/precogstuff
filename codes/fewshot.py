@@ -14,7 +14,7 @@ genai.configure(api_key=api_key)
 
 # Model Configuration
 generation_config = {
-    "temperature": 1.4,
+    "temperature": 0.8,
     "top_p": 0.95,
     "top_k": 40,
     "max_output_tokens": 8192,
@@ -115,7 +115,7 @@ def generate_prompt(data):
 
 
 # Read dataset from file
-dataset_path = "../new.json"
+dataset_path = "../dataset/combined.json"
 if not os.path.exists(dataset_path):
     raise FileNotFoundError(f"Dataset file not found: {dataset_path}")
 
