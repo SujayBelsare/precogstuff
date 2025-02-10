@@ -122,7 +122,7 @@ def generate_prompt(data):
 
 
 # Read dataset from file
-dataset_path = "../new.json"
+dataset_path = "../dataset/combined.json"
 if not os.path.exists(dataset_path):
     raise FileNotFoundError(f"Dataset file not found: {dataset_path}")
 
