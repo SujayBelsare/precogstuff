@@ -1,4 +1,5 @@
 import json
+from collections import deque
 
 
 def load_data():
@@ -17,6 +18,26 @@ def apply_transition(current_str, transition):
         return None
     new_str = current_str.replace(src, tgt, 1)
     return new_str
+
+
+def bfs_distance_to_empty(s, transitions, max_depth=10):
+    if s == "":
+        return 0
+
+    queue = deque([(s, 0)])
+    visited = set([s])
+    while queue:
+        current, depth = queue.popleft()
+        if current == "":
+            return depth
+        if depth >= max_depth:
+            continue
+        for transition in transitions:
+            new_s = apply_transition(current, transition)
+            if new_s is not None and new_s not in visited:
+                visited.add(new_s)
+                queue.append((new_s, depth + 1))
+    return None
 
 
 def validate_problem(problem, solution_moves, output_entry=None):
@@ -54,6 +75,8 @@ def validate_problem(problem, solution_moves, output_entry=None):
     metrics["correct_moves_count"] = correct_moves_count
     metrics["total_moves"] = len(solution_moves)
     metrics["valid"] = s == ""
+
+    metrics["bfs_distance"] = bfs_distance_to_empty(s, transitions, max_depth=10)
 
     return metrics
 
@@ -100,6 +123,7 @@ def main():
         print(
             f"  Correct moves: {metrics['correct_moves_count']} / {metrics['total_moves']}"
         )
+        print(f"  BFS distance (additional moves needed): {metrics['bfs_distance']}")
         print("-" * 50)
 
     if all_valid:

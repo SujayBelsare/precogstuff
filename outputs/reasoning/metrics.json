@@ -42,6 +42,7 @@
         "correct_moves_count": 3,
         "total_moves": 4,
         "valid": false,
+        "bfs_distance": 2,
         "problem_id": "006"
     },
     {
@@ -100,6 +101,7 @@
         "correct_moves_count": 5,
         "total_moves": 5,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "001"
     },
     {
@@ -112,6 +114,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "011"
     },
     {
@@ -124,6 +127,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "028"
     },
     {
@@ -151,6 +155,7 @@
         "correct_moves_count": 1,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "004"
     },
     {
@@ -196,6 +201,7 @@
         "correct_moves_count": 3,
         "total_moves": 4,
         "valid": false,
+        "bfs_distance": 2,
         "problem_id": "005"
     },
     {
@@ -218,6 +224,7 @@
         "correct_moves_count": 1,
         "total_moves": 1,
         "valid": false,
+        "bfs_distance": 4,
         "problem_id": "016"
     },
     {
@@ -230,6 +237,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "018"
     },
     {
@@ -242,6 +250,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "013"
     },
     {
@@ -269,6 +278,7 @@
         "correct_moves_count": 1,
         "total_moves": 4,
         "valid": false,
+        "bfs_distance": 4,
         "problem_id": "031"
     },
     {
@@ -281,6 +291,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "007"
     },
     {
@@ -312,6 +323,7 @@
         "correct_moves_count": 2,
         "total_moves": 2,
         "valid": false,
+        "bfs_distance": 3,
         "problem_id": "017"
     },
     {
@@ -370,6 +382,7 @@
         "correct_moves_count": 5,
         "total_moves": 5,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "014"
     },
     {
@@ -406,6 +419,7 @@
         "correct_moves_count": 2,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": 3,
         "problem_id": "010"
     },
     {
@@ -464,6 +478,7 @@
         "correct_moves_count": 5,
         "total_moves": 5,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "033"
     },
     {
@@ -522,6 +537,7 @@
         "correct_moves_count": 5,
         "total_moves": 5,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "034"
     },
     {
@@ -534,6 +550,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "024"
     },
     {
@@ -546,6 +563,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "032"
     },
     {
@@ -591,6 +609,7 @@
         "correct_moves_count": 3,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "026"
     },
     {
@@ -618,6 +637,7 @@
         "correct_moves_count": 1,
         "total_moves": 2,
         "valid": false,
+        "bfs_distance": 4,
         "problem_id": "021"
     },
     {
@@ -630,6 +650,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "012"
     },
     {
@@ -675,6 +696,7 @@
         "correct_moves_count": 3,
         "total_moves": 4,
         "valid": false,
+        "bfs_distance": 2,
         "problem_id": "019"
     },
     {
@@ -702,6 +724,7 @@
         "correct_moves_count": 1,
         "total_moves": 4,
         "valid": false,
+        "bfs_distance": 4,
         "problem_id": "030"
     },
     {
@@ -714,6 +737,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "035"
     },
     {
@@ -772,6 +796,7 @@
         "correct_moves_count": 5,
         "total_moves": 5,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "022"
     },
     {
@@ -790,6 +815,7 @@
         "correct_moves_count": 0,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": 4,
         "problem_id": "002"
     },
     {
@@ -802,6 +828,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "020"
     },
     {
@@ -814,6 +841,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "003"
     },
     {
@@ -826,6 +854,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "015"
     },
     {
@@ -884,6 +913,7 @@
         "correct_moves_count": 5,
         "total_moves": 5,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "025"
     },
     {
@@ -896,6 +926,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "009"
     },
     {
@@ -981,6 +1012,7 @@
         "correct_moves_count": 8,
         "total_moves": 8,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "008"
     },
     {
@@ -1039,6 +1071,7 @@
         "correct_moves_count": 5,
         "total_moves": 5,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "029"
     },
     {
@@ -1097,6 +1130,7 @@
         "correct_moves_count": 5,
         "total_moves": 5,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "023"
     },
     {
@@ -1109,6 +1143,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 5,
         "problem_id": "027"
     },
     {
@@ -1163,6 +1198,7 @@
         "correct_moves_count": 4,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "041"
     },
     {
@@ -1175,6 +1211,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "036"
     },
     {
@@ -1187,6 +1224,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "046"
     },
     {
@@ -1199,6 +1237,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "063"
     },
     {
@@ -1211,6 +1250,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "039"
     },
     {
@@ -1223,6 +1263,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "040"
     },
     {
@@ -1277,6 +1318,7 @@
         "correct_moves_count": 4,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": 2,
         "problem_id": "051"
     },
     {
@@ -1289,6 +1331,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "053"
     },
     {
@@ -1301,6 +1344,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "048"
     },
     {
@@ -1355,6 +1399,7 @@
         "correct_moves_count": 4,
         "total_moves": 7,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "066"
     },
     {
@@ -1409,6 +1454,7 @@
         "correct_moves_count": 4,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": 2,
         "problem_id": "042"
     },
     {
@@ -1445,6 +1491,7 @@
         "correct_moves_count": 2,
         "total_moves": 3,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "052"
     },
     {
@@ -1481,6 +1528,7 @@
         "correct_moves_count": 2,
         "total_moves": 3,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "049"
     },
     {
@@ -1535,6 +1583,7 @@
         "correct_moves_count": 4,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "045"
     },
     {
@@ -1598,6 +1647,7 @@
         "correct_moves_count": 5,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "068"
     },
     {
@@ -1652,6 +1702,7 @@
         "correct_moves_count": 4,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "069"
     },
     {
@@ -1706,6 +1757,7 @@
         "correct_moves_count": 4,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": 2,
         "problem_id": "059"
     },
     {
@@ -1718,6 +1770,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "067"
     },
     {
@@ -1781,6 +1834,7 @@
         "correct_moves_count": 5,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "061"
     },
     {
@@ -1793,6 +1847,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "056"
     },
     {
@@ -1829,6 +1884,7 @@
         "correct_moves_count": 2,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": 4,
         "problem_id": "047"
     },
     {
@@ -1878,6 +1934,7 @@
         "correct_moves_count": 4,
         "total_moves": 4,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "054"
     },
     {
@@ -1941,6 +1998,7 @@
         "correct_moves_count": 5,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "065"
     },
     {
@@ -1977,6 +2035,7 @@
         "correct_moves_count": 2,
         "total_moves": 4,
         "valid": false,
+        "bfs_distance": 4,
         "problem_id": "070"
     },
     {
@@ -2031,6 +2090,7 @@
         "correct_moves_count": 4,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": 2,
         "problem_id": "057"
     },
     {
@@ -2098,6 +2158,7 @@
         "correct_moves_count": 6,
         "total_moves": 6,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "037"
     },
     {
@@ -2143,6 +2204,7 @@
         "correct_moves_count": 3,
         "total_moves": 9,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "055"
     },
     {
@@ -2155,6 +2217,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "038"
     },
     {
@@ -2167,6 +2230,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "050"
     },
     {
@@ -2212,6 +2276,7 @@
         "correct_moves_count": 3,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "060"
     },
     {
@@ -2261,6 +2326,7 @@
         "correct_moves_count": 4,
         "total_moves": 4,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "044"
     },
     {
@@ -2315,6 +2381,7 @@
         "correct_moves_count": 4,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "043"
     },
     {
@@ -2369,6 +2436,7 @@
         "correct_moves_count": 4,
         "total_moves": 7,
         "valid": false,
+        "bfs_distance": 2,
         "problem_id": "064"
     },
     {
@@ -2381,6 +2449,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 6,
         "problem_id": "058"
     },
     {
@@ -2417,6 +2486,7 @@
         "correct_moves_count": 2,
         "total_moves": 3,
         "valid": false,
+        "bfs_distance": 4,
         "problem_id": "062"
     },
     {
@@ -2453,6 +2523,7 @@
         "correct_moves_count": 2,
         "total_moves": 7,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "076"
     },
     {
@@ -2529,6 +2600,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "071"
     },
     {
@@ -2541,6 +2613,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 7,
         "problem_id": "081"
     },
     {
@@ -2604,6 +2677,7 @@
         "correct_moves_count": 5,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": 2,
         "problem_id": "098"
     },
     {
@@ -2658,6 +2732,7 @@
         "correct_moves_count": 4,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": 3,
         "problem_id": "074"
     },
     {
@@ -2712,6 +2787,7 @@
         "correct_moves_count": 4,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": 3,
         "problem_id": "075"
     },
     {
@@ -2766,6 +2842,7 @@
         "correct_moves_count": 4,
         "total_moves": 5,
         "valid": false,
+        "bfs_distance": 3,
         "problem_id": "086"
     },
     {
@@ -2829,6 +2906,7 @@
         "correct_moves_count": 5,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "088"
     },
     {
@@ -2914,6 +2992,7 @@
         "correct_moves_count": 8,
         "total_moves": 8,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "083"
     },
     {
@@ -2990,6 +3069,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "077"
     },
     {
@@ -3002,6 +3082,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 7,
         "problem_id": "087"
     },
     {
@@ -3014,6 +3095,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 7,
         "problem_id": "084"
     },
     {
@@ -3090,6 +3172,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "080"
     },
     {
@@ -3166,6 +3249,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "094"
     },
     {
@@ -3242,6 +3326,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "096"
     },
     {
@@ -3254,6 +3339,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 7,
         "problem_id": "091"
     },
     {
@@ -3330,6 +3416,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "082"
     },
     {
@@ -3342,6 +3429,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 7,
         "problem_id": "089"
     },
     {
@@ -3418,6 +3506,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "100"
     },
     {
@@ -3494,6 +3583,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "092"
     },
     {
@@ -3548,6 +3638,7 @@
         "correct_moves_count": 4,
         "total_moves": 7,
         "valid": false,
+        "bfs_distance": 3,
         "problem_id": "072"
     },
     {
@@ -3624,6 +3715,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "090"
     },
     {
@@ -3669,6 +3761,7 @@
         "correct_moves_count": 3,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": 4,
         "problem_id": "073"
     },
     {
@@ -3745,6 +3838,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "085"
     },
     {
@@ -3821,6 +3915,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "095"
     },
     {
@@ -3897,6 +3992,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "079"
     },
     {
@@ -3969,6 +4065,7 @@
         "correct_moves_count": 6,
         "total_moves": 7,
         "valid": false,
+        "bfs_distance": null,
         "problem_id": "078"
     },
     {
@@ -4045,6 +4142,7 @@
         "correct_moves_count": 7,
         "total_moves": 7,
         "valid": true,
+        "bfs_distance": 0,
         "problem_id": "099"
     },
     {
@@ -4099,6 +4197,7 @@
         "correct_moves_count": 4,
         "total_moves": 6,
         "valid": false,
+        "bfs_distance": 3,
         "problem_id": "093"
     },
     {
@@ -4111,6 +4210,7 @@
         "correct_moves_count": 0,
         "total_moves": 0,
         "valid": false,
+        "bfs_distance": 7,
         "problem_id": "097"
     }
 ]
