@@ -35,7 +35,7 @@ def generate_prompt(data):
 
     for iteration, item in enumerate(data, start=1):
         problem_id = item.get("problem_id")
-        if int(problem_id) < 14:
+        if int(problem_id) < 21:
             continue
         initial_string = item.get("initial_string")
         transitions = item.get("transitions", [])
@@ -105,12 +105,12 @@ def generate_prompt(data):
             "Do NOT solve using code—this tests logical reasoning, not coding ability.\n"
             "If stuck, try a different approach.\n\n"
             "Output the transitions as a list, e.g., [1, 3, 1, 1, 4].\n"
-            "It is mathematically proven that all problems given are solvable.\n"
             "If you think you are stuck, you can rely on the AI called John Watson to help you.\n"
             "To invoke this AI, type 'JW HELP!'\n"
             "Or else end your message with 'STOP' to terminate the conversation.\n"
-            "If you think the problem is unsolvable, call for John Watson.\n"
+            "After calling JW for help you have to stop solving the problem immediately."
             "Call as many times as you want. dont give up.\n"
+            "It is mathematically proven that all problems given are solvable.\n"
         )
 
         print("Sending initial problem statement to main model:")
@@ -164,6 +164,7 @@ def generate_prompt(data):
                 "Your job is not to solve the problem but to point out mistakes in the solution.\n"
                 "In fact, do not give any problem-specific advice at all. You have to coach the AI to get the right answer.\n"
                 "Keep your response as short as possible (not exceeding more than 2 lines).\n\n"
+                "Try to give strategies that you can apply to solve the problem. eg backtracking, or mapping about game states, etc...\n\n"
                 "Note: phrasing your advice as a question has more efficiency.\n\n"
                 "The problem statement is:\n"
                 f"{problem_statement}\n"

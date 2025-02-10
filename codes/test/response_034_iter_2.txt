@@ -1,0 +1,32 @@
+Okay, John Watson is saying my reasoning about the empty string insertion is correct, but the order is slightly off. Let's re-examine the steps.
+
+We start with "FABFF". We want to reach "".
+The transitions are:
+1) "F" -> "EE"
+2) "" -> "AC"
+3) "ACEEABEEEE" -> ""
+
+The key is that rule 2 inserts "AC" at the beginning of the string.
+
+1. Apply rule 2: "FABFF" becomes "ACFABFF".  [2]
+2. Apply rule 1 to the first "F": "ACFABFF" becomes "ACEEABFF". [1]
+3. Apply rule 1 to the second "F": "ACEEABFF" becomes "ACEEABEE". [1]
+
+Now we have "ACEEABEE".
+
+We need "ACEEABEEEE" to apply rule 3. We are missing two "EE"s.
+We can only get "EE" by applying rule 1 to "F". But we don't have any "F"s left.
+
+I made a mistake. Rule 2 is ""->"AC" and it inserts AC at the *beginning*.
+So applying rule 2 to any string "S" gives "ACS".
+
+Let's start with "FABFF".
+Apply rule 1. "FABFF" -> "EEABEEF" [1]
+Apply rule 1. "EEABEEF" -> "EEABEEEE" [1]
+Apply rule 2. "EEABEEEE" -> "ACEEABEEEE" [2]
+Apply rule 3. "ACEEABEEEE" -> "" [3]
+
+So the sequence is [1, 1, 2, 3].
+
+FINAL ANSWER: [1, 1, 2, 3]
+STOP

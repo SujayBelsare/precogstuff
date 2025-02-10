@@ -1,0 +1,86 @@
+DFDDACBEC
+We want to get to EAEEACBEAACB
+
+1. Apply 1: DFDD -> BEA
+BEAACBEC
+2. Apply 2: CBEC -> CB
+BEAACB
+
+We have BEAACB
+
+DFDDACBEC
+1. Apply 2: CBEC -> CB
+DFDDACB
+2. Apply 1: DFDD -> BEA
+BEAACB
+
+Now we have BEAACB
+
+DFDDACBEC
+1. Apply 1: DFDD -> BEA
+BEAACBEC
+2. Apply 2: CBEC -> CB
+BEAACB
+
+We want EAEEACBEAACB
+
+DFDDACBEC
+1. Apply 2: CBEC -> CB
+DFDDACB
+
+We want to create EAEEACBEAACB.
+The last part is BEAACB.
+
+DFDDACBEC
+1. Apply 1: DFDD -> BEA
+BEAACBEC
+2. Apply 2: CBEC -> CB
+BEAACB
+
+Let's try another approach. Focus on the initial CBEC.
+DFDDACBEC
+1. Apply 2: CBEC -> CB
+DFDDACB
+
+We now have DFDDACB. We want EAEEACBEAACB
+
+DFDDACBEC
+1. Apply 1: DFDD -> BEA
+BEAACBEC
+2. Apply 2: CBEC -> CB
+BEAACB
+
+We need EAEEAC
+
+DFDDACBEC
+1. Apply 2: CBEC->CB
+DFDDACB
+2. Apply 3: ""->EAC
+DFDDACBEAC
+
+This is getting very complex.
+
+DFDDACBEC
+1. Apply 1: DFDD->BEA
+BEAACBEC
+2. Apply 2: CBEC->CB
+BEAACB
+
+DFDDACBEC
+1. Apply 1: DFDD->BEA
+BEAACBEC
+2. Apply 2: CBEC->CB
+BEAACB
+3. Apply 3: ""->EAC
+BEAACBEAC
+4. Apply 4: EAC->EAE
+BEAACBEAE
+5. Apply 3: ""->EAC
+BEAACBEAEEAC
+We have BEAACBEAEEAC
+
+I am stuck.
+
+JW HELP!
+STOP
+```

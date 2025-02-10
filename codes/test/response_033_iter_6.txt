@@ -1,0 +1,74 @@
+Okay, John Watson is emphasizing starting with applicable rules from the initial state.
+
+Initial string: BBBCAFBDEC
+
+Rules:
+1) "CAFBDEC"->"FFBCA"
+2) "BBFFB"->"FEBD"
+3) "EBDCA"->"FFE"
+4) "FFE"->"BBC"
+5) "BFBBC"->""
+
+Rule 1 applies directly.
+
+1. BBBCAFBDEC -> BBBFFBCA (1)
+
+Now we have BBBFFBCA.
+
+Let's analyze the rules again:
+
+1) "CAFBDEC"->"FFBCA"
+2) "BBFFB"->"FEBD"
+3) "EBDCA"->"FFE"
+4) "FFE"->"BBC"
+5) "BFBBC"->""
+
+Rule 2 is now applicable.
+
+2. BBBFFBCA -> BFEBDCA (2)
+
+Now we have BFEBDCA.
+
+Let's analyze the rules again:
+
+1) "CAFBDEC"->"FFBCA"
+2) "BBFFB"->"FEBD"
+3) "EBDCA"->"FFE"
+4) "FFE"->"BBC"
+5) "BFBBC"->""
+
+Rule 3 is now applicable.
+
+3. BFEBDCA -> BFFFE (3)
+
+Now we have BFFFE.
+
+Let's analyze the rules again:
+
+1) "CAFBDEC"->"FFBCA"
+2) "BBFFB"->"FEBD"
+3) "EBDCA"->"FFE"
+4) "FFE"->"BBC"
+5) "BFBBC"->""
+
+Rule 4 is now applicable.
+
+4. BFFFE -> BFBBC (4)
+
+Now we have BFBBC.
+
+Let's analyze the rules again:
+
+1) "CAFBDEC"->"FFBCA"
+2) "BBFFB"->"FEBD"
+3) "EBDCA"->"FFE"
+4) "FFE"->"BBC"
+5) "BFBBC"->""
+
+Rule 5 is now applicable.
+
+5. BFBBC -> "" (5)
+
+So the final answer is [1, 2, 3, 4, 5]
+
+STOP
